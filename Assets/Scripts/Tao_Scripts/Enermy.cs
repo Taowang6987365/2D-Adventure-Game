@@ -43,6 +43,7 @@ public class Enermy : MonoBehaviour
     {
         patrolEnemy,
         standEnemy,
+        chasingEnemy
     }
 
     void Awake()
@@ -54,12 +55,14 @@ public class Enermy : MonoBehaviour
         boundsCenterDistance = BoundsCenterDistance();
 
         timer = bulletTimer;
-        movementSpeed = 5f;
         setMoveDistance = 400f;
         canAttack = false;
         isPlayerDetected = false;
         speed = movementSpeed;
-        shootPos = transform.GetChild(0).GetComponent<Transform>();
+        if(enemyType == EnemyType.standEnemy)
+        {
+            shootPos = transform.GetChild(0).GetComponent<Transform>();
+        }
     }
     private void Update()
     {
@@ -80,6 +83,10 @@ public class Enermy : MonoBehaviour
                 StandEnemyBehaviour();
                 break;
 
+            case EnemyType.chasingEnemy:
+                ChasingEnemyBehaviour();
+                break;
+
             default:
                 break;
         }
@@ -98,22 +105,9 @@ public class Enermy : MonoBehaviour
 
     void EnermyMove(ref Vector3 velocity)
     {
-        Vector2 input = Vector2.right;
-        float targetVelocityX = input.x * movementSpeed;
-        //Mathf.SmoothDamp:
-        //Gradually changes a value towards a desired goal over time.
-        velocity.x = Mathf.SmoothDamp(
-            velocity.x,
-            targetVelocityX,
-            ref velocityXSmoothing,
-            (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne
-            );
-        moveDistance += velocity.x;
-        velocity.y += PlayerController.gravity * Time.fixedDeltaTime;
-
+        Movement();
         if (!isPlayerDetected)
         {
-            controller.Move(velocity * Time.fixedDeltaTime, input);
             //Patrol
             if (Mathf.Abs(moveDistance) >= setMoveDistance)
             {
@@ -158,6 +152,23 @@ public class Enermy : MonoBehaviour
         {
             runOnce = false;
         }
+    }
+
+    void Movement()
+    {
+        Vector2 input = Vector2.right;
+        float targetVelocityX = input.x * movementSpeed;
+        //Mathf.SmoothDamp:
+        //Gradually changes a value towards a desired goal over time.
+        velocity.x = Mathf.SmoothDamp(
+            velocity.x,
+            targetVelocityX,
+            ref velocityXSmoothing,
+            (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne
+            );
+        moveDistance += velocity.x;
+        velocity.y += PlayerController.gravity * Time.fixedDeltaTime;
+        controller.Move(velocity * Time.fixedDeltaTime, input);
     }
 
     void MoveToPlayer(Vector3 playerPos)
@@ -251,4 +262,8 @@ public class Enermy : MonoBehaviour
         }
     }
 
+    void ChasingEnemyBehaviour()
+    {
+        Movement();
+    }
 }
