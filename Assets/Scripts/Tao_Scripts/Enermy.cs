@@ -42,7 +42,7 @@ public class Enermy : MonoBehaviour
         standEnemy,
     }
 
-    void Start()
+    void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         controller = GetComponent<Controller2D>();
@@ -76,6 +76,7 @@ public class Enermy : MonoBehaviour
             case EnemyType.standEnemy:
                 StandEnemyBehaviour();
                 break;
+
             default:
                 break;
         }
@@ -214,6 +215,7 @@ public class Enermy : MonoBehaviour
 
     void StandEnemyBehaviour()
     {
+        controller.Move(velocity, false);
         if (createOnce)
         {
             timer -= Time.fixedDeltaTime;
