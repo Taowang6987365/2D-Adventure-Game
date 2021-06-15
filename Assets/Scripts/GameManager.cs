@@ -22,13 +22,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         currentLevel = startingLevel;
-        //if (currentLevel == "")
-        //{
-        //    
-        //    InGameSaveManager.instance.levelName = LevelName.Level1;
-        //}
-        //else 
-        if (InGameSaveManager.instance.activeSave.currentLevel == "Level2")
+        if (currentLevel == "")
+        {
+
+            InGameSaveManager.instance.levelName = LevelName.Level1;
+        }
+        else if (InGameSaveManager.instance.activeSave.currentLevel == "Level2")
         {
             currentLevel = InGameSaveManager.instance.activeSave.currentLevel;
         }
