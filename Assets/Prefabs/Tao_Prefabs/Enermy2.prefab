@@ -162,7 +162,7 @@ MonoBehaviour:
   movementSpeed: 0
   enermyCollider: {fileID: 0}
   playerCollider: {fileID: 0}
-  enemyType: 0
+  enemyType: 1
   goList: []
 --- !u!114 &6380837646517022175
 MonoBehaviour:

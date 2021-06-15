@@ -11,6 +11,7 @@ public class Enemy_Centi_Behaviour : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         playerPos = Enermy.player.transform;
         enermy = GetComponent<Enermy>();
     }
