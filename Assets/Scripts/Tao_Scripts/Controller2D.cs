@@ -158,6 +158,7 @@ public class Controller2D : RaycastController
                 if (this.gameObject.tag == "Player")
                 {
                     isGounded = true;
+                    BreakingPlat bp = null;
                     if (hit.collider.tag == "PressurePlate")
                     {
                         PressurePlate.isStandingOnPressurePlate = true;
@@ -166,6 +167,13 @@ public class Controller2D : RaycastController
                     {
                         PressurePlate.isStandingOnPressurePlate = false;
                     }
+
+                    if(hit.collider.tag =="BreakingPlat")
+                    {                       
+                        bp = hit.collider.gameObject.GetComponent<BreakingPlat>();                      
+                        bp.isOnPlat = true;
+                    }
+
                 }
 
                 if (this.gameObject.tag == "PushItems")
