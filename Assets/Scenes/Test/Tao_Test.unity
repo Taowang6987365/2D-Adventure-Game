@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 1829932624}
   m_Layer: 0
   m_Name: ChasingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -709,6 +709,7 @@ MonoBehaviour:
   isDead: 0
   runOnce: 0
   createOnce: 0
+  isBoss: 0
   bullet: {fileID: 0}
   shootPos: {fileID: 0}
   enemyType: 2

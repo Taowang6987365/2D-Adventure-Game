@@ -14,7 +14,6 @@ public class PlayerStatus : MonoBehaviour
     public Transform transformPos;
 
 
-
     public float resteTime = 0.2f;
     public float playerYPos;
     public bool isDead;

@@ -15,6 +15,7 @@ public class Enermy : MonoBehaviour
     public bool isDead;
     public bool runOnce;
     public bool createOnce;
+    public bool isBoss;
 
     public static bool facingRight;
     public static bool canAttack;
@@ -39,6 +40,7 @@ public class Enermy : MonoBehaviour
     float timer;
 
 
+
     public enum EnemyType
     {
         patrolEnemy,
@@ -54,6 +56,7 @@ public class Enermy : MonoBehaviour
         playerCollider = player.GetComponent<BoxCollider2D>();
         boundsCenterDistance = BoundsCenterDistance();
 
+        isBoss = false;
         timer = bulletTimer;
         setMoveDistance = 400f;
         canAttack = false;
@@ -264,6 +267,7 @@ public class Enermy : MonoBehaviour
 
     void ChasingEnemyBehaviour()
     {
+        isBoss = true;
         Movement();
     }
 }

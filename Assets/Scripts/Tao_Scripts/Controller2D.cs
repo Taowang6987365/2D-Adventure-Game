@@ -109,21 +109,7 @@ public class Controller2D : RaycastController
                     collisions.right = directionX == 1;
                 }
 
-                if (this.gameObject.tag == "Player")
-                {
-                    if (hit.collider.tag == "NewLevel")
-                    {
-                        collideObject = characterCollider;
-                        loadLevel = true;
-                    }
-
-                    if (hit.collider.tag == "PushItems")
-                    {
-                        hitItem = hit.collider.gameObject;
-                        Debug.Log(hitItem.name);
-                    }
-                }
-
+                HorizontalHit(ref hit);
             }
         }
     }
@@ -155,35 +141,7 @@ public class Controller2D : RaycastController
 
                 collisions.below = directionY == -1;
                 collisions.above = directionY == 1;
-                if (this.gameObject.tag == "Player")
-                {
-                    isGounded = true;
-                    BreakingPlat bp = null;
-                    if (hit.collider.tag == "PressurePlate")
-                    {
-                        PressurePlate.isStandingOnPressurePlate = true;
-                    }
-                    else
-                    {
-                        PressurePlate.isStandingOnPressurePlate = false;
-                    }
-
-                    if(hit.collider.tag =="BreakingPlat")
-                    {                       
-                        bp = hit.collider.gameObject.GetComponent<BreakingPlat>();                      
-                        bp.isOnPlat = true;
-                    }
-
-                }
-
-                if (this.gameObject.tag == "PushItems")
-                {
-                    Enermy enermy = hit.collider.gameObject.GetComponent<Enermy>();
-                    if (hit.collider.tag == "Enemy")
-                    {
-                        enermy.isDead = true;
-                    }
-                }
+                VerticalHit(ref hit);
             }
         }
 
@@ -279,6 +237,66 @@ public class Controller2D : RaycastController
 
             slopeAngleOld = slopeAngle;
             slopeAngle = 0;
+        }
+    }
+
+    void VerticalHit(ref RaycastHit2D hit)
+    {
+        if (gameObject.tag == "Player")
+        {
+            isGounded = true;
+            BreakingPlat bp = null;
+            if (hit.collider.tag == "PressurePlate")
+            {
+                PressurePlate.isStandingOnPressurePlate = true;
+            }
+            else
+            {
+                PressurePlate.isStandingOnPressurePlate = false;
+            }
+
+            if (hit.collider.tag == "BreakingPlat")
+            {
+                bp = hit.collider.gameObject.GetComponent<BreakingPlat>();
+                bp.isOnPlat = true;
+            }
+        }
+
+        if (gameObject.tag == "PushItems")
+        {
+            Enermy enermy = hit.collider.gameObject.GetComponent<Enermy>();
+            if (hit.collider.tag == "Enemy")
+            {
+                enermy.isDead = true;
+            }
+        }
+    }
+
+    void HorizontalHit(ref RaycastHit2D hit)
+    {
+        if (gameObject.tag == "Player")
+        {
+            if (hit.collider.tag == "NewLevel")
+            {
+                collideObject = characterCollider;
+                loadLevel = true;
+            }
+
+            if (hit.collider.tag == "PushItems")
+            {
+                hitItem = hit.collider.gameObject;
+                Debug.Log(hitItem.name);
+            }
+        }
+
+        if(gameObject.tag == "Enemy")
+        {
+            Enermy enermy = gameObject.GetComponent<Enermy>();
+            if(enermy.isBoss && hit.collider.tag == "Player")
+            {
+                Debug.Log("BossHit");
+                PlayerStatus.instance.isDead = true;
+            }
         }
     }
 
