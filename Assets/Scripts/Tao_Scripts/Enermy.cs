@@ -10,30 +10,33 @@ public class Enermy : MonoBehaviour
     public float detectDistance;
     public float bulletSpeed;
     public float bulletTimer;
+    public float movementSpeed;
+    public bool isFollowPlayer;
+    public bool isDead;
+    public bool runOnce;
+    public bool createOnce;
+
     public static bool facingRight;
     public static bool canAttack;
     public static bool isPlayerDetected;
     public static float speed;
     public static float boundsCenterDistance;
-    public static GameObject player;
-    public GameObject bullet;
     public static Controller2D controller;
+    public static GameObject player;
     public static Vector3 velocity;
+
+    public GameObject bullet;
     public Transform shootPos;
-    public bool isFollowPlayer;
-    public bool isDead;
-    public bool runOnce;
-    public bool createOnce;
-    public float movementSpeed;
+    public EnemyType enemyType;
     public BoxCollider2D enermyCollider;
     public BoxCollider2D playerCollider;
+    public List<GameObject> goList;
+
     float accelerationTimeAirborne = 0.2f;
     float accelerationTimeGrounded = 0.1f;
     float velocityXSmoothing;
     float moveDistance;
     float timer;
-    public EnemyType enemyType;
-    public List<GameObject> goList;
 
 
     public enum EnemyType
@@ -161,7 +164,7 @@ public class Enermy : MonoBehaviour
     {
         if (detectDistance < 5f)
         {
-            Enermy.isPlayerDetected = true;
+            isPlayerDetected = true;
             float distanceX = playerPos.x - transform.position.x;
             if (Mathf.Abs(distanceX) < BoundsCenterDistance())
             {
@@ -177,11 +180,11 @@ public class Enermy : MonoBehaviour
             Vector3 newPos = playerPos + 5 * orientation * Vector3.right;
             Vector3 CurrentPos = currentPos;
             CurrentPos.y -= PlayerController.gravity;
-            Enermy.controller.Move((newPos - CurrentPos).normalized * Time.fixedDeltaTime * 20, false);
+            controller.Move((newPos - CurrentPos).normalized * Time.fixedDeltaTime * 20, false);
         }
         else
         {
-            Enermy.isPlayerDetected = false;
+            isPlayerDetected = false;
         }
     }
 

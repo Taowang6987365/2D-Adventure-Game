@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class PlatformController : RaycastController
 {
-    public LayerMask passengerMask;
     [SerializeField] private Vector3 move;
+    [SerializeField] private PlayerStatus playerStat;
+
+    public LayerMask passengerMask;
     public float platformMoveDistance = 0f;
     public float setMoveDistance = 100f;
-    Vector3 velocity;
     public bool isHorizontal;
     public bool resetOnPlayerDeath = true;
-    [SerializeField] private PlayerStatus playerStat;
-    private Vector3 originPos;
-    private bool originDirection;
-    private float originMoveDistance;
 
+    bool originDirection;
+    float originMoveDistance;
+    Vector3 velocity;
+    Vector3 originPos;
     List<PassengerMovement> passengerMovement;
     Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
+
     public override void Start()
     {
         
