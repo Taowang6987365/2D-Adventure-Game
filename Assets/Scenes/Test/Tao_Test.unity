@@ -704,7 +704,7 @@ MonoBehaviour:
   detectDistance: 0
   bulletSpeed: 0
   bulletTimer: 0
-  movementSpeed: 8
+  movementSpeed: 4
   isFollowPlayer: 0
   isDead: 0
   runOnce: 0
