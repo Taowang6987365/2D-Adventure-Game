@@ -26,7 +26,7 @@ public class Enemy_Centi_Behaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        animator.SetFloat("Speed", Mathf.Abs(Enermy.velocity.x));
+        animator.SetFloat("Speed", Mathf.Abs(enermy.velocity.x));
     }
 
     IEnumerator EnemyDeath()

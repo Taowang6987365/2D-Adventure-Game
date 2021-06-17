@@ -64,9 +64,9 @@ public class InGameSaveManager : MonoBehaviour
             Debug.Log("Loaded");
             isLoaded = true;
         }
-        Debug.Log(activeSave.currentLevel);
-        Debug.Log(activeSave.saveName.ToString());
-        Debug.Log(activeSave.playerLives);
+        //Debug.Log(activeSave.currentLevel);
+        //Debug.Log(activeSave.saveName.ToString());
+        //Debug.Log(activeSave.playerLives);
        
     }
 
