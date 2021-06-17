@@ -62,14 +62,9 @@ public class Enermy : MonoBehaviour
         float distanceX = player.transform.position.x - transform.position.x;
         if (Mathf.Abs(distanceX) <= 0.1f && !runOnce)
         {
-            player.GetComponent<PlayerController>().isHitByEnemy = true;
+            player.GetComponent<PlayerController>().HitPlayer();
             runOnce = true;
         }
-        else
-        {
-            player.GetComponent<PlayerController>().isHitByEnemy = false;
-        }
-
         if (Mathf.Abs(distanceX) > boundsCenterDistance)
         {
             runOnce = false;
