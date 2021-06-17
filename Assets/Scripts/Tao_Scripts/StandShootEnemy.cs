@@ -7,10 +7,10 @@ public class StandShootEnemy : MonoBehaviour
     public float bulletSpeed;
     public float bulletTimer;
     public bool createOnce;
-    float timer;
     public GameObject bullet;
     public Transform shootPos;
     public List<GameObject> goList;
+    float timer;
 
     void Start()
     {
