@@ -109,11 +109,6 @@ public class PlayerController : MonoBehaviour
         {
             moveSpeed = 6f;
         }
-
-        if (isHitByEnemy)
-        {
-            StartCoroutine(PlayerHurt());
-        }
     }
 
     void FixedUpdate()
@@ -152,6 +147,11 @@ public class PlayerController : MonoBehaviour
         {
             velocity.x = 0;
         }
+    }
+
+    public void HitPlayer()
+    {
+        StartCoroutine(PlayerHurt());
     }
 
     internal void ResetPosition()
