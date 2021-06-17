@@ -14,7 +14,6 @@ public class pushablebox : MonoBehaviour
         initPos = transform.position;
     }
 
-
     public void GetHit()
     {
         if (life > 0)
@@ -35,6 +34,7 @@ public class pushablebox : MonoBehaviour
             }
             else
             {
+                Controller2D.isPlayerHit = false;
                 Destroy(gameObject);
             }
         }

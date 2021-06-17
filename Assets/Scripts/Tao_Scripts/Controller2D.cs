@@ -14,6 +14,7 @@ public class Controller2D : RaycastController
     public static Collider2D collideObject;
     public static bool isGounded;
     public static GameObject hitItem;
+    public static bool isPlayerHit;
     public override void Start()
     {
         base.Start();
@@ -284,6 +285,7 @@ public class Controller2D : RaycastController
             if (hit.collider.tag == "PushItems")
             {
                 hitItem = hit.collider.gameObject;
+                isPlayerHit = true;
                 Debug.Log(hitItem.name);
             }
         }
@@ -293,7 +295,6 @@ public class Controller2D : RaycastController
             Enermy enermy = gameObject.GetComponent<Enermy>();
             if(enermy.isBoss && hit.collider.tag == "Player")
             {
-                Debug.Log("BossHit");
                 PlayerStatus.instance.isDead = true;
             }
         }

@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,10 +145,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  isBoxPushable: 1
+  isBoxPushable: 0
   itemCollider: {fileID: 0}
   playerCollider: {fileID: 0}
   boxController: {fileID: 0}
+  _pushableBox: {fileID: 0}
+  speedModifier: 0.6
 --- !u!114 &4651565449368693989
 MonoBehaviour:
   m_ObjectHideFlags: 0

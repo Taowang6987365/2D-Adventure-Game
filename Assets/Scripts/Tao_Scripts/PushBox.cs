@@ -14,7 +14,7 @@ public class PushBox : MonoBehaviour
     public static float distanceX;
     public static float distance;
     public static bool isPushing;
-    public static pushablebox _pushableBox;
+    public pushablebox _pushableBox;
     private PlayerStatus playerStat;
     private Vector3 originPos;
     private Vector3 curVelocity;
