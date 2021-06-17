@@ -205,7 +205,6 @@ public class Controller2D : RaycastController
                     {
                         float moveDistance = Mathf.Abs(velocity.x);
                         float descendVelocityY = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * moveDistance;
-                        Debug.Log(descendVelocityY);
                         velocity.x = Mathf.Cos(slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign(velocity.x);
                         velocity.y -= descendVelocityY;//make sure the descending speed can change with the velocity.x in case the velocity is high
 

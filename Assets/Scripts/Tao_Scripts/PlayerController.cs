@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public bool isFinished;
     public bool isRunning;
     public bool canHit;
+    public bool isHitByEnemy;
     public Animator animator;
     public Vector3 velocity;
     public static bool isMoveable;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     float jumpVelocity;
     float velocityXSmoothing;
     bool jumped;
-    bool hit;
+
     Controller2D controller;
     [SerializeField] private float timer;
     public float animationTime = 0.6f;
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
         {
+
             Controller2D.isGounded = false;
             jumped = true;
         }
@@ -108,7 +110,7 @@ public class PlayerController : MonoBehaviour
             moveSpeed = 6f;
         }
 
-        if (Enermy.canAttack)
+        if (isHitByEnemy)
         {
             StartCoroutine(PlayerHurt());
         }
@@ -175,7 +177,6 @@ public class PlayerController : MonoBehaviour
     {
         if (controller.collisions.below && PushBox.isPushing)
         {
-            Debug.Log("Pushing active");
             if (Mathf.Abs(velocity.x) > 3f)
             {
                 timer -= Time.deltaTime;
