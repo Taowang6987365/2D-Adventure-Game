@@ -4,12 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject PausePannel;
+    bool isPaused;
+
     public string startingLevel = "Level1";
     public string nextLevel;
     [NonSerialized] public static string currentLevel = "";
     bool isLevelLoaded;
 
     public bool isWin = false;
+
+ 
 
 
     public static GameManager Instance { get; private set; }
@@ -21,6 +26,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        PausePannel.SetActive(false);
+        isPaused = false;
+
         currentLevel = startingLevel;
         if (currentLevel == "")
         {
@@ -55,5 +63,26 @@ public class GameManager : MonoBehaviour
     public void ReturnToTitle()
     {
         SceneManager.LoadScene("Title");
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        {
+            PausePannel.SetActive(true);
+            Time.timeScale = 0;
+            isPaused = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            BackToGame();
+        }
+    }
+
+    public void BackToGame()
+    {
+        PausePannel.SetActive(false);
+        Time.timeScale = 1;
+        isPaused = false;
     }
 }

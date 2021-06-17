@@ -8,7 +8,7 @@ public class LoadManager : MonoBehaviour
 {
     public GameObject loadingScreen;
     private AsyncOperation async;
-    [SerializeField] private Image progressbar;
+    [SerializeField] private Slider progressbar;
     public GameObject settingCanvas;
     public GameObject menuCanvas;
 
@@ -17,7 +17,7 @@ public class LoadManager : MonoBehaviour
     void Start()
     {
         menuCanvas.SetActive(true);
-        progressbar.fillAmount = 0;
+        progressbar.value = 0;
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class LoadManager : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            progressbar.fillAmount = progress;
+            progressbar.value = progress;
             yield return null;
         }
     }
