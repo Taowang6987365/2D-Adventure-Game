@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
     public float fallModifier = 0.8f;
     [SerializeField] private GameObject guide;
 
+    public delegate void boxHit();
+    public boxHit hit;
+
     private void Awake()
     {
         //Simulate gravity
@@ -220,16 +223,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && Mathf.Abs(velocity.x) <= 0.5f && Controller2D.isGounded)
         {
             isMoveable = false;
-            if (PushBox.distanceX <= PushBox.distance)
+            if (Controller2D.isPlayerHit)
             {
-                if (Controller2D.hitItem.tag == "PushItems")
-                {
-                    canHit = true;
-                }
-                else
-                {
-                    return;
-                }
+                pushablebox pb = Controller2D.hitItem.GetComponent<pushablebox>();
+                hit = new boxHit(pb.GetHit);
             }
             StartCoroutine(AttackAnim());
         }
@@ -251,14 +248,13 @@ public class PlayerController : MonoBehaviour
         bAttack = true;
         animator.SetBool("IsAttack", true);
         yield return new WaitForSeconds(0.45f);
-        if (canHit)
-        {
-            PushBox._pushableBox.GetHit();
-        }
         animator.SetBool("IsAttack", false);
+        if(hit != null)
+        {
+            hit();
+        }
         isMoveable = true;
         bAttack = false;
-        canHit = false;
     }
 
     IEnumerator WalkAttackAnim()
