@@ -286,7 +286,6 @@ public class Controller2D : RaycastController
             {
                 hitItem = hit.collider.gameObject;
                 isPlayerHit = true;
-                Debug.Log(hitItem.name);
             }
         }
 

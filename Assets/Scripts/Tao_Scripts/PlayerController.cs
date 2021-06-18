@@ -249,10 +249,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsAttack", true);
         yield return new WaitForSeconds(0.45f);
         animator.SetBool("IsAttack", false);
-        if(hit != null)
-        {
-            hit();
-        }
+        hit?.Invoke();
         isMoveable = true;
         bAttack = false;
     }
