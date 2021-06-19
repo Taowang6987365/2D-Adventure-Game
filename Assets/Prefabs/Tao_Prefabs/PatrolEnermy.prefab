@@ -188,7 +188,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
   enermyCollider: {fileID: 0}
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 8800119681587886305, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
 --- !u!114 &2168000228916787870
 MonoBehaviour:
   m_ObjectHideFlags: 0
