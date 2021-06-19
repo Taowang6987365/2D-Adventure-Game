@@ -187,12 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5313034a1057a4f86e9807cfa36709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 2
-  bulletTimer: 1
-  createOnce: 0
   bullet: {fileID: 863832182594560485, guid: 3d879ebab294dba4086389ce9bc9d401, type: 3}
   shootPos: {fileID: 1763105393054556772}
-  goList: []
+  timer: 0
 --- !u!95 &1763105392153820910
 Animator:
   serializedVersion: 3

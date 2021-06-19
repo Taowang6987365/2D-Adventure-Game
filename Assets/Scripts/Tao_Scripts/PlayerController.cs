@@ -238,6 +238,11 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.J))
             {
+                if (Controller2D.isPlayerHit)
+                {
+                    pushablebox pb = Controller2D.hitItem.GetComponent<pushablebox>();
+                    hit = new boxHit(pb.GetHit);
+                }
                 StartCoroutine(WalkAttackAnim());
             }
         }
@@ -260,6 +265,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsWalkingAttack", true);
         yield return new WaitForSeconds(0.45f);
         animator.SetBool("IsWalkingAttack", false);
+        hit?.Invoke();
         bAttack = false;
     }
 

@@ -60,7 +60,9 @@ public class Enermy : MonoBehaviour
     void EnemyAttack()
     {
         float distanceX = player.transform.position.x - transform.position.x;
-        if (Mathf.Abs(distanceX) <= 0.1f && !runOnce)
+        float distanceY = player.transform.position.y - transform.position.y;
+
+        if (Mathf.Abs(distanceX) <= 0.1f && Mathf.Abs(distanceY) <= 0.5f && !runOnce)
         {
             player.GetComponent<PlayerController>().HitPlayer();
             runOnce = true;

@@ -4,56 +4,29 @@ using UnityEngine;
 
 public class StandShootEnemy : MonoBehaviour
 {
-    public float bulletSpeed;
-    public float bulletTimer;
-    public bool createOnce;
     public GameObject bullet;
     public Transform shootPos;
-    public List<GameObject> goList;
-    float timer;
+    public float timer;
 
     void Start()
     {
-        timer = bulletTimer;
+        timer = 3f;
         shootPos = transform.GetChild(0).GetComponent<Transform>();
+        GameObject go = Instantiate(bullet, shootPos.position, transform.rotation);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         StandEnemyBehaviour();
     }
 
     void StandEnemyBehaviour()
     {
-        if (createOnce)
-        {
-            timer -= Time.fixedDeltaTime;
-        }
-        else
+        timer -= Time.deltaTime;
+        if(timer <= 0f)
         {
             GameObject go = Instantiate(bullet, shootPos.position, transform.rotation);
-            goList.Add(go);
-            createOnce = true;
-        }
-        if (goList.Count > 10)
-        {
-            for (int i = 0; i < goList.Count - 1; i++)
-            {
-                Destroy(goList[i]);
-                goList.Remove(goList[i]);
-            }
-        }
-        else
-        {
-            foreach (var go in goList)
-            {
-                go.transform.Translate(Vector3.left * Time.deltaTime * bulletSpeed);
-            }
-        }
-        if (timer <= 0)
-        {
-            createOnce = false;
-            timer = bulletTimer;
+            timer = 3f;
         }
     }
 }
