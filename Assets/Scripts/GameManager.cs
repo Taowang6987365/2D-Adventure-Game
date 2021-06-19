@@ -85,4 +85,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
