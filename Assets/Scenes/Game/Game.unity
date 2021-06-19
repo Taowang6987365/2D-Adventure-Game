@@ -1068,11 +1068,36 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 695756384}
+    - target: {fileID: 5730066524378247298, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
+      propertyPath: lookAheadDstX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730066524378247298, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
+      propertyPath: verticalOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730066524378247298, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
+      propertyPath: focusAreaSize.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730066524378247298, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
+      propertyPath: focusAreaSize.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730066524378247298, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
+      propertyPath: lookSmoothTimeX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730066524378247298, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
+      propertyPath: verticalSmoothTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5730066524378247303, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5730066524378247299, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 90b6bd406e0adf14fac588881c6c6f34, type: 3}
 --- !u!1 &2093392764
 GameObject:

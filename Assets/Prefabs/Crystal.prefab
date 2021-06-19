@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5675239766352157821}
   - component: {fileID: -1483805248166563339}
   - component: {fileID: 3211486880617676338}
+  - component: {fileID: 8598552700427510216}
   m_Layer: 8
   m_Name: Crystal
   m_TagString: PushItems
@@ -180,3 +181,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   canReset: 0
+--- !u!95 &8598552700427510216
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3211486880617676339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 496e27b6260b4de4e942e7f5011e0d17, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
