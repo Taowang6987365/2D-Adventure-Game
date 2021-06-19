@@ -6,6 +6,7 @@ public class pushablebox : MonoBehaviour
 {
     private Vector3 initPos ;
     public int life = 3;
+    
 
     [SerializeField] private bool canReset = false;
     // Start is called before the first frame update
@@ -35,7 +36,8 @@ public class pushablebox : MonoBehaviour
             else
             {
                 Controller2D.isPlayerHit = false;
-                Destroy(gameObject);
+           
+                Destroy(gameObject,0.1f);
             }
         }
     }
