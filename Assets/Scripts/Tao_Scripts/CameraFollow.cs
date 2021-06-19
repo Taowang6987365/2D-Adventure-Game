@@ -23,7 +23,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        focusArea = new FocusArea(target.characterCollider.bounds, focusAreaSize);
+        focusArea = new FocusArea(target.characterCollider.bounds, focusAreaSize);        
     }
 
     private void LateUpdate()
