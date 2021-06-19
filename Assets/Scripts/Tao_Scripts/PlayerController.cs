@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour
 
     internal void ResetPosition()
     {
-        transform.position = Vector2.zero;
+        transform.position = GameObject.FindGameObjectWithTag("Spawn").transform.position;
     }
 
     void CharacterFlip()

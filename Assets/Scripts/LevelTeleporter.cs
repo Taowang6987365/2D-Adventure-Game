@@ -14,9 +14,8 @@ public class LevelTeleporter : MonoBehaviour
         instance = this;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-
         if (Controller2D.loadLevel)
         {
             LevelLoad();
@@ -34,7 +33,6 @@ public class LevelTeleporter : MonoBehaviour
         //InGameSaveManager.instance.levelName = LevelName.Level2;
         Debug.Log("activate");
         isLoading = true;
-        //collision.GetComponent<PlayerController>().ResetPosition();
         Controller2D.collideObject.GetComponent<PlayerController>().ResetPosition();
         if (nextLevelName != "Title")
         {

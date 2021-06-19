@@ -18,9 +18,7 @@ public class CheckPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-            playerYPos = PlayerStatus.instance.playerYPos;
-
+        playerYPos = PlayerStatus.instance.playerYPos;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +27,7 @@ public class CheckPoint : MonoBehaviour
         {
             checkPoint = this.gameObject;
             PlayerStatus.instance.checkPoint = checkPoint;
-            InGameSaveManager.instance.activeSave.respawnPosition = new Vector2(PlayerStatus.instance.checkPoint.transform.position.x, playerYPos);
+            InGameSaveManager.instance.activeSave.respawnPosition = new Vector3(PlayerStatus.instance.checkPoint.transform.position.x, playerYPos, 0);
             checkPoint.GetComponent<Renderer>().material = checkPointAfterMaterial;
             Debug.Log(PlayerStatus.instance.checkPoint);
         }

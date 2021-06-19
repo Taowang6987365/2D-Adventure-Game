@@ -5,14 +5,18 @@ using UnityEngine;
 public class StandShootEnemy : MonoBehaviour
 {
     public GameObject bullet;
-    public Transform shootPos;
+    public Transform leftShootPos;
+    public Transform rightShootPos;
     public float timer;
+    [SerializeField] private bool isLeft;
 
     void Start()
     {
+        isLeft = false;
         timer = 3f;
-        shootPos = transform.GetChild(0).GetComponent<Transform>();
-        GameObject go = Instantiate(bullet, shootPos.position, transform.rotation);
+        leftShootPos = transform.GetChild(0).GetComponent<Transform>();
+        rightShootPos = transform.GetChild(1).GetComponent<Transform>();
+        GameObject go = Instantiate(bullet, leftShootPos.position, transform.rotation);
     }
 
     private void Update()
@@ -23,9 +27,18 @@ public class StandShootEnemy : MonoBehaviour
     void StandEnemyBehaviour()
     {
         timer -= Time.deltaTime;
-        if(timer <= 0f)
+
+        if(timer <= 0f && isLeft)
         {
-            GameObject go = Instantiate(bullet, shootPos.position, transform.rotation);
+            GameObject go = Instantiate(bullet, leftShootPos.position, transform.rotation);
+            isLeft = false;
+            timer = 3f;
+        }
+
+        if (timer <= 0f && !isLeft)
+        {
+            GameObject go = Instantiate(bullet, rightShootPos.position, transform.rotation);
+            isLeft = true;
             timer = 3f;
         }
     }

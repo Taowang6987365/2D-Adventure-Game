@@ -16,6 +16,7 @@ TagManager:
   - Trigger
   - NewLevel
   - BreakingPlat
+  - Spawn
   layers:
   - Default
   - TransparentFX

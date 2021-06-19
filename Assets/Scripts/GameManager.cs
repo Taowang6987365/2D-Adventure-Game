@@ -13,10 +13,6 @@ public class GameManager : MonoBehaviour
     bool isLevelLoaded;
 
     public bool isWin = false;
-
- 
-
-
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -32,7 +28,6 @@ public class GameManager : MonoBehaviour
         currentLevel = startingLevel;
         if (currentLevel == "")
         {
-
             InGameSaveManager.instance.levelName = LevelName.Level1;
         }
         else if (InGameSaveManager.instance.activeSave.currentLevel == "Level2")

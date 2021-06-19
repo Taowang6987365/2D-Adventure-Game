@@ -477,12 +477,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8800119681587886310, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
   m_PrefabInstance: {fileID: 695756383}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 856893969}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca0aadd0a2107434784caae1fc468676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &856893969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8800119681587886304, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+  m_PrefabInstance: {fileID: 695756383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &967405795
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,14 +607,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeSave:
     saveName: 
-    respawnPosition: {x: 0, y: 0}
+    respawnPosition: {x: 0, y: 0, z: 0}
     canSave: 0
     playerLives: 0
     currentLevel: 
   isLoaded: 0
-  spawnPos: {fileID: 0}
   levelName: 0
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 856893969}
 --- !u!114 &1321376982 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6930873624399563056, guid: 2245c9a0370675f45ba47883fd667e24, type: 3}

@@ -10,7 +10,6 @@ public class InGameSaveManager : MonoBehaviour
     public static InGameSaveManager instance;
     public InGameSaveData activeSave;
     public bool isLoaded;
-    public Transform spawnPos;
     public LevelName levelName;
     [SerializeField] private GameObject playerObject;
 
@@ -23,7 +22,7 @@ public class InGameSaveManager : MonoBehaviour
     void Update()
     {
         //for test
-        if(Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             Save();
         }
@@ -64,10 +63,6 @@ public class InGameSaveManager : MonoBehaviour
             Debug.Log("Loaded");
             isLoaded = true;
         }
-        //Debug.Log(activeSave.currentLevel);
-        //Debug.Log(activeSave.saveName.ToString());
-        //Debug.Log(activeSave.playerLives);
-       
     }
 
     public void DeletSaveData()
@@ -87,7 +82,7 @@ public class InGameSaveData
 {
     public string saveName;
 
-    public Vector2 respawnPosition;
+    public Vector3 respawnPosition;
 
     public bool canSave;
 
