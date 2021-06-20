@@ -76,8 +76,8 @@ public class PlayerStatus : MonoBehaviour
         if (collision.CompareTag("DeadZone"))
         {
             lives -= 1;
-            //transformPos.position = InGameSaveManager.instance.activeSave.respawnPosition;
-            transformPos.position = GameObject.FindGameObjectWithTag("Spawn").transform.position;
+            transformPos.position = InGameSaveManager.instance.activeSave.respawnPosition;
+            //transformPos.position = GameObject.FindGameObjectWithTag("Spawn").transform.position;
             InGameSaveManager.instance.activeSave.playerLives = lives;
             isDead = true;
             InGameSaveManager.instance.Load();
@@ -87,7 +87,7 @@ public class PlayerStatus : MonoBehaviour
             Debug.Log("Save111");
             //checkPoint = GameObject.FindGameObjectWithTag("CheckPoint");
             //checkPointAfter = GameObject.FindGameObjectWithTag("CheckPointAfter");
-            //InGameSaveManager.instance.activeSave.respawnPosition = new Vector2(checkPoint.transform.position.x, playerYPos);
+            InGameSaveManager.instance.activeSave.respawnPosition = new Vector2(checkPoint.transform.position.x, playerYPos);
 
             InGameSaveManager.instance.Save();
             //checkPoint.SetActive(false);

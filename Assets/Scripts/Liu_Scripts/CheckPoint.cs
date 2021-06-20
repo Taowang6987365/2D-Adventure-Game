@@ -7,7 +7,7 @@ public class CheckPoint : MonoBehaviour
     public GameObject checkPoint;
     Controller2D controller2D;
     float playerYPos;
-    [SerializeField] private Material checkPointAfterMaterial;
+   //[SerializeField] private Material checkPointAfterMaterial;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,8 @@ public class CheckPoint : MonoBehaviour
             checkPoint = this.gameObject;
             PlayerStatus.instance.checkPoint = checkPoint;
             InGameSaveManager.instance.activeSave.respawnPosition = new Vector3(PlayerStatus.instance.checkPoint.transform.position.x, playerYPos, 0);
-            checkPoint.GetComponent<Renderer>().material = checkPointAfterMaterial;
+            //checkPoint.GetComponent<Renderer>().material = checkPointAfterMaterial;
+            //checkPoint.GetComponent<SpriteRenderer>().color = 
             Debug.Log(PlayerStatus.instance.checkPoint);
         }
     }
