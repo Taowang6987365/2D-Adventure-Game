@@ -10,7 +10,7 @@ public class Enermy : MonoBehaviour
     public bool runOnce;
     public bool facingRight;
     public bool isBoss;
-    public float patrolEnemySpeed;
+    public float enemySpeed;
     public float moveDistance;
 
     public Vector3 velocity;
@@ -76,7 +76,7 @@ public class Enermy : MonoBehaviour
     void Movement()
     {
         Vector2 input = Vector2.right;
-        float targetVelocityX = input.x * patrolEnemySpeed;
+        float targetVelocityX = input.x * enemySpeed;
         //Mathf.SmoothDamp:
         //Gradually changes a value towards a desired goal over time.
         velocity.x = Mathf.SmoothDamp(
@@ -88,11 +88,5 @@ public class Enermy : MonoBehaviour
         moveDistance += velocity.x;
         velocity.y += PlayerController.gravity * Time.fixedDeltaTime;
         controller.Move(velocity * Time.fixedDeltaTime, input);
-    }
-
-    void ChasingEnemyBehaviour()
-    {
-        isBoss = true;
-        Movement();
     }
 }

@@ -19,7 +19,7 @@ public class PatrolEnemy : MonoBehaviour
         //Patrol
         if (Mathf.Abs(enermy.moveDistance) >= setMoveDistance)
         {
-            enermy.patrolEnemySpeed *= -1;
+            enermy.enemySpeed *= -1;
             enermy.moveDistance = 0;
         }
         //flip sprite
