@@ -11,11 +11,6 @@ public class Entrence : MonoBehaviour
         if(PlayerStatus.instance.scenenPassword == entrancePassword)
         {
             PlayerStatus.instance.transform.position = transform.position;//entrance position
-            Debug.Log("Entrance");
-        }
-        else
-        {
-            Debug.Log("Lost");
         }
     }
 

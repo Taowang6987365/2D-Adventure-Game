@@ -59,8 +59,6 @@ public class InGameSaveManager : MonoBehaviour
             activeSave = serializaer.Deserialize(stream) as InGameSaveData;
             stream.Close();
 
-            
-            Debug.Log("Loaded");
             isLoaded = true;
         }
     }

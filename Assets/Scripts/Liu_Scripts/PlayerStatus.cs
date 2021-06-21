@@ -6,22 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MonoBehaviour
 {
-    public GameObject checkPoint;
-    public GameObject checkPointAfter;
     public int lives;
     private int maxLives;
-    public static PlayerStatus instance;
-    public Transform transformPos;
-
-
     public float resteTime = 0.2f;
     public float playerYPos;
     public bool isDead;
-    public Controller2D controller2D;
-
-    [SerializeField] private Text liveText;
-
     public string scenenPassword;//store the name when player move to another scene
+
+    public GameObject checkPoint;
+    public GameObject checkPointAfter;
+    public Controller2D controller2D;
+    public PlayerController playerController;
+    public Transform transformPos;
+
+    public static PlayerStatus instance;
+    [SerializeField] private Text liveText;
+    float deathTimer = 1f;
+
 
 
     private void Awake()
@@ -32,10 +33,11 @@ public class PlayerStatus : MonoBehaviour
     void Start()
     {
         isDead = false;
-        controller2D = GetComponent<Controller2D>();
         maxLives = 3;
         lives = maxLives;
         transformPos = GetComponent<Transform>();
+        controller2D = GetComponent<Controller2D>();
+        playerController = GetComponent<PlayerController>();
     }
 
     void Update()
@@ -44,19 +46,30 @@ public class PlayerStatus : MonoBehaviour
         {
             liveText.text = "X " + lives.ToString();
         }
-        if (lives >= maxLives)
-        {
-            lives = maxLives;
-        }
+
+        ////Add lives
+        //if (lives >= maxLives)
+        //{
+        //    lives = maxLives;
+        //}
+
         if (lives <= 0)
         {
             lives = 0;
-            ResetGame();
+            playerController.Death();
+            deathTimer -= Time.deltaTime;
+            if(deathTimer <= 0)
+            {
+                ResetGame();
+                deathTimer = 1f;
+            }
         }
+
         if (controller2D.collisions.below)
         {
             playerYPos = this.transformPos.position.y;
         }
+
         if (isDead)
         {
             PlayerController.isMoveable = false;
@@ -67,6 +80,7 @@ public class PlayerStatus : MonoBehaviour
         {
             PlayerController.isMoveable = true;
             isDead = false;
+            lives = 3;
             resteTime = 0.2f;
         }
     }
@@ -75,27 +89,26 @@ public class PlayerStatus : MonoBehaviour
     {
         if (collision.CompareTag("DeadZone"))
         {
-            lives -= 1;
-            transformPos.position = InGameSaveManager.instance.activeSave.respawnPosition;
-            //transformPos.position = GameObject.FindGameObjectWithTag("Spawn").transform.position;
             InGameSaveManager.instance.activeSave.playerLives = lives;
-            isDead = true;
-            InGameSaveManager.instance.Load();
+            playerController.HitPlayer();
         }
         if (collision.tag == ("CheckPoint"))
         {
-            Debug.Log("Save111");
-            //checkPoint = GameObject.FindGameObjectWithTag("CheckPoint");
-            //checkPointAfter = GameObject.FindGameObjectWithTag("CheckPointAfter");
-            InGameSaveManager.instance.activeSave.respawnPosition = new Vector2(checkPoint.transform.position.x, playerYPos);
+            if(checkPoint != null)
+            {
+                InGameSaveManager.instance.activeSave.respawnPosition = new Vector2(checkPoint.transform.position.x, playerYPos);
+            }
 
             InGameSaveManager.instance.Save();
-            //checkPoint.SetActive(false);
         }
     }
 
     private void ResetGame()
     {
-        SceneManager.LoadScene("Title");
+        isDead = true;
+        transformPos.position = InGameSaveManager.instance.activeSave.respawnPosition;
+        InGameSaveManager.instance.Load();//dead then reload
+        //SceneManager.LoadScene("Title");
     }
+
 }

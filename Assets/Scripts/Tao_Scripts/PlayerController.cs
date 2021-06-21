@@ -15,12 +15,14 @@ public class PlayerController : MonoBehaviour
     public bool isRunning;
     public bool canHit;
     public bool isHitByEnemy;
+
     public Animator animator;
     public Vector3 velocity;
     public static bool isMoveable;
     public static float gravity;
     public static float VelocityX;
     public static float VelocityY;
+
     float accelerationTimeAirborne = 0.2f;
     float accelerationTimeGrounded = 0.1f;
     float jumpVelocity;
@@ -154,7 +156,13 @@ public class PlayerController : MonoBehaviour
 
     public void HitPlayer()
     {
+        //called in Enemy.cs
         StartCoroutine(PlayerHurt());
+    }
+
+    public void Death()
+    {
+        StartCoroutine(PlayerDeath());
     }
 
     internal void ResetPosition()
@@ -273,8 +281,17 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isHurt", true);
         yield return new WaitForSeconds(0.2f);
+        PlayerStatus.instance.lives--;
         animator.SetBool("isHurt", false);
     }
+
+    IEnumerator PlayerDeath()
+    {
+        animator.SetBool("isDead", true);
+        yield return new WaitForSeconds(1f);
+        animator.SetBool("isDead", false);
+    }
+
     public void ShowGuide(string phrase)
     {
         guide.SetActive(true);

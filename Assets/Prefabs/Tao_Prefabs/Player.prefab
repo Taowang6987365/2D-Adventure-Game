@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &163812914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1489415940
 Transform:
   m_ObjectHideFlags: 0
@@ -308,11 +308,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8800119681587886308}
   - component: {fileID: 8800119681587886305}
+  - component: {fileID: 309065292}
+  - component: {fileID: 309065289}
   - component: {fileID: 8800119681587886310}
   - component: {fileID: 8800119681587886309}
   - component: {fileID: 932352941}
-  - component: {fileID: 309065292}
-  - component: {fileID: 309065289}
   - component: {fileID: -3555980433073104334}
   m_Layer: 6
   m_Name: Player
@@ -354,7 +354,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5588235, y: 0.9705882}
-    newSize: {x: 0.19, y: 0.33}
+    newSize: {x: 0.5588235, y: 0.9705882}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -362,73 +362,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5701056, y: 1.0033708}
   m_EdgeRadius: 0
---- !u!114 &8800119681587886310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8800119681587886304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca0aadd0a2107434784caae1fc468676, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 384
-  horizontalRayCount: 4
-  verticalRayCount: 4
-  horizontalRaySpacing: 0
-  verticalRaySpacing: 0
-  characterCollider: {fileID: 0}
-  playerInput: {x: 0, y: 0}
---- !u!114 &8800119681587886309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8800119681587886304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f8000b0410af44c9f7e5b07fd6ef2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpHeight: 4
-  timeToJumpApex: 0.4
-  moveSpeed: 6
-  setTime: 0.1
-  facingRight: 1
-  bAttack: 0
-  isFinished: 0
-  isRunning: 0
-  canHit: 0
-  animator: {fileID: 309065289}
-  velocity: {x: 0, y: 0, z: 0}
-  timer: 0
-  animationTime: 0.6
-  fallModifier: 0.8
-  guide: {fileID: 1489415939}
---- !u!114 &932352941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8800119681587886304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b225ecd9ede12f14882cae786782d230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkPoint: {fileID: 0}
-  checkPointAfter: {fileID: 0}
-  lives: 4
-  resteTime: 0.2
-  playerYPos: 0
-  isDead: 0
-  liveText: {fileID: 0}
 --- !u!212 &309065292
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -474,7 +407,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.19, y: 0.33}
+  m_Size: {x: 0.5588235, y: 0.9705882}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -499,6 +432,77 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8800119681587886310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800119681587886304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0aadd0a2107434784caae1fc468676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 384
+  horizontalRayCount: 4
+  verticalRayCount: 4
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  characterCollider: {fileID: 0}
+  playerInput: {x: 0, y: 0}
+--- !u!114 &8800119681587886309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800119681587886304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f8000b0410af44c9f7e5b07fd6ef2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 4
+  timeToJumpApex: 0.4
+  moveSpeed: 6
+  setTime: 0.1
+  facingRight: 1
+  bAttack: 0
+  isFinished: 0
+  isRunning: 0
+  canHit: 0
+  isHitByEnemy: 0
+  animator: {fileID: 309065289}
+  velocity: {x: 0, y: 0, z: 0}
+  timer: 0
+  animationTime: 0.6
+  fallModifier: 0.8
+  guide: {fileID: 1489415939}
+--- !u!114 &932352941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800119681587886304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b225ecd9ede12f14882cae786782d230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkPoint: {fileID: 0}
+  checkPointAfter: {fileID: 0}
+  lives: 4
+  transformPos: {fileID: 0}
+  resteTime: 0.2
+  playerYPos: 0
+  isDead: 0
+  controller2D: {fileID: 0}
+  liveText: {fileID: 0}
+  scenenPassword: 
 --- !u!114 &-3555980433073104334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,3 +515,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9861c6ee86cf67b4783431220b2be449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collection: 
