@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Exit : MonoBehaviour
 {
     public string sceneName;
+    public string currentScene;
     [SerializeField] private string newScecnePassword;
 
 
@@ -15,6 +16,7 @@ public class Exit : MonoBehaviour
         {
             PlayerStatus.instance.scenenPassword = newScecnePassword;
             SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync(currentScene);
         }
     }
 }
