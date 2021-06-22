@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class GameEnter : MonoBehaviour
 {
+    bool isStart;
     // Start is called before the first frame update
     void Start()
     {
-        PlayerStatus.instance.transform.position = transform.position;
+        isStart = true;
+        if(isStart)
+        {
+            PlayerStatus.instance.transform.position = transform.position;
+            isStart = false;
+        }
+        
     }
 
     // Update is called once per frame
