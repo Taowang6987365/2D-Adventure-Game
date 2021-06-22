@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float jumpHeight = 4;
-    public float timeToJumpApex = 0.4f;
+    public float timeToJumpApex = 0.8f;
     public float moveSpeed = 6f;
     public float setTime = 0.1f;
     public bool facingRight = true;
