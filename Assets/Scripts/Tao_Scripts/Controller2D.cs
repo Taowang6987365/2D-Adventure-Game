@@ -294,7 +294,8 @@ public class Controller2D : RaycastController
             Enermy enermy = gameObject.GetComponent<Enermy>();
             if(enermy.isBoss && hit.collider.tag == "Player")
             {
-                PlayerStatus.instance.isDead = true;
+                PlayerStatus.instance.lives -= 3;
+                enermy.enemySpeed = 0f;
             }
         }
     }
