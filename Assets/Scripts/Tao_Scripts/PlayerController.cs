@@ -294,6 +294,7 @@ public class PlayerController : MonoBehaviour
 
     public void ShowGuide(string phrase)
     {
+        Debug.Log("trig");
         guide.SetActive(true);
         guide.GetComponent<GuideNPC>().ShowUp(phrase);
     }

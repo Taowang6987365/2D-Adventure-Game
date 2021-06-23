@@ -15,6 +15,7 @@ public class GuideNPC : MonoBehaviour
     }
     public void ShowUp(string phrase)
     {
+       
         dialog.text = phrase;
         StartCoroutine("ShowDialog");
     }

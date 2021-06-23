@@ -21,6 +21,7 @@ public class NPCtrigger : MonoBehaviour
     {
         if(collision.tag=="Player")
         {
+            //Debug.Log("trig");
             player.GetComponent<PlayerController>().ShowGuide(phrase);
             Destroy(gameObject);
         }

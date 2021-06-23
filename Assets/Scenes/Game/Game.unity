@@ -426,6 +426,10 @@ PrefabInstance:
       propertyPath: liveText
       value: 
       objectReference: {fileID: 1560795239}
+    - target: {fileID: 1489415942, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8800119681587886304, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1276,7 +1280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2093392765
 MonoBehaviour:
   m_ObjectHideFlags: 0
