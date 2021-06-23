@@ -11,6 +11,7 @@ public class PatrolEnemy : MonoBehaviour
     void Start()
     {
         enermy = GetComponent<Enermy>();
+        enermy.enemySpeed = 1f;
     }
 
     private void FixedUpdate()
