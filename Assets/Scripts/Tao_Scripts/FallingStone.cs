@@ -7,7 +7,7 @@ public class FallingStone : MonoBehaviour
     public Vector3 stoneVelocity;
     public Controller2D controller;
     public float dirction;
-    Vector2 input;
+
     void Start()
     {
         controller = GetComponent<Controller2D>();
@@ -40,7 +40,7 @@ public class FallingStone : MonoBehaviour
         }
         else
         {
-            velocity.y -= PlayerController.gravity * Time.fixedDeltaTime * 0.3f;
+            velocity.y -= PlayerController.gravity * Time.fixedDeltaTime * 0.6f;
         }
 
         controller.Move(velocity * Time.fixedDeltaTime, false);
