@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
                 (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne
                 );
 
-            velocity.y += gravity * Time.fixedDeltaTime;
+            velocity.y += gravity * Time.fixedDeltaTime * 0.9f;
             controller.Move(velocity * Time.fixedDeltaTime, input);
         }
         else

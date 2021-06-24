@@ -9,17 +9,19 @@ public class BulletScript : MonoBehaviour
     bool runOnce;
    
     BoxCollider2D playerCollider;
+    Controller2D controller2D;
     
     void Start()
     {
         bulletSpeed = 2f;
+        controller2D = GetComponent<Controller2D>();
         playerCollider = Enermy.player.GetComponent<BoxCollider2D>();
         playerBounds = (playerCollider.bounds.max.y - playerCollider.bounds.min.y) / 2;
     }
  
     void Update()
     {
-        this.transform.Translate(Vector3.left * Time.deltaTime * bulletSpeed);
+        controller2D.Move(Vector3.left * Time.deltaTime * bulletSpeed, false);
         HitPlayer();
         Destroy(gameObject, 10f);
     }
@@ -33,10 +35,7 @@ public class BulletScript : MonoBehaviour
         {
             Enermy.player.GetComponent<PlayerController>().HitPlayer();
             runOnce = true;
-        }
-        if (Mathf.Abs(distanceX) > 1f)
-        {
-            runOnce = false;
+            Destroy(gameObject);
         }
     }
 }
