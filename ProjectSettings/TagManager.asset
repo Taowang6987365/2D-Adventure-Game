@@ -17,6 +17,8 @@ TagManager:
   - NewLevel
   - BreakingPlat
   - Spawn
+  - Bullets
+  - Environment
   layers:
   - Default
   - TransparentFX

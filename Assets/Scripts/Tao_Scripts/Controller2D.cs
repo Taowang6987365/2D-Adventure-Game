@@ -298,6 +298,14 @@ public class Controller2D : RaycastController
                 enermy.enemySpeed = 0f;
             }
         }
+
+        if (gameObject.tag == "Bullets") 
+        {
+            if(hit.collider.tag == "Environment")
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
 }
