@@ -422,13 +422,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163812913, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 932352941, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
       propertyPath: liveText
       value: 
       objectReference: {fileID: 1560795239}
     - target: {fileID: 1489415939, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1489415942, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
       propertyPath: m_SortingOrder
