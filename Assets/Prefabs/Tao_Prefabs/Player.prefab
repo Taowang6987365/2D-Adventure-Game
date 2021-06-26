@@ -252,7 +252,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -493,16 +493,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b225ecd9ede12f14882cae786782d230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkPoint: {fileID: 0}
-  checkPointAfter: {fileID: 0}
   lives: 4
-  transformPos: {fileID: 0}
   resteTime: 0.2
   playerYPos: 0
   isDead: 0
-  controller2D: {fileID: 0}
-  liveText: {fileID: 0}
   scenenPassword: 
+  checkPoint: {fileID: 0}
+  checkPointAfter: {fileID: 0}
+  controller2D: {fileID: 0}
+  playerController: {fileID: 0}
+  transformPos: {fileID: 0}
+  liveText: {fileID: 0}
 --- !u!114 &-3555980433073104334
 MonoBehaviour:
   m_ObjectHideFlags: 0
