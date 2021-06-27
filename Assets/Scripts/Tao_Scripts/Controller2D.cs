@@ -115,6 +115,7 @@ public class Controller2D : RaycastController
         }
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public void VerticalCollisions(ref Vector3 velocity)
     {
         float directionY = Mathf.Sign(velocity.y);
@@ -242,11 +243,11 @@ public class Controller2D : RaycastController
 
     void VerticalHit(ref RaycastHit2D hit)
     {
-        if (gameObject.tag == "Player")
+        if (gameObject.CompareTag("Player"))
         {
             isGounded = true;
             BreakingPlat bp = null;
-            if (hit.collider.tag == "PressurePlate")
+            if (hit.collider.CompareTag("PressurePlate"))
             {
                 PressurePlate.isStandingOnPressurePlate = true;
             }
@@ -255,17 +256,17 @@ public class Controller2D : RaycastController
                 PressurePlate.isStandingOnPressurePlate = false;
             }
 
-            if (hit.collider.tag == "BreakingPlat")
+            if (hit.collider.CompareTag("BreakingPlat"))
             {
                 bp = hit.collider.gameObject.GetComponent<BreakingPlat>();
                 bp.isOnPlat = true;
             }
         }
 
-        if (gameObject.tag == "PushItems")
+        if (gameObject.CompareTag("PushItems"))
         {
             Enermy enermy = hit.collider.gameObject.GetComponent<Enermy>();
-            if (hit.collider.tag == "Enemy")
+            if (hit.collider.CompareTag("Enemy"))
             {
                 enermy.isDead = true;
             }
@@ -274,34 +275,34 @@ public class Controller2D : RaycastController
 
     void HorizontalHit(ref RaycastHit2D hit)
     {
-        if (gameObject.tag == "Player")
+        if (gameObject.CompareTag("Player"))
         {
-            if (hit.collider.tag == "NewLevel")
+            if (hit.collider.CompareTag("NewLevel"))
             {
                 collideObject = characterCollider;
                 loadLevel = true;
             }
 
-            if (hit.collider.tag == "PushItems")
+            if (hit.collider.CompareTag("PushItems"))
             {
                 hitItem = hit.collider.gameObject;
                 isPlayerHit = true;
             }
         }
 
-        if(gameObject.tag == "Enemy")
+        if(gameObject.CompareTag("Enemy"))
         {
             Enermy enermy = gameObject.GetComponent<Enermy>();
-            if(enermy.isBoss && hit.collider.tag == "Player")
+            if(enermy.isBoss && hit.collider.CompareTag("Player"))
             {
                 PlayerStatus.instance.lives -= 3;
                 enermy.enemySpeed = 0f;
             }
         }
 
-        if (gameObject.tag == "Bullets") 
+        if (gameObject.CompareTag("Bullets")) 
         {
-            if(hit.collider.tag == "Environment")
+            if(hit.collider.CompareTag("Environment"))
             {
                 Destroy(gameObject);
             }

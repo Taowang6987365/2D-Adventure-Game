@@ -13,12 +13,12 @@ public class PlatformController : RaycastController
     public bool isHorizontal;
     public bool resetOnPlayerDeath = true;
 
-    bool originDirection;
-    float originMoveDistance;
-    Vector3 velocity;
-    Vector3 originPos;
-    List<PassengerMovement> passengerMovement;
-    Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
+    private bool originDirection;
+    private float originMoveDistance;
+    private Vector3 velocity;
+    private Vector3 originPos;
+    private List<PassengerMovement> passengerMovement;
+    private readonly Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
 
     public override void Start()
     {
@@ -34,10 +34,9 @@ public class PlatformController : RaycastController
     {
         if(playerStat.isDead && resetOnPlayerDeath)
         {
-            
             ResetPlateform();
-            
         }
+
         if (isHorizontal)
         {
             move.y = 0;
