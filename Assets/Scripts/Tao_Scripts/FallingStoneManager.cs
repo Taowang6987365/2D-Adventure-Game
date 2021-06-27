@@ -21,12 +21,12 @@ public class FallingStoneManager : MonoBehaviour
         StartCoroutine(StoneFalling());
     }
 
-    IEnumerator StoneFalling()
+    private IEnumerator StoneFalling()
     {
-        for (int i = 0; i < stones.Length; i++)
+        foreach (var stone in stones)
         {
             yield return new WaitForSeconds(0.1f);
-            stones[i].enabled = true;
+            stone.enabled = true;
         }
     }
 }
