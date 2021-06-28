@@ -19,6 +19,7 @@ TagManager:
   - Spawn
   - Bullets
   - Environment
+  - Lava
   layers:
   - Default
   - TransparentFX

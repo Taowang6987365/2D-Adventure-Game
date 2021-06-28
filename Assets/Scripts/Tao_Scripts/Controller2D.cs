@@ -261,6 +261,11 @@ public class Controller2D : RaycastController
                 bp = hit.collider.gameObject.GetComponent<BreakingPlat>();
                 bp.isOnPlat = true;
             }
+
+            if (hit.collider.CompareTag("Lava"))
+            {
+                gameObject.GetComponent<PlayerStatus>().lives = 0;
+            }
         }
 
         if (gameObject.CompareTag("PushItems"))
