@@ -31,7 +31,7 @@ public class ShotGunBullet : MonoBehaviour
                 CreatBullet(angle - 30, firPoint.transform.position);
                 CreatBullet(angle, firPoint.transform.position);
                 CreatBullet(angle + 30, firPoint.transform.position);
-                angle += 90;
+                //angle += 90;
                 yield return new WaitForSeconds(0.5f);
             }
         }
