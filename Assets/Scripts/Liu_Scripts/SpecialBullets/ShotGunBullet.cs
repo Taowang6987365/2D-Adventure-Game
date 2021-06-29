@@ -22,26 +22,55 @@ public class ShotGunBullet : MonoBehaviour
 
     IEnumerator FirShotgun()
     {
-        while (CountTime < StopTime)
+        // while (CountTime < StopTime)
+        // {
+        //     float angle = 0;
+        //     yield return new WaitForSeconds(2f);
+        //     for (int i = 0; i < 10; i++)
+        //     {
+        //         CreatBullet(angle - 30, firPoint.transform.position);
+        //         CreatBullet(angle, firPoint.transform.position);
+        //         CreatBullet(angle + 30, firPoint.transform.position);
+        //         //angle += 90;
+        //         yield return new WaitForSeconds(0.5f);
+        //     }
+        // }
+        Vector3 bulletDir = Vector3.down; 
+        Quaternion leftRota = Quaternion.AngleAxis(-30, Vector3.forward);
+        Quaternion RightRota = Quaternion.AngleAxis(30, Vector3.forward); 
+        while(CountTime<StopTime)
         {
-            float angle = 0;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(5f);
             for (int i = 0; i < 10; i++)
             {
-                CreatBullet(angle - 30, firPoint.transform.position);
-                CreatBullet(angle, firPoint.transform.position);
-                CreatBullet(angle + 30, firPoint.transform.position);
-                //angle += 90;
+                for (int j = 0; j < 3; j++)
+                {
+                    switch (j)
+                    {
+                        case 0:
+                            CreatBullet(bulletDir, firPoint.transform.position);  
+                            break;
+                        case 1:
+                            bulletDir = RightRota * bulletDir;
+                            CreatBullet(bulletDir, firPoint.transform.position);
+                            break;
+                        case 2:
+                            bulletDir = leftRota * (leftRota * bulletDir); 
+                            CreatBullet(bulletDir, firPoint.transform.position);
+                            bulletDir = RightRota * bulletDir;
+                            break;
+                    }
+                }
                 yield return new WaitForSeconds(0.5f);
             }
         }
     }
 
-    public BulletCharacter CreatBullet(float angle, Vector3 creatPoint)
+    public BulletCharacter CreatBullet(Vector3 dir, Vector3 creatPoint)
     {
         BulletCharacter bulletCharacter = Instantiate(bulletTemplate, creatPoint, Quaternion.identity);
-        bulletCharacter.transform.Rotate(new Vector3(0, 0, angle));
         bulletCharacter.gameObject.SetActive(true);
+        bulletCharacter.dir = dir;
         tempBullets.Add(bulletCharacter);
         return bulletCharacter;
     }
