@@ -9,11 +9,13 @@ public class FallingStone : MonoBehaviour
     public Controller2D controller;
     public float fallingSpeed;
     public float dirction;
+    public float timer;
 
     void Start()
     {
         controller = GetComponent<Controller2D>();
         fallingSpeed = 0.1f;
+        timer = 1f;
     }
 
     private void FixedUpdate()
@@ -30,11 +32,11 @@ public class FallingStone : MonoBehaviour
     {
         if (controller.collisions.below)
         {
-            dirction = 1;
+            ResetDir(1);
         }
         if (controller.collisions.above)
         {
-            dirction = -1;
+            ResetDir(-1);
         }
 
         if (dirction < 0)
@@ -47,5 +49,15 @@ public class FallingStone : MonoBehaviour
         }
 
         controller.Move(velocity * Time.fixedDeltaTime, false);
+    }
+
+    void ResetDir(int dir)
+    {
+        timer -= Time.fixedDeltaTime;
+        if (timer <= 0)
+        {
+            dirction = dir;
+            timer = 1;
+        }
     }
 }
