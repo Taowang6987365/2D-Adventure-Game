@@ -16,8 +16,9 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/ShotGunBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/BulletCharacter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/BulletCharacter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundGroupBullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uaXoPfsLFPfPNJnOMPAL3gC4ca" />
@@ -64,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624904851067</updated>
       <workItem from="1624904861548" duration="708000" />
-      <workItem from="1624985642093" duration="1676000" />
+      <workItem from="1624985642093" duration="2563000" />
     </task>
     <servers />
   </component>
