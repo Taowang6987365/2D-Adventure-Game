@@ -19,6 +19,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/BulletCharacter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundGroupBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/ShotGunBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uaXoPfsLFPfPNJnOMPAL3gC4ca" />
@@ -66,6 +67,7 @@
       <updated>1624904851067</updated>
       <workItem from="1624904861548" duration="708000" />
       <workItem from="1624985642093" duration="3415000" />
+      <workItem from="1625081456389" duration="2961000" />
     </task>
     <servers />
   </component>
