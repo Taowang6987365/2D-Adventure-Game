@@ -23,9 +23,9 @@ public class pushablebox : MonoBehaviour
         if (life > 0)
         {
             life -= 1;
-            BossCrystal.instance.life -= 1;
         }
     }
+    
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +40,6 @@ public class pushablebox : MonoBehaviour
             else
             {
                 Controller2D.isPlayerHit = false;
-                BossFightController.instance.count--;
                 Destroy(gameObject,0.1f);
             }
         }

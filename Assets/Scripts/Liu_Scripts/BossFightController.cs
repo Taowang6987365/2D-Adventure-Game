@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -17,6 +18,10 @@ public class BossFightController : MonoBehaviour
     private int id;
     public bool canshoot;
     public int bossHP;
+
+    public Transform[] originalIndex;
+    public List<Transform> rawIndex;
+    public List<Transform> newIndex;
 
 
     public Transform firePosition;
@@ -36,39 +41,29 @@ public class BossFightController : MonoBehaviour
         if (count == 0)
         {
             CreateBox();
-
         }
-        //Debug.Log(count);
-        
     }
     
-
     public void CreateBox()
     {
-        id = Random.Range(0, 10);
-            //Debug.Log(id);
-        for (int i = 0; i <1; i++)
+        foreach (var item in originalIndex)
         {
-            if (id <= 5)
-            {
-                GameObject.Instantiate(breakableObj,spwanPosition[1].transform);
-                GameObject.Instantiate(breakableObj,spwanPosition[3].transform);
-                GameObject.Instantiate(breakableObj,spwanPosition[5].transform);
-                count+=3;
-            }
-            else
-            {
-                GameObject.Instantiate(breakableObj,spwanPosition[0].transform);
-                GameObject.Instantiate(breakableObj,spwanPosition[2].transform);
-                GameObject.Instantiate(breakableObj,spwanPosition[4].transform);
-                count+=3;
-            }
-            
-            
-            
+            rawIndex.Add(item);
         }
-        
-        
+        newIndex.Clear();
+        int tempCount = rawIndex.Count;
+        for (int i = 0; i < tempCount; i++)
+        {
+            int tempIndex = UnityEngine.Random.Range(0, rawIndex.Count);
+            newIndex.Add(rawIndex[tempCount]);
+            rawIndex.RemoveAt(tempCount);
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(breakableObj,newIndex[i].position,quaternion.identity);
+            count++;
+        }
     }
 
     public void AttackBoss()
@@ -76,6 +71,4 @@ public class BossFightController : MonoBehaviour
         Debug.Log("Shoot");
         GameObject.Instantiate(bulletPrefab, firePosition);
     }
-    
-    
 }
