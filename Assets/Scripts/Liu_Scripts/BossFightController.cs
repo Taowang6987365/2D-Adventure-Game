@@ -40,7 +40,12 @@ public class BossFightController : MonoBehaviour
     {
         if (count == 0)
         {
-            CreateBox();
+            nextCreateTime -= Time.deltaTime;
+            if (nextCreateTime <= 0)
+            {
+                CreateBox();
+                nextCreateTime = 2f;
+            }
         }
     }
     
@@ -52,11 +57,12 @@ public class BossFightController : MonoBehaviour
         }
         newIndex.Clear();
         int tempCount = rawIndex.Count;
+
         for (int i = 0; i < tempCount; i++)
         {
             int tempIndex = UnityEngine.Random.Range(0, rawIndex.Count);
-            newIndex.Add(rawIndex[tempCount]);
-            rawIndex.RemoveAt(tempCount);
+            newIndex.Add(rawIndex[tempIndex]);
+            rawIndex.RemoveAt(tempIndex);
         }
 
         for (int i = 0; i < 3; i++)
