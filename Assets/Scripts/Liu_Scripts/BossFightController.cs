@@ -7,25 +7,37 @@ using Random = UnityEngine.Random;
 
 public class BossFightController : MonoBehaviour
 {
+    public static BossFightController instance;
+    
     [SerializeField] private GameObject breakableObj;
-    private int count;
+    public int count;
     private int max_count;
     private float nextCreateTime;
     public Transform[] spwanPosition;
     [SerializeField] private int id;
+    [SerializeField] private bool canshoot;
+    public int bossHP;
+
+
+    public Transform firePosition;
+    public GameObject bulletPrefab;
 
     private void Start()
     {
+        instance = this;
+        bossHP = 10;
         nextCreateTime = 0;
         max_count = 3;
+        canshoot = false;
     }
 
     private void Update()
     {
-        if (count < max_count)
+        if (count == 0)
         {
             CreateBox();
         }
+        //Debug.Log(count);
         
     }
 
@@ -38,7 +50,7 @@ public class BossFightController : MonoBehaviour
     public void CreateBox()
     {
         id = Random.Range(0, 10);
-        Debug.Log(id);
+            //Debug.Log(id);
         for (int i = 0; i < max_count; i++)
         {
             if (id <= 5)
@@ -62,5 +74,11 @@ public class BossFightController : MonoBehaviour
         
         
     }
+
+    public void AttackBoss()
+    {
+        GameObject.Instantiate(bulletPrefab, firePosition);
+    }
+    
     
 }

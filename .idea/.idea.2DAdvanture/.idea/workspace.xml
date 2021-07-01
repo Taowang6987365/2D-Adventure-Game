@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -19,7 +20,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/BulletCharacter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundGroupBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/ShotGunBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Minghao_Scripts/CrystalScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uaXoPfsLFPfPNJnOMPAL3gC4ca" />
@@ -67,7 +70,8 @@
       <updated>1624904851067</updated>
       <workItem from="1624904861548" duration="708000" />
       <workItem from="1624985642093" duration="3415000" />
-      <workItem from="1625081456389" duration="2961000" />
+      <workItem from="1625081456389" duration="3764000" />
+      <workItem from="1625159176280" duration="4272000" />
     </task>
     <servers />
   </component>
