@@ -13,9 +13,9 @@ public class BossFightController : MonoBehaviour
     public int count;
     private int max_count;
     private float nextCreateTime;
-    public Transform[] spwanPosition;
-    [SerializeField] private int id;
-    [SerializeField] private bool canshoot;
+    public Transform[] spwanPosition; 
+    private int id;
+    public bool canshoot;
     public int bossHP;
 
 
@@ -36,36 +36,32 @@ public class BossFightController : MonoBehaviour
         if (count == 0)
         {
             CreateBox();
+
         }
         //Debug.Log(count);
         
     }
-
-    private List<int> rawIndex = new List<int> {0, 1, 2, 3, 4, 5};
-    private List<int> newIndex = new List<int>();
-
-
-   
+    
 
     public void CreateBox()
     {
         id = Random.Range(0, 10);
             //Debug.Log(id);
-        for (int i = 0; i < max_count; i++)
+        for (int i = 0; i <1; i++)
         {
             if (id <= 5)
             {
-                GameObject.Instantiate(breakableObj,spwanPosition[1]);
-                GameObject.Instantiate(breakableObj,spwanPosition[3]);
-                GameObject.Instantiate(breakableObj,spwanPosition[5]);
-                count++;
+                GameObject.Instantiate(breakableObj,spwanPosition[1].transform);
+                GameObject.Instantiate(breakableObj,spwanPosition[3].transform);
+                GameObject.Instantiate(breakableObj,spwanPosition[5].transform);
+                count+=3;
             }
             else
             {
-                GameObject.Instantiate(breakableObj,spwanPosition[0]);
-                GameObject.Instantiate(breakableObj,spwanPosition[2]);
-                GameObject.Instantiate(breakableObj,spwanPosition[4]);
-                count++;
+                GameObject.Instantiate(breakableObj,spwanPosition[0].transform);
+                GameObject.Instantiate(breakableObj,spwanPosition[2].transform);
+                GameObject.Instantiate(breakableObj,spwanPosition[4].transform);
+                count+=3;
             }
             
             
@@ -77,6 +73,7 @@ public class BossFightController : MonoBehaviour
 
     public void AttackBoss()
     {
+        Debug.Log("Shoot");
         GameObject.Instantiate(bulletPrefab, firePosition);
     }
     

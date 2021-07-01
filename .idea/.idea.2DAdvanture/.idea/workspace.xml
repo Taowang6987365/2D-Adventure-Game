@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3085ee11-c6ea-4161-a7b1-0107ddf1a6fc" name="Default Changelist" comment="" />
+    <list default="true" id="0120d099-8fe2-40f0-95e4-9a102eda2358" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,22 +11,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossCrystal.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/BulletCharacter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundGroupBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/ShotGunBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Minghao_Scripts/CrystalScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Minghao_Scripts/pushablebox.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossCrystal.cs" />
     </changedPaths>
   </component>
-  <component name="ProjectId" id="1uaXoPfsLFPfPNJnOMPAL3gC4ca" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1ujMcWJfTRZlqScx8T6BeADXkrq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,15 +58,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3085ee11-c6ea-4161-a7b1-0107ddf1a6fc" name="Default Changelist" comment="" />
-      <created>1624904851067</created>
+      <changelist id="0120d099-8fe2-40f0-95e4-9a102eda2358" name="Default Changelist" comment="" />
+      <created>1625174627872</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1624904851067</updated>
-      <workItem from="1624904861548" duration="708000" />
-      <workItem from="1624985642093" duration="3415000" />
-      <workItem from="1625081456389" duration="3764000" />
-      <workItem from="1625159176280" duration="4272000" />
+      <updated>1625174627872</updated>
+      <workItem from="1625174635326" duration="29000" />
+      <workItem from="1625174684220" duration="2500000" />
     </task>
     <servers />
   </component>
@@ -80,7 +73,4 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="VcsManagerConfiguration">
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
 </project>
