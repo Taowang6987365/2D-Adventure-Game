@@ -40,7 +40,7 @@ public class pushablebox : MonoBehaviour
             else
             {
                 Controller2D.isPlayerHit = false;
-           
+                BossFightController.instance.count--;
                 Destroy(gameObject,0.1f);
             }
         }

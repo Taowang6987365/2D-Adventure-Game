@@ -24,18 +24,15 @@ public class BossCrystal : MonoBehaviour
         Debug.Log("Enemyaccount"+BossFightController.instance.count);
             if (life <= 0 && canDecrease)
             {
-                BossFightController.instance.count--;
+                //BossFightController.instance.count--;
                 canDecrease = false;
             }
             if (BossFightController.instance.count<=0)
             {
-                BossFightController.instance.canshoot = true;
-                if (BossFightController.instance.canshoot)
-                {
+
                     BossFightController.instance.AttackBoss();
                     BossFightController.instance.canshoot = false;
 
-                }
                 
 
             }
