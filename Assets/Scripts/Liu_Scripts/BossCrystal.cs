@@ -21,20 +21,15 @@ public class BossCrystal : MonoBehaviour
 
             if ( box.life <= 0 && canDecrease)
             {
-                BossFightController.instance.count--;
+                BossFightController.GetInstance().count--;
                 canDecrease = false;
             }
-            if (BossFightController.instance.count<=0)
+            if (BossFightController.GetInstance().count<=0)
             {
-                BossFightController.instance.canshoot = true;
-                if (BossFightController.instance.canshoot)
+                if (!BossFightController.canshoot)
                 {
-                    BossFightController.instance.AttackBoss();
-                    BossFightController.instance.canshoot = false;
+                    BossFightController.GetInstance().AttackBoss();
                 }
-                
-                
-
             }
     }
 }

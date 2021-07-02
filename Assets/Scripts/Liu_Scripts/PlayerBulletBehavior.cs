@@ -25,8 +25,8 @@ public class PlayerBulletBehavior : MonoBehaviour
     {
         if (other.tag == "Boss")
         {
-            BossFightController.instance.bossHP -= 1;
-            BossFightController.instance.booHPSlider.value -= 0.01f;
+            BossFightController.GetInstance().bossHP -= 1;
+            BossFightController.GetInstance().booHPSlider.value -= 0.01f;
             Destroy(this.gameObject,0.5f);
         }
 

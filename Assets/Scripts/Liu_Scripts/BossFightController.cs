@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 public class BossFightController : MonoBehaviour
 {
-    public static BossFightController instance;
+    private static BossFightController instance;
     
     [SerializeField] private GameObject breakableObj;
     public int count;
@@ -17,7 +17,7 @@ public class BossFightController : MonoBehaviour
     private float nextCreateTime;
     public Transform[] spwanPosition; 
     private int id;
-    public bool canshoot;
+    public static bool canshoot;
     public int bossHP;
     public Slider booHPSlider;
 
@@ -29,6 +29,7 @@ public class BossFightController : MonoBehaviour
     public Transform firePosition;
     public GameObject bulletPrefab;
 
+    private  BossFightController(){}
     private void Start()
     {
         instance = this;
@@ -37,7 +38,15 @@ public class BossFightController : MonoBehaviour
         max_count = 3;
         canshoot = false;
     }
-
+    public static BossFightController GetInstance()
+    {
+        if (instance == null)
+        {
+            instance = new BossFightController();
+        }
+        return instance;
+    }
+    
     private void Update()
     {
         if (count == 0)
@@ -50,7 +59,7 @@ public class BossFightController : MonoBehaviour
             }
         }
         
-        Debug.Log("BossHP"+bossHP);
+        // Debug.Log("BossHP"+bossHP);
     }
     
     public void CreateBox()
@@ -78,6 +87,7 @@ public class BossFightController : MonoBehaviour
 
     public void AttackBoss()
     {
+        canshoot = true;
         Debug.Log("Shoot");
         GameObject.Instantiate(bulletPrefab, firePosition);
     }
