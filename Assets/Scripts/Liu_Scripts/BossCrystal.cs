@@ -30,10 +30,7 @@ public class BossCrystal : MonoBehaviour
             if (BossFightController.instance.count<=0)
             {
 
-                    BossFightController.instance.AttackBoss();
-                    BossFightController.instance.canshoot = false;
-
-                
+                BossFightController.instance.AttackBoss();
 
             }
             

@@ -46,7 +46,6 @@ public class BossFightController : MonoBehaviour
     public void CreateBox()
     {
         id = Random.Range(0, 10);
-            //Debug.Log(id);
         for (int i = 0; i <1; i++)
         {
             if (id <= 5)
