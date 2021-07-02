@@ -17,7 +17,7 @@ public class BossFightController : MonoBehaviour
     private float nextCreateTime;
     public Transform[] spwanPosition; 
     private int id;
-    public static bool canshoot;
+    public bool canshoot;
     public int bossHP;
     public Slider booHPSlider;
 
@@ -33,7 +33,7 @@ public class BossFightController : MonoBehaviour
     private void Start()
     {
         instance = this;
-        bossHP = 100;
+        bossHP = 10;
         nextCreateTime = 0;
         max_count = 3;
         canshoot = false;
@@ -58,12 +58,11 @@ public class BossFightController : MonoBehaviour
                 nextCreateTime = 2f;
             }
         }
-        
-        // Debug.Log("BossHP"+bossHP);
     }
     
     public void CreateBox()
     {
+        canshoot = false;
         foreach (var item in originalIndex)
         {
             rawIndex.Add(item);

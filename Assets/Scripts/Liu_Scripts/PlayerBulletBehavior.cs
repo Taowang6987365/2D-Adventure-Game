@@ -6,15 +6,12 @@ using UnityEngine;
 public class PlayerBulletBehavior : MonoBehaviour
 {
     private BossFightController bc;
-    
     public float speed;
-    // Start is called before the first frame update
     void Start()
     {
         speed = 4f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);//up  
@@ -26,10 +23,8 @@ public class PlayerBulletBehavior : MonoBehaviour
         if (other.tag == "Boss")
         {
             BossFightController.GetInstance().bossHP -= 1;
-            BossFightController.GetInstance().booHPSlider.value -= 0.01f;
+            BossFightController.GetInstance().booHPSlider.value -= 0.1f;
             Destroy(this.gameObject,0.5f);
         }
-
-        
     }
 }
