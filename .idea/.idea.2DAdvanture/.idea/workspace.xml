@@ -17,8 +17,9 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Minghao_Scripts/CrystalScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Minghao_Scripts/pushablebox.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossCrystal.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ujMcWJfTRZlqScx8T6BeADXkrq" />
@@ -65,6 +66,7 @@
       <updated>1625174627872</updated>
       <workItem from="1625174635326" duration="29000" />
       <workItem from="1625174684220" duration="4469000" />
+      <workItem from="1625243696556" duration="1034000" />
     </task>
     <servers />
   </component>

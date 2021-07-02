@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 
@@ -18,6 +19,7 @@ public class BossFightController : MonoBehaviour
     private int id;
     public bool canshoot;
     public int bossHP;
+    public Slider booHPSlider;
 
     public Transform[] originalIndex;
     public List<Transform> rawIndex;
@@ -30,7 +32,7 @@ public class BossFightController : MonoBehaviour
     private void Start()
     {
         instance = this;
-        bossHP = 10;
+        bossHP = 100;
         nextCreateTime = 0;
         max_count = 3;
         canshoot = false;
@@ -47,6 +49,8 @@ public class BossFightController : MonoBehaviour
                 nextCreateTime = 2f;
             }
         }
+        
+        Debug.Log("BossHP"+bossHP);
     }
     
     public void CreateBox()
