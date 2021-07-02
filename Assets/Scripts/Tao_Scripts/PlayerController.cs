@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public bool isRunning;
     public bool canHit;
     public bool isHitByEnemy;
+    public bool doOnce;
 
     public Animator animator;
     public Vector3 velocity;
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<Controller2D>();
         jumped = false;
         timer = setTime;
+        doOnce = false;
     }
 
     private void Update()
@@ -231,8 +233,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && Mathf.Abs(velocity.x) <= 0.5f && Controller2D.isGounded)
         {
             isMoveable = false;
-            if (Controller2D.isPlayerHit)
+            if (Controller2D.isPlayerHit && !doOnce)
             {
+                doOnce = true;
                 pushablebox pb = Controller2D.hitItem.GetComponent<pushablebox>();
                 hit = new boxHit(pb.GetHit);
             }
@@ -244,10 +247,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Controller2D.isGounded)
         {
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.J) && !doOnce)
             {
                 if (Controller2D.isPlayerHit)
                 {
+                    doOnce = true;
                     pushablebox pb = Controller2D.hitItem.GetComponent<pushablebox>();
                     hit = new boxHit(pb.GetHit);
                 }
@@ -265,6 +269,7 @@ public class PlayerController : MonoBehaviour
         hit?.Invoke();
         isMoveable = true;
         bAttack = false;
+        doOnce = false;
     }
 
     IEnumerator WalkAttackAnim()
@@ -275,6 +280,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsWalkingAttack", false);
         hit?.Invoke();
         bAttack = false;
+        doOnce = false;
     }
 
     IEnumerator PlayerHurt()
