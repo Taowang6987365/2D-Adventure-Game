@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0120d099-8fe2-40f0-95e4-9a102eda2358" name="Default Changelist" comment="" />
+    <list default="true" id="2855ba79-9798-4f6f-8966-8da6b3f03814" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,17 +12,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossCrystal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SceneFader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Minghao_Scripts/CrystalScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Minghao_Scripts/pushablebox.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossCrystal.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SceneFader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/Exit.cs" />
     </changedPaths>
   </component>
-  <component name="ProjectId" id="1ujMcWJfTRZlqScx8T6BeADXkrq" />
+  <component name="ProjectId" id="1urNP4VeuvNKGDT82tGfM72Hujh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,14 +58,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0120d099-8fe2-40f0-95e4-9a102eda2358" name="Default Changelist" comment="" />
-      <created>1625174627872</created>
+      <changelist id="2855ba79-9798-4f6f-8966-8da6b3f03814" name="Default Changelist" comment="" />
+      <created>1625419723862</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1625174627872</updated>
-      <workItem from="1625174635326" duration="29000" />
-      <workItem from="1625174684220" duration="4469000" />
-      <workItem from="1625243696556" duration="1034000" />
+      <updated>1625419723862</updated>
+      <workItem from="1625419730930" duration="2241000" />
     </task>
     <servers />
   </component>

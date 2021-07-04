@@ -21,6 +21,7 @@ TagManager:
   - Environment
   - Lava
   - Boss
+  - GameEnter
   layers:
   - Default
   - TransparentFX
