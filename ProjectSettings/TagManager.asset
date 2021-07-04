@@ -21,6 +21,7 @@ TagManager:
   - Environment
   - Lava
   - Boss
+  - InitialPos
   layers:
   - Default
   - TransparentFX
