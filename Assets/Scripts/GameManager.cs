@@ -39,8 +39,6 @@ public class GameManager : MonoBehaviour
             currentLevel = InGameSaveManager.instance.activeSave.currentLevel;
         }
 
-
-
         LoadLevel(currentLevel);
         //LoadLevel(nextLevel);
     }

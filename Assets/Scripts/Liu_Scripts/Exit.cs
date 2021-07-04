@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
-    public string targetSceneName;
+    public string sceneName;
     public string currentScene;
     [SerializeField] private string newScecnePassword;
 
@@ -15,9 +15,8 @@ public class Exit : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             PlayerStatus.instance.scenenPassword = newScecnePassword;
-            //SceneManager.LoadScene(targetSceneName, LoadSceneMode.Additive);
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync(currentScene);
-            FindObjectOfType<SceneFader>().FadeTo(targetSceneName);
         }
     }
 }

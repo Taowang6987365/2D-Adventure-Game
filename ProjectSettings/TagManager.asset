@@ -21,11 +21,6 @@ TagManager:
   - Environment
   - Lava
   - Boss
-<<<<<<< HEAD
-  - GameEnter
-=======
-  - InitialPos
->>>>>>> main
   layers:
   - Default
   - TransparentFX
