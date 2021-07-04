@@ -274,13 +274,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1200678060}
     m_Modifications:
+    - target: {fileID: 2168000228916787870, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
+      propertyPath: setMoveDistance
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.478111
+      value: -49.57
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2136,7 +2140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.506905
+      value: 49.41
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2927,17 +2931,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1200678060}
     m_Modifications:
+    - target: {fileID: 2168000228916787870, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
+      propertyPath: setMoveDistance
+      value: 650
+      objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.83
+      value: 9.68
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.31
+      value: 2.41
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4404,13 +4412,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1200678060}
     m_Modifications:
+    - target: {fileID: 2168000228916787870, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
+      propertyPath: setMoveDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.04
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4800,13 +4812,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1200678060}
     m_Modifications:
+    - target: {fileID: 2168000228916787870, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
+      propertyPath: setMoveDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.210503
+      value: -51.81
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5364,13 +5380,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1200678060}
     m_Modifications:
+    - target: {fileID: 2168000228916787870, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
+      propertyPath: setMoveDistance
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.626099
+      value: -40.88
       objectReference: {fileID: 0}
     - target: {fileID: 2168000228916787874, guid: f634fefc09eea7d40ba717d13c46acd9, type: 3}
       propertyPath: m_LocalPosition.y
