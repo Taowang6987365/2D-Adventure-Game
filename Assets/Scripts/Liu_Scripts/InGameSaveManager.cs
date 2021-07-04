@@ -34,6 +34,8 @@ public class InGameSaveManager : MonoBehaviour
         {
             DeletSaveData();
         }
+
+
     }
 
     public void Save()
