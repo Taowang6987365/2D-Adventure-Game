@@ -22,12 +22,12 @@ public class SceneFader : MonoBehaviour
 
     IEnumerator FadeIn()
     {
-        alpha = 1;
+        alpha = 2.5f;
         while(true)
         {
             alpha -= Time.deltaTime;
             blackImage.color = new Color(0, 0, 0, alpha);
-            yield return new WaitForSeconds(0f);
+            yield return null;
         }
     }
 
