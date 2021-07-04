@@ -21,8 +21,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossCrystal.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/Exit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SceneFader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/Exit.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ujMcWJfTRZlqScx8T6BeADXkrq" />
