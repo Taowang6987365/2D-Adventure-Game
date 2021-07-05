@@ -1484,6 +1484,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1665339490}
     m_Modifications:
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: setMoveDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: platformMoveDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2351,7 +2359,7 @@ GameObject:
   - component: {fileID: 2109736301}
   - component: {fileID: 2109736300}
   - component: {fileID: 2109736302}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap
   m_TagString: Environment
   m_Icon: {fileID: 0}

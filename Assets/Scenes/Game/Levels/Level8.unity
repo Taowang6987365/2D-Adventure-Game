@@ -30363,16 +30363,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1439427395}
     m_Modifications:
     - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
-      propertyPath: platformMoveDistance
+      propertyPath: setMoveDistance
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: platformMoveDistance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.56006
+      value: -36.79
       objectReference: {fileID: 0}
     - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: m_LocalPosition.y

@@ -8,7 +8,7 @@ public class PlatformController : RaycastController
     [SerializeField] private PlayerStatus playerStat;
 
     public LayerMask passengerMask;
-    public float platformMoveDistance = 0f;
+    private float platformMoveDistance = 0f;
     public float setMoveDistance = 100f;
     public bool isHorizontal;
     public bool resetOnPlayerDeath = true;
