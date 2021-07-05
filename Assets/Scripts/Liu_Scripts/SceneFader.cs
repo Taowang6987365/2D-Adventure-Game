@@ -38,9 +38,8 @@ public class SceneFader : MonoBehaviour
         {
             alpha += Time.deltaTime;
             blackImage.color = new Color(0, 0, 0, alpha);
+            SceneManager.LoadScene((sceneName),LoadSceneMode.Additive);
             yield return null;
         }
-
-        SceneManager.LoadScene((sceneName));
     }
 }
