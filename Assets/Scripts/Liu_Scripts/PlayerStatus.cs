@@ -60,6 +60,11 @@ public class PlayerStatus : MonoBehaviour
             deathTimer -= Time.deltaTime;
             if(deathTimer <= 0)
             {
+                if(!PlayerController.playerControllerInstance.enabled)
+                {
+                    PlayerController.playerControllerInstance.enabled = true;
+                    PlayerController.playerControllerInstance.boxCollider.enabled = true;
+                }
                 ResetGame();
                 deathTimer = 1f;
             }

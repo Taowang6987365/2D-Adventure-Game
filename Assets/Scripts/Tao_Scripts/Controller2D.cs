@@ -266,6 +266,7 @@ public class Controller2D : RaycastController
             {
                 gameObject.GetComponent<PlayerStatus>().lives = 0;
             }
+
         }
 
         if (gameObject.CompareTag("PushItems"))
@@ -274,6 +275,16 @@ public class Controller2D : RaycastController
             if (hit.collider.CompareTag("Enemy"))
             {
                 enermy.isDead = true;
+            }
+        }
+
+        if(gameObject.CompareTag("FallingStone"))
+        {
+            if(hit.collider.CompareTag("Player"))
+            {
+                PlayerStatus.instance.lives -= 3;
+                PlayerController.playerControllerInstance.boxCollider.enabled = false;
+                PlayerController.playerControllerInstance.enabled = false;
             }
         }
     }

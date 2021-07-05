@@ -17,12 +17,14 @@ public class PlayerController : MonoBehaviour
     public bool isHitByEnemy;
     public bool doOnce;
 
+    public BoxCollider2D boxCollider;
     public Animator animator;
     public Vector3 velocity;
     public static bool isMoveable;
     public static float gravity;
     public static float VelocityX;
     public static float VelocityY;
+    public static PlayerController playerControllerInstance;
 
     float accelerationTimeAirborne = 0.2f;
     float accelerationTimeGrounded = 0.1f;
@@ -42,6 +44,8 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        playerControllerInstance = this;
+        boxCollider = gameObject.GetComponent<BoxCollider2D>();
         //Simulate gravity
         //x = vt + 1/2at^2 (v = 0)
         //a = 2x / t^2
