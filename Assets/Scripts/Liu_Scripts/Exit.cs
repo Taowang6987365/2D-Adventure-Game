@@ -15,9 +15,10 @@ public class Exit : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             PlayerStatus.instance.scenenPassword = newScecnePassword;
+            FindObjectOfType<SceneFader>().FadeTo(sceneName);
             //SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync(currentScene);
-            FindObjectOfType<SceneFader>().FadeTo(sceneName);
+
         }
     }
 }
