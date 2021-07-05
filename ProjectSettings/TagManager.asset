@@ -21,6 +21,8 @@ TagManager:
   - Environment
   - Lava
   - Boss
+  - InitialPos
+  - FallingStone
   layers:
   - Default
   - TransparentFX
