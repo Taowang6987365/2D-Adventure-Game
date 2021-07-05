@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwingHammer : MonoBehaviour
 {
     private Animator anim;
-    public float SwingSpeed = 1;
+    public float SwingSpeed = 1f;
     [SerializeField] private float delay = 0f;
     // Start is called before the first frame update
     void Start()
