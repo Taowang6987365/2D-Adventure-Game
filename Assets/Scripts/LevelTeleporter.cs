@@ -37,9 +37,9 @@ public class LevelTeleporter : MonoBehaviour
         if (nextLevelName != "Title")
         {
             currentLevelName = nextLevelName;
-            InGameSaveManager.instance.activeSave.currentLevel = currentLevelName;
+            InGameSaveManager.currentSaveData.currentLevel = currentLevelName;
             GameManager.Instance.LoadLevel(nextLevelName);
-            InGameSaveManager.instance.Save();
+            InGameSaveManager.Save();
             Debug.Log("current  level is " + currentLevelName);
             //InGameSaveManager.instance.Load();
         }
@@ -67,9 +67,9 @@ public class LevelTeleporter : MonoBehaviour
             if (nextLevelName != "Title")
             {
                 currentLevelName = nextLevelName;
-                InGameSaveManager.instance.activeSave.currentLevel = currentLevelName;
+                InGameSaveManager.currentSaveData.currentLevel = currentLevelName;
                 GameManager.Instance.LoadLevel(nextLevelName);
-                InGameSaveManager.instance.Save();
+                InGameSaveManager.Save();
                 Debug.Log("current  level is " + currentLevelName);
                 //InGameSaveManager.instance.Load();
             }
