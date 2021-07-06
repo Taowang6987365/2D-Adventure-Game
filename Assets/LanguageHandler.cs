@@ -22,15 +22,16 @@ public class LanguageHandler : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
     // Start is called before the first frame update
     void Start()
     {
-        path = "D:/Unity/Adventure/Assets/Language/Language.json";
+        path = "./Assets/Language/Language.json";
         jsonstr = System.IO.File.ReadAllText(path);
         logs = JsonUtility.FromJson<Dialogs>(jsonstr);
         currentLang = 1;
-        //Debug.Log(logs.eng[1]);
+       // Debug.Log(path);
     }
     private void Update()
     {
@@ -56,5 +57,5 @@ public class LanguageHandler : MonoBehaviour
         }
     }
 
-
+    
 }
