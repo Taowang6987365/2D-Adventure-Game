@@ -10,14 +10,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/InGameSaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TitleManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelTeleporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/CheckPoint.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerStatus.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/InGameSaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uwusooExLlcmOykvPIkJLJ9CdS" />
@@ -62,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625589185577</updated>
-      <workItem from="1625589194445" duration="962000" />
+      <workItem from="1625589194445" duration="3477000" />
     </task>
     <servers />
   </component>
