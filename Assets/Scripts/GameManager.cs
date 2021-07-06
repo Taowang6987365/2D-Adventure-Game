@@ -30,13 +30,13 @@ public class GameManager : MonoBehaviour
         {
             InGameSaveManager.instance.levelName = LevelName.Level1;
         }
-        else if (InGameSaveManager.instance.activeSave.currentLevel == "Level2")
+        else if (InGameSaveManager.currentSaveData.currentLevel == "Level2")
         {
-            currentLevel = InGameSaveManager.instance.activeSave.currentLevel;
+            currentLevel = InGameSaveManager.currentSaveData.currentLevel;
         }
-        else if(InGameSaveManager.instance.activeSave.currentLevel == "Level3")
+        else if(InGameSaveManager.currentSaveData.currentLevel == "Level3")
         {
-            currentLevel = InGameSaveManager.instance.activeSave.currentLevel;
+            currentLevel = InGameSaveManager.currentSaveData.currentLevel;
         }
 
         LoadLevel(currentLevel);

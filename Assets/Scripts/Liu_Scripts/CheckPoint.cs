@@ -22,7 +22,7 @@ public class CheckPoint : MonoBehaviour
             PlayerStatus.instance.checkPoint = checkPoint;
             if(checkPoint != null)
             {
-                InGameSaveManager.instance.activeSave.respawnPosition = new Vector3(PlayerStatus.instance.checkPoint.transform.position.x, playerYPos, 0);
+                InGameSaveManager.currentSaveData.respawnPosition = new Vector3(PlayerStatus.instance.checkPoint.transform.position.x, playerYPos, 0);
             }
         }
     }

@@ -19,15 +19,15 @@ public class TitleManager : MonoBehaviour
 
     public void Save()
     {
-        InGameSaveManager.instance.activeSave.saveName = inputField.text;
+        InGameSaveManager.currentSaveData.saveName = inputField.text;
         //SaveManager.Save();
-        InGameSaveManager.instance.Save();
+        InGameSaveManager.Save();
     }
 
     public void Load()
     {
         //SaveManager.Load();
-        InGameSaveManager.instance.Load();
-        inputField.text = InGameSaveManager.instance.activeSave.saveName;
+        InGameSaveManager.Load();
+        inputField.text = InGameSaveManager.currentSaveData.saveName;
     }
 }

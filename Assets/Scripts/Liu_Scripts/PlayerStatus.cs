@@ -94,25 +94,25 @@ public class PlayerStatus : MonoBehaviour
     {
         if (collision.CompareTag("DeadZone"))
         {
-            InGameSaveManager.instance.activeSave.playerLives = lives;
+            InGameSaveManager.currentSaveData.playerLives = lives;
             playerController.HitPlayer();
         }
         if (collision.tag == ("CheckPoint"))
         {
             if(checkPoint != null)
             {
-                InGameSaveManager.instance.activeSave.respawnPosition = new Vector2(checkPoint.transform.position.x, playerYPos);
+                InGameSaveManager.currentSaveData.respawnPosition = new Vector2(checkPoint.transform.position.x, playerYPos);
             }
 
-            InGameSaveManager.instance.Save();
+            InGameSaveManager.Save();
         }
     }
 
     private void ResetGame()
     {
         isDead = true;
-        transformPos.position = InGameSaveManager.instance.activeSave.respawnPosition;
-        InGameSaveManager.instance.Load();//dead then reload
+        transformPos.position = InGameSaveManager.currentSaveData.respawnPosition;
+        InGameSaveManager.Load();//dead then reload
         //SceneManager.LoadScene("Title");
     }
 
