@@ -22,7 +22,7 @@ public class PlayerStatus : MonoBehaviour
 
     public static PlayerStatus instance;
     [SerializeField] private Text liveText;
-    float deathTimer = 3f;
+    float deathTimer = 2f;
 
 
 
@@ -70,7 +70,7 @@ public class PlayerStatus : MonoBehaviour
                 //fadeInCanvas.gameObject.SetActive(true);
                 FindObjectOfType<SceneFader>().PlayerDeathFade();
                 ResetGame();
-                deathTimer = 3f;
+                deathTimer = 2f;
             }
         }
 

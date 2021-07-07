@@ -302,7 +302,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isDead", true);
         isMoveable = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         animator.SetBool("isDead", false);
     }
 
