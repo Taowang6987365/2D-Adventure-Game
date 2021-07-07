@@ -21,7 +21,7 @@ public class PlayerStatus : MonoBehaviour
 
     public static PlayerStatus instance;
     [SerializeField] private Text liveText;
-    float deathTimer = 1f;
+    float deathTimer = 3f;
 
 
 
@@ -66,7 +66,7 @@ public class PlayerStatus : MonoBehaviour
                     PlayerController.playerControllerInstance.boxCollider.enabled = true;
                 }
                 ResetGame();
-                deathTimer = 1f;
+                deathTimer = 3f;
             }
         }
 
@@ -112,6 +112,7 @@ public class PlayerStatus : MonoBehaviour
     {
         isDead = true;
         transformPos.position = InGameSaveManager.currentSaveData.respawnPosition;
+        PlayerController.isMoveable = true;
         InGameSaveManager.Load();//dead then reload
         //SceneManager.LoadScene("Title");
     }
