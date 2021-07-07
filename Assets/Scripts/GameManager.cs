@@ -63,13 +63,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if(PlayerController.playerControllerInstance.Player.GetButtonDown("Menu") && !isPaused)
         {
             PausePannel.SetActive(true);
             Time.timeScale = 0;
             isPaused = true;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        else if(PlayerController.playerControllerInstance.Player.GetButtonDown("Menu") && isPaused)
         {
             BackToGame();
         }
@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
 
     public void BackToMenu()
     {
+        Debug.Log("123");
         SceneManager.LoadScene("Menu");
     }
 }

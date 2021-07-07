@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     public delegate void boxHit();
     public boxHit hit;
 
+    public Rewired.Player Player { get => player; set => player = value; }
+
     private void Awake()
     {
         playerControllerInstance = this;
