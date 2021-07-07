@@ -12,6 +12,7 @@ public class PlayerStatus : MonoBehaviour
     public float playerYPos;
     public bool isDead;
     public string scenenPassword;//store the name when player move to another scene
+    public Canvas fadeInCanvas;
 
     public GameObject checkPoint;
     public GameObject checkPointAfter;
@@ -87,6 +88,7 @@ public class PlayerStatus : MonoBehaviour
             isDead = false;
             lives = 3;
             resteTime = 0.2f;
+            fadeInCanvas.gameObject.SetActive((false));
         }
     }
 
@@ -113,6 +115,7 @@ public class PlayerStatus : MonoBehaviour
         isDead = true;
         transformPos.position = InGameSaveManager.currentSaveData.respawnPosition;
         PlayerController.isMoveable = true;
+        fadeInCanvas.gameObject.SetActive(true);
         InGameSaveManager.Load();//dead then reload
         //SceneManager.LoadScene("Title");
     }
