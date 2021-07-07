@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 [RequireComponent(typeof(Controller2D))]
 public class PlayerController : MonoBehaviour
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float timeToJumpApex = 0.8f;
     public float moveSpeed = 6f;
     public float setTime = 0.1f;
+    public float animationTime = 0.6f;
+    public float fallModifier = 0.8f;
     public bool facingRight = true;
     public bool bAttack;//for stand attack anim
     public bool isFinished;
@@ -34,10 +37,9 @@ public class PlayerController : MonoBehaviour
 
     Controller2D controller;
     [SerializeField] private float timer;
-    public float animationTime = 0.6f;
-
-    public float fallModifier = 0.8f;
     [SerializeField] private GameObject guide;
+    [SerializeField] private int playerID = 0;
+    [SerializeField] private Rewired.Player player;
 
     public delegate void boxHit();
     public boxHit hit;
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
         jumped = false;
         timer = setTime;
         doOnce = false;
+        player = ReInput.players.GetPlayer(playerID);
     }
 
     private void Update()
@@ -73,7 +76,7 @@ public class PlayerController : MonoBehaviour
             velocity.x = 0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
+        if (player.GetButtonDown("Jump") && controller.collisions.below)
         {
 
             Controller2D.isGounded = false;
@@ -100,13 +103,13 @@ public class PlayerController : MonoBehaviour
             PlayerMoveAttack();
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && animator.GetFloat("Speed") >= 5.5f)
+        if (player.GetButton("Accelerate") && animator.GetFloat("Speed") >= 5.5f)
         {
             animator.SetBool("IsRunning", true);
             moveSpeed = 9f;
             isRunning = true;
         }
-        else if (Input.GetKey(KeyCode.LeftShift) && animator.GetFloat("Speed") <= 0.5f)
+        else if (player.GetButton("Accelerate") && animator.GetFloat("Speed") <= 0.5f)
         {
             animator.SetBool("IsRunning", false);
         }
@@ -132,7 +135,7 @@ public class PlayerController : MonoBehaviour
         //when stand attack, disable player movement
         if (isMoveable)
         {
-            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            Vector2 input = new Vector2(player.GetAxisRaw("Move Horizontal"), player.GetAxisRaw("Move Vertical"));
 
             //if player stands on something and try to jump
             if (jumped)
@@ -234,7 +237,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayerAttack()
     {
-        if (Input.GetKeyDown(KeyCode.J) && Mathf.Abs(velocity.x) <= 0.5f && Controller2D.isGounded)
+        if (player.GetButtonDown("Attack") && Mathf.Abs(velocity.x) <= 0.5f && Controller2D.isGounded)
         {
             isMoveable = false;
             if (Controller2D.isPlayerHit && !doOnce)
@@ -251,7 +254,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Controller2D.isGounded)
         {
-            if (Input.GetKeyDown(KeyCode.J) && !doOnce)
+            if (player.GetButtonDown("Attack") && !doOnce)
             {
                 if (Controller2D.isPlayerHit)
                 {
