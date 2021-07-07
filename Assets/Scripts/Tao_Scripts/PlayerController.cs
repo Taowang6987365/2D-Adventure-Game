@@ -301,7 +301,8 @@ public class PlayerController : MonoBehaviour
     IEnumerator PlayerDeath()
     {
         animator.SetBool("isDead", true);
-        yield return new WaitForSeconds(1f);
+        isMoveable = false;
+        yield return new WaitForSeconds(3f);
         animator.SetBool("isDead", false);
     }
 
