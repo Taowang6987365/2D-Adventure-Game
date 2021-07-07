@@ -57,7 +57,7 @@ public class PlayerStatus : MonoBehaviour
         if (lives <= 0)
         {
             lives = 0;
-            FindObjectOfType<SceneFader>().PlayerDeathFade();
+            
             playerController.Death();
             deathTimer -= Time.deltaTime;
             if(deathTimer <= 0)
@@ -68,6 +68,7 @@ public class PlayerStatus : MonoBehaviour
                     PlayerController.playerControllerInstance.boxCollider.enabled = true;
                 }
                 //fadeInCanvas.gameObject.SetActive(true);
+                FindObjectOfType<SceneFader>().PlayerDeathFade();
                 ResetGame();
                 deathTimer = 3f;
             }
