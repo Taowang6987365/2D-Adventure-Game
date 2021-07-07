@@ -19,7 +19,12 @@ public class SceneFader : MonoBehaviour
     {
         StartCoroutine(FadeOut(_sceneName));
     }
-    public IEnumerator FadeIn()
+
+    public void PlayerDeathFade()
+    {
+        StartCoroutine((FadeIn()));
+    }
+    IEnumerator FadeIn()
     {
         alpha = 2.5f;
         while(true)

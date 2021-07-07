@@ -57,6 +57,7 @@ public class PlayerStatus : MonoBehaviour
         if (lives <= 0)
         {
             lives = 0;
+            FindObjectOfType<SceneFader>().PlayerDeathFade();
             playerController.Death();
             deathTimer -= Time.deltaTime;
             if(deathTimer <= 0)
@@ -66,6 +67,7 @@ public class PlayerStatus : MonoBehaviour
                     PlayerController.playerControllerInstance.enabled = true;
                     PlayerController.playerControllerInstance.boxCollider.enabled = true;
                 }
+                //fadeInCanvas.gameObject.SetActive(true);
                 ResetGame();
                 deathTimer = 3f;
             }
@@ -78,6 +80,7 @@ public class PlayerStatus : MonoBehaviour
 
         if (isDead)
         {
+
             PlayerController.isMoveable = false;
             resteTime -= Time.deltaTime;
         }
@@ -88,7 +91,6 @@ public class PlayerStatus : MonoBehaviour
             isDead = false;
             lives = 3;
             resteTime = 0.2f;
-            fadeInCanvas.gameObject.SetActive((false));
         }
     }
 
@@ -115,7 +117,6 @@ public class PlayerStatus : MonoBehaviour
         isDead = true;
         transformPos.position = InGameSaveManager.currentSaveData.respawnPosition;
         PlayerController.isMoveable = true;
-        fadeInCanvas.gameObject.SetActive(true);
         InGameSaveManager.Load();//dead then reload
         //SceneManager.LoadScene("Title");
     }
