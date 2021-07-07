@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
         isLevelLoaded = true;
         currentLevel = levelName;
         SceneManager.LoadScene(currentLevel, LoadSceneMode.Additive);
+        InGameSaveManager.currentSaveData.currentLevel = currentLevel;
     }
 
     public void ReturnToTitle()

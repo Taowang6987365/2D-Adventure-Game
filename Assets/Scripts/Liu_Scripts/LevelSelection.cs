@@ -9,13 +9,31 @@ using UnityEngine.SceneManagement;
 
 public class LevelSelection : MonoBehaviour
 {
-    [SerializeField] private bool unlocked;//default is false
+    public bool unlocked;//default is false
     public Image unlockImage;
+    [SerializeField] private string chapterName; 
 
     private void Update()
     {
         UpdateLevelImage();
     }
+
+    public void UpdateLevelStatus()
+    {
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level4" && chapterName =="chapterOne")
+        {
+            unlocked = true;
+        }
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level7" && chapterName =="chapterTwo")
+        {
+            unlocked = true;
+        }
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level9" && chapterName =="chapterThree")
+        {
+            unlocked = true;
+        }
+    }
+    
 
     public void UpdateLevelImage()
     {
@@ -25,7 +43,7 @@ public class LevelSelection : MonoBehaviour
         }
         else//if unlock is true, player can play this level
         {
-            unlockImage.gameObject.SetActive(true);
+            unlockImage.gameObject.SetActive(false);
         }
         
     }
