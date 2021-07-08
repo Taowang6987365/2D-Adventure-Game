@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject PausePannel;
+    public GameObject FirstPauseBtn;
     bool isPaused;
 
     public string startingLevel = "Level1";
@@ -66,6 +68,8 @@ public class GameManager : MonoBehaviour
         if(PlayerController.playerControllerInstance.Player.GetButtonDown("Menu") && !isPaused)
         {
             PausePannel.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(FirstPauseBtn);
             Time.timeScale = 0;
             isPaused = true;
         }

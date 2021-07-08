@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class LoadManager : MonoBehaviour
 {
     public GameObject loadingScreen;
-    private AsyncOperation async;
-    [SerializeField] private Slider progressbar;
     public GameObject settingCanvas;
     public GameObject menuCanvas;
+    private AsyncOperation async;
+    [SerializeField] private Slider progressbar;
+
+    //In the Menu scene
+    public GameObject settingBtn;
+    public GameObject settingFirstBtn;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         menuCanvas.SetActive(true);
         progressbar.value = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -52,6 +55,7 @@ public class LoadManager : MonoBehaviour
     {
         menuCanvas.SetActive(false);
         settingCanvas.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(settingFirstBtn);
     }
 
     public void CloseSettingPanel()
