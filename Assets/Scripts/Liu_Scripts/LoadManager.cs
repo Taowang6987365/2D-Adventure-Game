@@ -28,7 +28,7 @@ public class LoadManager : MonoBehaviour
     {
         
     }
-    public IEnumerator LoadLevel(string sceneName)
+    IEnumerator LoadLevel(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync("Game");//load target scene
         loadingScreen.SetActive(true);
@@ -44,6 +44,11 @@ public class LoadManager : MonoBehaviour
     {
         StartCoroutine(LoadLevel("Game"));
 
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Title");
     }
 
     public void QuitGame()
