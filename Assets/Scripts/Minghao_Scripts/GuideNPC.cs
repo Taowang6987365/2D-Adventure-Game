@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GuideNPC : MonoBehaviour
 {
     [SerializeField] private Text dialog;
+    private LanguageHandler lang;
 
 
     private IEnumerator ShowDialog()
@@ -13,10 +14,10 @@ public class GuideNPC : MonoBehaviour
         yield return new WaitForSeconds(5f);
         gameObject.SetActive(false);
     }
-    public void ShowUp(string phrase)
+    public void ShowUp(int logID)
     {
-       
-        dialog.text = phrase;
+        
+        dialog.text = lang.GetText(logID);
         StartCoroutine("ShowDialog");
     }
 
@@ -25,6 +26,8 @@ public class GuideNPC : MonoBehaviour
     void Start()
     {
         gameObject.SetActive(false);
+        lang = LanguageHandler.instance;
+
     }
 
     // Update is called once per frame

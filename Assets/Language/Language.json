@@ -2,13 +2,23 @@
     "eng":[
         "Start",
         "Setting",
-        "Quit"
+        "Quit",
+        "Ah those are called bounceroom, they will help you get to higher place you usually can't",
+        "Seems this door is locked by some sort of spell, there must be a medium for the spell nearby",
+        "The door is locked, we must look for another way",
+        "There are crackles on the wall there, see if you can make a hole from there",
+        "If you wan't run faster, simply hold shift button"
     ],
 
     "chn":[
         "开始",
         "设定",
-        "退出"
+        "退出",
+        "这些东西叫弹跳菇，他可以帮我们到达更高的地方",
+        "看起来这扇门被某种魔法封住了",
+        "上锁了，让我们看看有没有别的路吧",
+        "那些墙体看起来有很多裂隙，也许你能打破他们",
+        "你可以按住shift来让自己跑的更快"
 
     ]
 

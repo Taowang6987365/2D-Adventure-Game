@@ -7067,6 +7067,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
+      propertyPath: logID
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
       value: A key, seems we have to turn back anyway
       objectReference: {fileID: 0}
@@ -94435,6 +94439,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
+      propertyPath: logID
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
       value: It seems we are traped here, There must be another way out
       objectReference: {fileID: 0}
@@ -95156,6 +95164,10 @@ PrefabInstance:
     - target: {fileID: 6779353934695669520, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
+      propertyPath: logID
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
