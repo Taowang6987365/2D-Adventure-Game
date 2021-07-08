@@ -12,7 +12,6 @@ public class PlayerStatus : MonoBehaviour
     public float playerYPos;
     public bool isDead;
     public string scenenPassword;//store the name when player move to another scene
-    public Canvas fadeInCanvas;
 
     public GameObject checkPoint;
     public GameObject checkPointAfter;
