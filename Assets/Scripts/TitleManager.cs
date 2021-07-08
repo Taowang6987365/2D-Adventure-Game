@@ -38,4 +38,21 @@ public class TitleManager : MonoBehaviour
         mainCanvas.gameObject.SetActive(false);
         levelCanvas.gameObject.SetActive(true);
     }
+
+    public void StartChapterOne()
+    {
+       SceneManager.LoadScene("Game");
+       GameManager.startingLevel = "Level1";
+    }
+    public void StartChapterTwo()
+    {
+        SceneManager.LoadScene("Game");
+        GameManager.startingLevel = "Level4";
+    }
+    
+    public void StartChapterThree()
+    {
+        SceneManager.LoadScene("Game");
+        GameManager.startingLevel = "Level7";
+    }
 }

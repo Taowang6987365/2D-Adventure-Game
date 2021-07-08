@@ -19,6 +19,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerStatus.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TitleManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -66,7 +67,7 @@
       <workItem from="1625692184277" duration="2579000" />
       <workItem from="1625695471850" duration="1031000" />
       <workItem from="1625767303554" duration="2019000" />
-      <workItem from="1625770586135" duration="776000" />
+      <workItem from="1625770586135" duration="2363000" />
     </task>
     <servers />
   </component>
