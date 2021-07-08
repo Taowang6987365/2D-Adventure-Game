@@ -14,8 +14,8 @@ public class LoadManager : MonoBehaviour
     [SerializeField] private Slider progressbar;
 
     //In the Menu scene
-    public GameObject settingBtn;
     public GameObject settingFirstBtn;
+    public GameObject backFirstBtn;
 
 
     void Start()
@@ -55,6 +55,7 @@ public class LoadManager : MonoBehaviour
     {
         menuCanvas.SetActive(false);
         settingCanvas.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(settingFirstBtn);
     }
 
@@ -62,5 +63,7 @@ public class LoadManager : MonoBehaviour
     {
         menuCanvas.SetActive(true);
         settingCanvas.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(backFirstBtn);
     }
 }

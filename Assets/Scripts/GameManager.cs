@@ -58,10 +58,6 @@ public class GameManager : MonoBehaviour
         InGameSaveManager.currentSaveData.currentLevel = currentLevel;
     }
 
-    public void ReturnToTitle()
-    {
-        SceneManager.LoadScene("Title");
-    }
 
     private void Update()
     {
@@ -77,24 +73,20 @@ public class GameManager : MonoBehaviour
         {
             BackToGame();
         }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReturnToTitle();
-        }
     }
 
+    public void ReturnToTitle()
+    {
+        SceneManager.LoadScene("Title");
+    }
     public void BackToGame()
     {
-        Debug.Log("Click");
         PausePannel.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
     }
-
     public void BackToMenu()
     {
-        Debug.Log("123");
         SceneManager.LoadScene("Menu");
     }
 }
