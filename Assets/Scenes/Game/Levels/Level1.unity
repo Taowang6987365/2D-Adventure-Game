@@ -72973,6 +72973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTeleporter
       objectReference: {fileID: 0}
+    - target: {fileID: 788773932471696088, guid: 96f052c26214cd747a8f83a89aa7be59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1183426176894891655, guid: 96f052c26214cd747a8f83a89aa7be59, type: 3}
       propertyPath: nextLevelName
       value: Level2
@@ -73181,6 +73185,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 737739410}
     m_Modifications:
+    - target: {fileID: 2533542886232425132, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533542886242056770, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533542886242056770, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2533542886242056771, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -73191,7 +73207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2533542886242056771, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2533542886242056771, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -73268,6 +73284,10 @@ PrefabInstance:
     - target: {fileID: 2533542886242056775, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
       propertyPath: m_Name
       value: FadeInCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533542886242056775, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92d1fb2df3d08444a9dfef8f71ccb38f, type: 3}
@@ -73571,6 +73591,10 @@ PrefabInstance:
     - target: {fileID: 7647921674101417445, guid: 3d970f0aa6845834ab2995492377bed1, type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7647921674101417445, guid: 3d970f0aa6845834ab2995492377bed1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7647921674101417466, guid: 3d970f0aa6845834ab2995492377bed1, type: 3}
       propertyPath: m_RootOrder

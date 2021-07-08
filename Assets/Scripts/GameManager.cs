@@ -73,10 +73,16 @@ public class GameManager : MonoBehaviour
         {
             BackToGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ReturnToTitle();
+        }
     }
 
     public void BackToGame()
     {
+        Debug.Log("Click");
         PausePannel.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;

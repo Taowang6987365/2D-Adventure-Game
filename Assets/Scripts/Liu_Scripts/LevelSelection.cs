@@ -16,6 +16,7 @@ public class LevelSelection : MonoBehaviour
     private void Update()
     {
         UpdateLevelImage();
+        UpdateLevelStatus();
     }
 
     public void UpdateLevelStatus()
@@ -24,11 +25,11 @@ public class LevelSelection : MonoBehaviour
         {
             unlocked = true;
         }
-        if (InGameSaveManager.currentSaveData.currentLevel == "Level7" && chapterName =="chapterTwo")
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level7" && chapterName =="chapterTwo" || chapterName =="chapterOne")
         {
             unlocked = true;
         }
-        if (InGameSaveManager.currentSaveData.currentLevel == "Level9" && chapterName =="chapterThree")
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level9" && chapterName =="chapterThree"|| chapterName =="chapterTwo" || chapterName =="chapterOne")
         {
             unlocked = true;
         }

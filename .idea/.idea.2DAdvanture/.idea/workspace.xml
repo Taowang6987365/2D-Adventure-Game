@@ -15,6 +15,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Tao_Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SceneFader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerStatus.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/InGameSaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -59,7 +62,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625692173192</updated>
-      <workItem from="1625692184277" duration="1737000" />
+      <workItem from="1625692184277" duration="2579000" />
+      <workItem from="1625695471850" duration="1031000" />
+      <workItem from="1625767303554" duration="1014000" />
     </task>
     <servers />
   </component>

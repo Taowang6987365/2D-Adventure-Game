@@ -23,7 +23,7 @@ public class InGameSaveManager : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(currentSaveData.currentLevel);
+        Debug.Log(currentSaveData.currentLevel);
         //for test
         if (Input.GetKeyDown(KeyCode.K))
         {
