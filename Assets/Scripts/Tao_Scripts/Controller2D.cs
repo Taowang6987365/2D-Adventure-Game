@@ -264,6 +264,7 @@ public class Controller2D : RaycastController
 
             if (hit.collider.CompareTag("Lava"))
             {
+                Lava.lava.isReset = false;
                 gameObject.GetComponent<PlayerStatus>().lives = 0;
             }
 

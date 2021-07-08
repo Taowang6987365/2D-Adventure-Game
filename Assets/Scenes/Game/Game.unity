@@ -1672,7 +1672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1431418308639610993, guid: 960ebcf1906686a41b284585f2fca12f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1431418308639611007, guid: 960ebcf1906686a41b284585f2fca12f, type: 3}
       propertyPath: m_RootOrder
@@ -1727,6 +1727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6930873624399563056, guid: 2245c9a0370675f45ba47883fd667e24, type: 3}
+      propertyPath: nextLevel
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6930873624399563056, guid: 2245c9a0370675f45ba47883fd667e24, type: 3}
       propertyPath: PausePannel
       value: 
