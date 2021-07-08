@@ -73,11 +73,7 @@ public class GameManager : MonoBehaviour
         {
             BackToGame();
         }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReturnToTitle();
-        }
+        
     }
 
     public void BackToGame()

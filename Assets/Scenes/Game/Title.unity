@@ -1650,8 +1650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 329455183}
-  mainCanvas: {fileID: 0}
-  levelCanvas: {fileID: 0}
+  mainCanvas: {fileID: 1984550401}
+  levelCanvas: {fileID: 2123264675}
 --- !u!4 &1079238586
 Transform:
   m_ObjectHideFlags: 0
@@ -2043,7 +2043,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1079238585}
         m_TargetAssemblyTypeName: TitleManager, Assembly-CSharp
-        m_MethodName: Save
+        m_MethodName: SelevtLevelCanvas
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3515,7 +3515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2123264673
 MonoBehaviour:
   m_ObjectHideFlags: 0
