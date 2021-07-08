@@ -89,7 +89,7 @@ public class InGameSaveManager : MonoBehaviour
         }
         catch (Exception e)
         {
-            Debug.LogError($"Save error... {e.Message}");
+            //Debug.LogError($"Save error... {e.Message}");
         }
     }
     
@@ -113,11 +113,11 @@ public class InGameSaveManager : MonoBehaviour
             }
             catch (Exception e)
             {
-                Debug.LogError($"Load error... {e.Message}");
+                //Debug.LogError($"Load error... {e.Message}");
             }
             finally
             {
-                Debug.Log("Load successful.");
+                //Debug.Log("Load successful.");
                 if (file != null)
                 {
                     file.Close();
