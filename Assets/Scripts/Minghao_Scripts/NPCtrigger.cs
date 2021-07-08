@@ -5,7 +5,8 @@ using UnityEngine;
 public class NPCtrigger : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private string phrase = "";
+    //[SerializeField] private string phrase = "";
+    [SerializeField]private int logID;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class NPCtrigger : MonoBehaviour
         if(collision.tag=="Player")
         {
             //Debug.Log("trig");
-            player.GetComponent<PlayerController>().ShowGuide(phrase);
+            player.GetComponent<PlayerController>().ShowGuide(logID);
             Destroy(gameObject);
         }
     }

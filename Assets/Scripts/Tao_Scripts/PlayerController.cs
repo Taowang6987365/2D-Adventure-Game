@@ -308,11 +308,11 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isDead", false);
     }
 
-    public void ShowGuide(string phrase)
+    public void ShowGuide(int logID)
     {
         Debug.Log("trig");
         guide.SetActive(true);
-        guide.GetComponent<GuideNPC>().ShowUp(phrase);
+        guide.GetComponent<GuideNPC>().ShowUp(logID);
     }
 }
 
