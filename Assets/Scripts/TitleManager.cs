@@ -42,17 +42,17 @@ public class TitleManager : MonoBehaviour
     public void StartChapterOne()
     {
        SceneManager.LoadScene("Game");
-       GameManager.startingLevel = "Level1";
+       GameManager.Instance.startingLevel = "Level1";
     }
     public void StartChapterTwo()
     {
         SceneManager.LoadScene("Game");
-        GameManager.startingLevel = "Level4";
+        GameManager.Instance.startingLevel = "Level4";
     }
     
     public void StartChapterThree()
     {
         SceneManager.LoadScene("Game");
-        GameManager.startingLevel = "Level7";
+        GameManager.Instance.startingLevel = "Level7";
     }
 }
