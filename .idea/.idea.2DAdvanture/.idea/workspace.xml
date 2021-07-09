@@ -10,6 +10,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SceneFader.cs" />
@@ -18,8 +21,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/InGameSaveManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/TitleManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TitleManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -67,7 +70,7 @@
       <workItem from="1625692184277" duration="2579000" />
       <workItem from="1625695471850" duration="1031000" />
       <workItem from="1625767303554" duration="2019000" />
-      <workItem from="1625770586135" duration="8897000" />
+      <workItem from="1625770586135" duration="9681000" />
     </task>
     <servers />
   </component>

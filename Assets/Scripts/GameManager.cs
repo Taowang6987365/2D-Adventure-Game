@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     bool isPaused;
 
     public string startingLevel = "Level1";
-    public string nextLevel;
+    //public string nextLevel;
     [NonSerialized] public static string currentLevel = "";
     bool isLevelLoaded;
 
