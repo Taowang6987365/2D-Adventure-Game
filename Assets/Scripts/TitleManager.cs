@@ -15,6 +15,8 @@ public class TitleManager : MonoBehaviour
     [SerializeField] private Canvas levelCanvas;
     public GameManager gm;
 
+    //...
+
     public void StartGame()
     {
         SceneManager.LoadScene("Game");
