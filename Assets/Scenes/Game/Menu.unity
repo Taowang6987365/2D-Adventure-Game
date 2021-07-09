@@ -3708,7 +3708,7 @@ MonoBehaviour:
   loadingScreen: {fileID: 1636038556}
   settingCanvas: {fileID: 1928422093}
   menuCanvas: {fileID: 574122822}
-  dataCanvas: {fileID: 0}
+  dataCanvas: {fileID: 1925528691}
   progressbar: {fileID: 492202678}
   settingFirstBtn: {fileID: 1979645089}
   backFirstBtn: {fileID: 1056849931}
