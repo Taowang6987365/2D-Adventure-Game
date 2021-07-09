@@ -11,6 +11,7 @@ public class LoadManager : MonoBehaviour
     public GameObject settingCanvas;
     public GameObject menuCanvas;
     public GameObject dataCanvas;
+    [SerializeField] private Canvas levelCanvas;
     private AsyncOperation async;
     [SerializeField] private Slider progressbar;
 
@@ -25,11 +26,7 @@ public class LoadManager : MonoBehaviour
         dataCanvas.SetActive(false);
         progressbar.value = 0;
     }
-
-    void Update()
-    {
-        
-    }
+    
     IEnumerator LoadLevel(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync("Game");//load target scene
@@ -68,7 +65,14 @@ public class LoadManager : MonoBehaviour
 
     public void LoadData()
     {
+        menuCanvas.SetActive(false);
         dataCanvas.SetActive(true);
+    }
+
+    public void BackToMenu()
+    {
+        menuCanvas.SetActive(true);
+        levelCanvas.gameObject.SetActive(false);
     }
 
     public void CloseSettingPanel()
@@ -78,4 +82,13 @@ public class LoadManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(backFirstBtn);
     }
+    
+    
+    public void SelevtLevelCanvas()
+    {
+        menuCanvas.gameObject.SetActive(false);
+        levelCanvas.gameObject.SetActive(true);
+    }
+
+
 }

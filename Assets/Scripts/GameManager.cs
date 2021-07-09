@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        
         if(PlayerController.playerControllerInstance.Player.GetButtonDown("Menu") && !isPaused)
         {
             PausePannel.SetActive(true);

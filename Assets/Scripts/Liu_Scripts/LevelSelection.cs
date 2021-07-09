@@ -11,12 +11,27 @@ public class LevelSelection : MonoBehaviour
 {
     public bool unlocked;//default is false
     public Image unlockImage;
-    [SerializeField] private string chapterName; 
+    [SerializeField] private string chapterName;
+    private Button bt;
+
+    private void Start()
+    {
+        unlocked = false;
+        bt = GetComponent<Button>();
+    }
 
     private void Update()
     {
         UpdateLevelImage();
         UpdateLevelStatus();
+        if (unlocked == false)
+        {
+            bt.interactable = false;
+        }
+        else
+        {
+            bt.interactable = true;
+        }
     }
 
     public void UpdateLevelStatus()

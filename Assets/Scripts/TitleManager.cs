@@ -13,6 +13,12 @@ public class TitleManager : MonoBehaviour
     [SerializeField] TMP_InputField inputField;
     [SerializeField] private Canvas mainCanvas;
     [SerializeField] private Canvas levelCanvas;
+    private GameManager gm;
+
+    private void Update()
+    {
+        gm = GetComponent<GameManager>();
+    }
 
     public void StartGame()
     {
@@ -32,17 +38,12 @@ public class TitleManager : MonoBehaviour
         InGameSaveManager.Load();
         inputField.text = InGameSaveManager.currentSaveData.saveName;
     }
-
-    public void SelevtLevelCanvas()
-    {
-        mainCanvas.gameObject.SetActive(false);
-        levelCanvas.gameObject.SetActive(true);
-    }
-
+    
     public void StartChapterOne()
     {
-       SceneManager.LoadScene("Game");
-       GameManager.Instance.startingLevel = "Level1";
+        SceneManager.LoadScene("Game");
+        GameManager.Instance.startingLevel = "Level1";
+        
     }
     public void StartChapterTwo()
     {
@@ -55,4 +56,6 @@ public class TitleManager : MonoBehaviour
         SceneManager.LoadScene("Game");
         GameManager.Instance.startingLevel = "Level7";
     }
+
+
 }
