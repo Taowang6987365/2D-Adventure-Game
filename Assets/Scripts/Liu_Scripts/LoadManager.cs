@@ -31,6 +31,7 @@ public class LoadManager : MonoBehaviour
     IEnumerator LoadLevel(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync("Game");//load target scene
+        menuCanvas.SetActive(false);
         loadingScreen.SetActive(true);
         while (!operation.isDone)
         {

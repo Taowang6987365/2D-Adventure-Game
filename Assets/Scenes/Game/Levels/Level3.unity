@@ -32104,6 +32104,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1032149564}
     m_Modifications:
     - target: {fileID: 5877489319935600692, guid: e397365ed05724147a86680163c9eb29, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5877489319935600692, guid: e397365ed05724147a86680163c9eb29, type: 3}
       propertyPath: m_Name
       value: Entrance
       objectReference: {fileID: 0}
