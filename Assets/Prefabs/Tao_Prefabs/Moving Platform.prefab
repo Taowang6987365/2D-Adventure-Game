@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 836dd0579e6b1d545aa9db568f6ea8fa, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,13 +130,14 @@ MonoBehaviour:
   horizontalRaySpacing: 0
   verticalRaySpacing: 0
   characterCollider: {fileID: 0}
+  move: {x: 2, y: 2, z: 0}
+  playerStat: {fileID: 0}
   passengerMask:
     serializedVersion: 2
     m_Bits: 64
-  move: {x: 2, y: 2, z: 0}
-  platformMoveDistance: 0
   setMoveDistance: 0
   isHorizontal: 1
+  resetOnPlayerDeath: 1
 --- !u!1 &8725727164871130526
 GameObject:
   m_ObjectHideFlags: 0
