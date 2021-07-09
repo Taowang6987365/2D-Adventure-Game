@@ -7,7 +7,10 @@
         "Seems this door is locked by some sort of spell, there must be a medium for the spell nearby",
         "The door is locked, we must look for another way",
         "There are crackles on the wall there, see if you can make a hole from there",
-        "If you wan't run faster, simply hold shift button"
+        "If you wan't run faster, simply hold shift button",
+        "Look what we found, a Key, well at least we can open the front door",
+        "It seems we are trapped here, better look for a way out",
+        "This door is seal by magic, if we manage to open it, im sure that we can get out from here"
     ],
 
     "chn":[
@@ -18,7 +21,10 @@
         "看起来这扇门被某种魔法封住了",
         "上锁了，让我们看看有没有别的路吧",
         "那些墙体看起来有很多裂隙，也许你能打破他们",
-        "你可以按住shift来让自己跑的更快"
+        "你可以按住shift来让自己跑的更快",
+        "看看我们找到了什么，一把钥匙，看来我们至少可以从前门进来了",
+        "看来我们被困住了，找找看有没有出去的方法吧",
+        "这扇门被魔法封印了，我敢打赌如果我们打开它就能从这里出去了"
 
     ]
 

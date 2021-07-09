@@ -1537,11 +1537,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a050279fa35f47a5cda6014d57b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorSpeed: 0.8
+  doorSpeed: 1
   isOpen: 0
   isGuarded: 0
   guards: 0
-  resetOnPlayerDeath: 1
+  resetOnPlayerDeath: 0
 --- !u!61 &262533430
 BoxCollider2D:
   m_ObjectHideFlags: 0

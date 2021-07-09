@@ -16,8 +16,9 @@ public class GuideNPC : MonoBehaviour
     }
     public void ShowUp(int logID)
     {
-        
+        Debug.Log(logID);
         dialog.text = lang.GetText(logID);
+        
         StartCoroutine("ShowDialog");
     }
 

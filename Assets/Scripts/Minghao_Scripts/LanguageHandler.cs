@@ -35,7 +35,7 @@ public class LanguageHandler : MonoBehaviour
         jsonstr = System.IO.File.ReadAllText(path);
         logs = JsonUtility.FromJson<Dialogs>(jsonstr);
         currentLang = 1;
-       // Debug.Log(path);
+        //Debug.Log(logs.eng[10]);
     }
     private void Update()
     {
