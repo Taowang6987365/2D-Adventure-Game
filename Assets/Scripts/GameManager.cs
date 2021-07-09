@@ -74,6 +74,9 @@ public class GameManager : MonoBehaviour
         {
             BackToGame();
         }
+
+
+
     }
 
     public void ReturnToTitle()
