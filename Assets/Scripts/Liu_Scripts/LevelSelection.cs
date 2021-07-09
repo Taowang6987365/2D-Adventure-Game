@@ -22,15 +22,15 @@ public class LevelSelection : MonoBehaviour
 
     private void Update()
     {
-        UpdateLevelImage();
-        UpdateLevelStatus();
         if (unlocked == false)
         {
             bt.interactable = false;
+            UpdateLevelImage();
         }
         else
         {
             bt.interactable = true;
+            UpdateLevelImage();
         }
     }
 

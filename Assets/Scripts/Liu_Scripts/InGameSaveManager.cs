@@ -128,9 +128,11 @@ public class InGameSaveManager : MonoBehaviour
 
     public void DeletSaveData()
     {
-        if(System.IO.File.Exists(SavePath))
+        if(File.Exists(SavePath))
         {
+            currentSaveData = null;
             File.Delete(SavePath);
+            
             Debug.Log("Deleted!");
         }
     }
