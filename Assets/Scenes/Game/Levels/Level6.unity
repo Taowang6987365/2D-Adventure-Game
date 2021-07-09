@@ -91172,11 +91172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5877489319935600698, guid: e397365ed05724147a86680163c9eb29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -116.47278
+      value: -114.92
       objectReference: {fileID: 0}
     - target: {fileID: 5877489319935600698, guid: e397365ed05724147a86680163c9eb29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -65.11351
+      value: -65.65
       objectReference: {fileID: 0}
     - target: {fileID: 5877489319935600698, guid: e397365ed05724147a86680163c9eb29, type: 3}
       propertyPath: m_LocalPosition.z
@@ -91957,6 +91957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lavaSpeed: 0
   lavaController: {fileID: 498874817}
+  isReset: 0
+  initialPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1981439612
 PrefabInstance:
   m_ObjectHideFlags: 0

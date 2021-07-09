@@ -10,6 +10,7 @@ public class LoadManager : MonoBehaviour
     public GameObject loadingScreen;
     public GameObject settingCanvas;
     public GameObject menuCanvas;
+    public GameObject dataCanvas;
     private AsyncOperation async;
     [SerializeField] private Slider progressbar;
 
@@ -21,6 +22,7 @@ public class LoadManager : MonoBehaviour
     void Start()
     {
         menuCanvas.SetActive(true);
+        dataCanvas.SetActive(false);
         progressbar.value = 0;
     }
 
@@ -62,6 +64,11 @@ public class LoadManager : MonoBehaviour
         settingCanvas.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(settingFirstBtn);
+    }
+
+    public void LoadData()
+    {
+        dataCanvas.SetActive(true);
     }
 
     public void CloseSettingPanel()
