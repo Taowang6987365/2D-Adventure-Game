@@ -3784,6 +3784,7 @@ MonoBehaviour:
   inputField: {fileID: 1981555371}
   mainCanvas: {fileID: 1925528692}
   levelCanvas: {fileID: 1288008055}
+  gm: {fileID: 6930873624399563056, guid: 2245c9a0370675f45ba47883fd667e24, type: 3}
 --- !u!4 &1203058192
 Transform:
   m_ObjectHideFlags: 0
