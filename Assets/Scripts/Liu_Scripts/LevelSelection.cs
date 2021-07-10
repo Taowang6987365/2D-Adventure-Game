@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 
 public class LevelSelection : MonoBehaviour
@@ -13,11 +12,13 @@ public class LevelSelection : MonoBehaviour
     public Image unlockImage;
     [SerializeField] private string chapterName;
     private Button bt;
+    public bool bFirstChapter;
 
     private void Start()
     {
         unlocked = false;
         bt = GetComponent<Button>();
+        bFirstChapter = false;
     }
 
     private void Update()
@@ -39,6 +40,7 @@ public class LevelSelection : MonoBehaviour
         if (InGameSaveManager.currentSaveData.currentLevel == "Level4" && chapterName =="chapterOne")
         {
             unlocked = true;
+            bFirstChapter = true;
         }
         if (InGameSaveManager.currentSaveData.currentLevel == "Level7" && chapterName =="chapterTwo" || chapterName =="chapterOne")
         {
