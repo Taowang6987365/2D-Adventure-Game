@@ -73,11 +73,7 @@ public class GameManager : MonoBehaviour
 
 
     }
-
-    public void ReturnToTitle()
-    {
-        SceneManager.LoadScene("Title");
-    }
+    
     public void BackToGame()
     {
         PausePannel.SetActive(false);

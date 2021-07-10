@@ -45,7 +45,7 @@ public class LevelTeleporter : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.ReturnToTitle();
+            GameManager.Instance.BackToMenu();
         }
 
 
@@ -75,7 +75,7 @@ public class LevelTeleporter : MonoBehaviour
             }
             else
             {
-                GameManager.Instance.ReturnToTitle();
+                GameManager.Instance.BackToMenu();
             }
         }
     }
