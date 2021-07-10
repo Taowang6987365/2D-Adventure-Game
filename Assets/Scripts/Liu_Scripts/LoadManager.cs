@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using Rewired.Integration.UnityUI;
 
 public class LoadManager : MonoBehaviour
 {
@@ -15,17 +16,23 @@ public class LoadManager : MonoBehaviour
     [SerializeField] private Canvas levelCanvas;
     private AsyncOperation async;
     [SerializeField] private Slider progressbar;
+    public RewiredEventSystem rewiredEventSystem;
 
     //In the Menu scene
+    public LevelSelection levelSelection;
     public GameObject settingFirstBtn;
-    public GameObject backFirstBtn;
-
+    public GameObject settingBackFirstBtn;
+    public GameObject levelSelectFirstBtnOption1;
+    public GameObject levelSelectFirstBtnOption2;
+    public GameObject levelSelectBackFirstBtn;
+    EventSystem eventSystem;
 
     void Start()
     {
         menuCanvas.SetActive(true);
         dataCanvas.SetActive(false);
         progressbar.value = 0;
+        eventSystem = rewiredEventSystem;
     }
     
     IEnumerator LoadLevel(string sceneName)
@@ -62,8 +69,7 @@ public class LoadManager : MonoBehaviour
     {
         menuCanvas.SetActive(false);
         settingCanvas.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(settingFirstBtn);
+        eventSystem.SetSelectedGameObject(settingFirstBtn);
     }
 
     public void LoadData()
@@ -72,18 +78,18 @@ public class LoadManager : MonoBehaviour
         dataCanvas.SetActive(true);
     }
 
-    public void BackToMenu()
+    public void LevelSettingBackToMenu()
     {
         menuCanvas.SetActive(true);
         levelCanvas.gameObject.SetActive(false);
+        eventSystem.SetSelectedGameObject(levelSelectBackFirstBtn);
     }
 
     public void CloseSettingPanel()
     {
         menuCanvas.SetActive(true);
         settingCanvas.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(backFirstBtn);
+        eventSystem.SetSelectedGameObject(settingBackFirstBtn);
     }
     
     
@@ -91,6 +97,15 @@ public class LoadManager : MonoBehaviour
     {
         menuCanvas.gameObject.SetActive(false);
         levelCanvas.gameObject.SetActive(true);
+        Debug.Log(levelSelectFirstBtnOption1.activeInHierarchy);
+        if(!levelSelection.bFirstChapter)
+        {
+            eventSystem.SetSelectedGameObject(levelSelectFirstBtnOption2);
+        }
+        else
+        {
+            eventSystem.SetSelectedGameObject(levelSelectFirstBtnOption1);
+        }
     }
 
 
