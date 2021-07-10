@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GameEnter : MonoBehaviour
 {
-    bool isStart;
+
+    [SerializeField] Vector3 spawnPosition;
     // Start is called before the first frame update
     void Start()
     {
-        isStart = true;
-        if(isStart)
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
         {
-            PlayerStatus.instance.transform.position = transform.position;
-            isStart = false;
+            player.transform.position = spawnPosition;
         }
         
     }

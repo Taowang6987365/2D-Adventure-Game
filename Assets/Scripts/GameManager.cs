@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject FirstPauseBtn;
     bool isPaused;
 
-    public string startingLevel = "Level1";
+    public static string startingLevel = "Level1";
     //public string nextLevel;
     [NonSerialized] public static string currentLevel = "";
     bool isLevelLoaded;
@@ -26,20 +26,20 @@ public class GameManager : MonoBehaviour
     {
         PausePannel.SetActive(false);
         isPaused = false;
-
+        
         currentLevel = startingLevel;
-        if (currentLevel == "")
-        {
-            InGameSaveManager.instance.levelName = LevelName.Level1;
-        }
-        else if (InGameSaveManager.currentSaveData.currentLevel == "Level2")
-        {
-            currentLevel = InGameSaveManager.currentSaveData.currentLevel;
-        }
-        else if(InGameSaveManager.currentSaveData.currentLevel == "Level3")
-        {
-            currentLevel = InGameSaveManager.currentSaveData.currentLevel;
-        }
+        // if (currentLevel == "")
+        // {
+        //     InGameSaveManager.instance.levelName = LevelName.Level1;
+        // }
+        // else if (InGameSaveManager.currentSaveData.currentLevel == "Level2")
+        // {
+        //     currentLevel = InGameSaveManager.currentSaveData.currentLevel;
+        // }
+        // else if(InGameSaveManager.currentSaveData.currentLevel == "Level3")
+        // {
+        //     currentLevel = InGameSaveManager.currentSaveData.currentLevel;
+        // }
 
         LoadLevel(currentLevel);
         //LoadLevel(nextLevel);

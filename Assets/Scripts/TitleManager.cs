@@ -11,8 +11,6 @@ using UnityEngine.UI;
 public class TitleManager : MonoBehaviour
 {
     [SerializeField] TMP_InputField inputField;
-    [SerializeField] private Canvas mainCanvas;
-    [SerializeField] private Canvas levelCanvas;
     public GameManager gm;
 
     //...
@@ -38,19 +36,19 @@ public class TitleManager : MonoBehaviour
     
     public void StartChapterOne()
     {
+        GameManager.startingLevel = "Level1";
         SceneManager.LoadScene("Game");
-        gm.startingLevel = "Level1";
-        
     }
     public void StartChapterTwo()
     {
+        GameManager.startingLevel = "Level4";
         SceneManager.LoadScene("Game");
-        gm.startingLevel = "Level4";
+
     }
     
     public void StartChapterThree()
     {
+        GameManager.startingLevel = "Level7";
         SceneManager.LoadScene("Game");
-        gm.startingLevel = "Level7";
     }
 }

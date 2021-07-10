@@ -6,10 +6,10 @@ public class LevelManager : MonoBehaviour
 {
     void Awake()
     {
-        if (GameManager.currentLevel == "")
-        {
-            GameManager.currentLevel = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene("Game");
-        }
+        // if (GameManager.currentLevel == "")
+        // {
+        //     GameManager.currentLevel = SceneManager.GetActiveScene().name;
+        //     SceneManager.LoadScene("Game");
+        // }
     }
 }
