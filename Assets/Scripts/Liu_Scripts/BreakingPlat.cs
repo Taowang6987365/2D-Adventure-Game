@@ -9,11 +9,14 @@ public class BreakingPlat : MonoBehaviour
     BoxCollider2D boxCollider2D;
     [SerializeField] private float setTimer;
 
+    private Animator anim;
+
     private void Start()
     {
         setTimer = 3f;
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -27,12 +30,14 @@ public class BreakingPlat : MonoBehaviour
     IEnumerator PlatBreaking(float timer)
     {
         yield return new WaitForSeconds(timer);
-        spriteRenderer.enabled = false;
+        //spriteRenderer.enabled = false;
         boxCollider2D.enabled = false;
+        anim.SetBool("OnStep",true);
         isOnPlat = false;
 
         yield return new WaitForSeconds(timer);
-        spriteRenderer.enabled = true;
+        //spriteRenderer.enabled = true;
         boxCollider2D.enabled = true;
+        anim.SetBool("OnStep",false);
     }
 }

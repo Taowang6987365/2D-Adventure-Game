@@ -24,6 +24,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/UnlockAllLevels.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BreakingPlat.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -74,6 +75,7 @@
       <workItem from="1625770586135" duration="9681000" />
       <workItem from="1625852246820" duration="1735000" />
       <workItem from="1625861020022" duration="689000" />
+      <workItem from="1625942799229" duration="371000" />
     </task>
     <servers />
   </component>
