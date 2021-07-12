@@ -69,9 +69,6 @@ public class GameManager : MonoBehaviour
         {
             BackToGame();
         }
-
-
-
     }
     
     public void BackToGame()
