@@ -31,8 +31,8 @@ public class LoadManager : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
         menuCanvas.SetActive(true);
         dataCanvas.SetActive(false);
         progressbar.value = 0;
