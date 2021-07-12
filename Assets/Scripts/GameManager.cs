@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using Rewired.Integration.UnityUI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
     bool isLevelLoaded;
 
     public bool isWin = false;
+    public RewiredEventSystem rewiredEventSystem;
+    EventSystem eventSystem;
+
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -28,21 +32,8 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         
         currentLevel = startingLevel;
-        // if (currentLevel == "")
-        // {
-        //     InGameSaveManager.instance.levelName = LevelName.Level1;
-        // }
-        // else if (InGameSaveManager.currentSaveData.currentLevel == "Level2")
-        // {
-        //     currentLevel = InGameSaveManager.currentSaveData.currentLevel;
-        // }
-        // else if(InGameSaveManager.currentSaveData.currentLevel == "Level3")
-        // {
-        //     currentLevel = InGameSaveManager.currentSaveData.currentLevel;
-        // }
 
         LoadLevel(currentLevel);
-        //LoadLevel(nextLevel);
     }
 
     public void LoadLevel(string levelName)
@@ -61,12 +52,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if(rewiredEventSystem == null)
+        {
+            rewiredEventSystem = GameObject.Find("Rewired Event System").GetComponent<RewiredEventSystem>();
+            eventSystem = rewiredEventSystem;
+        }
         
         if(PlayerController.playerControllerInstance.Player.GetButtonDown("Menu") && !isPaused)
         {
             PausePannel.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(FirstPauseBtn);
+            eventSystem.SetSelectedGameObject(FirstPauseBtn);
             Time.timeScale = 0;
             isPaused = true;
         }
