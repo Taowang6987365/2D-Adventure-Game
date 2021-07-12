@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PausePannel;
     public GameObject FirstPauseBtn;
+    public Canvas settingCanvas;
     bool isPaused;
 
     public static string startingLevel = "Level1";
@@ -87,5 +88,12 @@ public class GameManager : MonoBehaviour
     public void OpenSettingCanvas()
     {
         PausePannel.SetActive(false);
+        settingCanvas.gameObject.SetActive(true);
+    }
+
+    public void BackToPause()
+    {
+        settingCanvas.gameObject.SetActive(false);
+        PausePannel.SetActive(true);
     }
 }
