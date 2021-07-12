@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Rewired;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -26,9 +27,12 @@ public class LoadManager : MonoBehaviour
     public GameObject levelSelectFirstBtnOption2;
     public GameObject levelSelectBackFirstBtn;
     EventSystem eventSystem;
+    
 
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         menuCanvas.SetActive(true);
         dataCanvas.SetActive(false);
         progressbar.value = 0;
