@@ -26,8 +26,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/GameEnter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TitleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelTeleporter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -80,6 +80,7 @@
       <workItem from="1625861020022" duration="689000" />
       <workItem from="1625942799229" duration="4869000" />
       <workItem from="1625960023467" duration="668000" />
+      <workItem from="1626127749356" duration="1206000" />
     </task>
     <servers />
   </component>

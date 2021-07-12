@@ -79,6 +79,13 @@ public class GameManager : MonoBehaviour
     }
     public void BackToMenu()
     {
+        isPaused = false;
+        Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
+    }
+
+    public void OpenSettingCanvas()
+    {
+        PausePannel.SetActive(false);
     }
 }
