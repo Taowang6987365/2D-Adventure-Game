@@ -83,4 +83,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
+
+    public void OpenSettingCanvas()
+    {
+        PausePannel.SetActive(false);
+    }
 }
