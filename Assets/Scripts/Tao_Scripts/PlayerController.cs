@@ -173,7 +173,12 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        StartCoroutine(PlayerDeath());
+        velocity.x = 0;
+        if (controller.collisions.below)
+        {
+            isMoveable = false;
+            StartCoroutine(PlayerDeath());
+        }
     }
 
     internal void ResetPosition()
@@ -303,7 +308,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator PlayerDeath()
     {
         animator.SetBool("isDead", true);
-        isMoveable = false;
         yield return new WaitForSeconds(2f);
         animator.SetBool("isDead", false);
     }
