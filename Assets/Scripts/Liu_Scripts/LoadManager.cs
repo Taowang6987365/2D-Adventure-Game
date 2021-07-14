@@ -28,7 +28,7 @@ public class LoadManager : MonoBehaviour
     public GameObject levelSelectFirstBtnOption2;
     public GameObject levelSelectBackFirstBtn;
     EventSystem eventSystem;
-    
+
 
     void Start()
     {
@@ -53,6 +53,7 @@ public class LoadManager : MonoBehaviour
             yield return null;
         }
     }
+    
     
 
     public void NextScene()

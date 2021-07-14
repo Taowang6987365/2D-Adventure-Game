@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/VolumeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -28,6 +29,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelTeleporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/VolumeController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -82,7 +84,7 @@
       <workItem from="1625960023467" duration="668000" />
       <workItem from="1626127749356" duration="1206000" />
       <workItem from="1626132542358" duration="1159000" />
-      <workItem from="1626287136875" duration="873000" />
+      <workItem from="1626287136875" duration="2777000" />
     </task>
     <servers />
   </component>
