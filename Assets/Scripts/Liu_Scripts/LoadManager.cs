@@ -20,13 +20,22 @@ public class LoadManager : MonoBehaviour
     [SerializeField] private Slider progressbar;
     public RewiredEventSystem rewiredEventSystem;
 
-    //In the Menu scene
+    //Menu scene
     public LevelSelection levelSelection;
+    
+    //setting
     public GameObject settingFirstBtn;
     public GameObject settingBackFirstBtn;
+    
+    //levelSelect
     public GameObject levelSelectFirstBtnOption1;
     public GameObject levelSelectFirstBtnOption2;
     public GameObject levelSelectBackFirstBtn;
+    
+    //volume
+    public GameObject volumeFirstBtn;
+    public GameObject volumeBackFirstBtn;
+    
     EventSystem eventSystem;
 
 
@@ -120,11 +129,13 @@ public class LoadManager : MonoBehaviour
     {
         volumeCanvas.SetActive(true);
         settingCanvas.SetActive(false);
+        eventSystem.SetSelectedGameObject(volumeFirstBtn);
     }
     public void CloseVolumeCanvas()
     {
         volumeCanvas.SetActive(false);
         settingCanvas.SetActive(true);
+        eventSystem.SetSelectedGameObject(volumeBackFirstBtn);
     }
 
 

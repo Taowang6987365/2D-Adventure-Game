@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public RewiredEventSystem rewiredEventSystem;
     EventSystem eventSystem;
 
+    public GameObject volumeFirstBtn;
+    public GameObject volumeBackFirstBtn;
+    
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -90,11 +93,13 @@ public class GameManager : MonoBehaviour
     {
         PausePannel.SetActive(false);
         settingCanvas.gameObject.SetActive(true);
+        eventSystem.SetSelectedGameObject(volumeFirstBtn);
     }
 
     public void BackToPause()
     {
         settingCanvas.gameObject.SetActive(false);
         PausePannel.SetActive(true);
+        eventSystem.SetSelectedGameObject(volumeBackFirstBtn);
     }
 }
