@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     private LanguageHandler lang;
   
 
-    public static string startingLevel = "Level1";
+    public static string startingLevel = "Level9";
+    
     //public string nextLevel;
     [NonSerialized] public static string currentLevel = "";
     bool isLevelLoaded;
@@ -22,6 +23,9 @@ public class GameManager : MonoBehaviour
     public RewiredEventSystem rewiredEventSystem;
     EventSystem eventSystem;
 
+    public GameObject volumeFirstBtn;
+    public GameObject volumeBackFirstBtn;
+    
     public static GameManager Instance { get; private set; }
 
 
@@ -96,11 +100,13 @@ public class GameManager : MonoBehaviour
     {
         PausePannel.SetActive(false);
         settingCanvas.gameObject.SetActive(true);
+        eventSystem.SetSelectedGameObject(volumeFirstBtn);
     }
 
     public void BackToPause()
     {
         settingCanvas.gameObject.SetActive(false);
         PausePannel.SetActive(true);
+        eventSystem.SetSelectedGameObject(volumeBackFirstBtn);
     }
 }

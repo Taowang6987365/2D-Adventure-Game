@@ -14,25 +14,36 @@ public class LoadManager : MonoBehaviour
     public GameObject settingCanvas;
     public GameObject menuCanvas;
     public GameObject dataCanvas;
+    [SerializeField] private GameObject volumeCanvas;
     [SerializeField] private Canvas levelCanvas;
     private AsyncOperation async;
     [SerializeField] private Slider progressbar;
     public RewiredEventSystem rewiredEventSystem;
 
-    //In the Menu scene
+    //Menu scene
     public LevelSelection levelSelection;
+    
+    //setting
     public GameObject settingFirstBtn;
     public GameObject settingBackFirstBtn;
+    
+    //levelSelect
     public GameObject levelSelectFirstBtnOption1;
     public GameObject levelSelectFirstBtnOption2;
     public GameObject levelSelectBackFirstBtn;
-    EventSystem eventSystem;
     
+    //volume
+    public GameObject volumeFirstBtn;
+    public GameObject volumeBackFirstBtn;
+    
+    EventSystem eventSystem;
+
 
     void Start()
     {
         // Cursor.visible = false;
         // Cursor.lockState = CursorLockMode.Locked;
+        volumeCanvas.SetActive(false);
         menuCanvas.SetActive(true);
         dataCanvas.SetActive(false);
         progressbar.value = 0;
@@ -51,6 +62,7 @@ public class LoadManager : MonoBehaviour
             yield return null;
         }
     }
+    
     
 
     public void NextScene()
@@ -110,6 +122,20 @@ public class LoadManager : MonoBehaviour
         {
             eventSystem.SetSelectedGameObject(levelSelectFirstBtnOption1);
         }
+    }
+
+
+    public void OpenVolumeCanvas()
+    {
+        volumeCanvas.SetActive(true);
+        settingCanvas.SetActive(false);
+        eventSystem.SetSelectedGameObject(volumeFirstBtn);
+    }
+    public void CloseVolumeCanvas()
+    {
+        volumeCanvas.SetActive(false);
+        settingCanvas.SetActive(true);
+        eventSystem.SetSelectedGameObject(volumeBackFirstBtn);
     }
 
 
