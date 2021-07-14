@@ -14,6 +14,7 @@ public class LoadManager : MonoBehaviour
     public GameObject settingCanvas;
     public GameObject menuCanvas;
     public GameObject dataCanvas;
+    [SerializeField] private GameObject volumeCanvas;
     [SerializeField] private Canvas levelCanvas;
     private AsyncOperation async;
     [SerializeField] private Slider progressbar;
@@ -33,6 +34,7 @@ public class LoadManager : MonoBehaviour
     {
         // Cursor.visible = false;
         // Cursor.lockState = CursorLockMode.Locked;
+        volumeCanvas.SetActive(false);
         menuCanvas.SetActive(true);
         dataCanvas.SetActive(false);
         progressbar.value = 0;
@@ -110,6 +112,18 @@ public class LoadManager : MonoBehaviour
         {
             eventSystem.SetSelectedGameObject(levelSelectFirstBtnOption1);
         }
+    }
+
+
+    public void OpenVolumeCanvas()
+    {
+        volumeCanvas.SetActive(true);
+        settingCanvas.SetActive(false);
+    }
+    public void CloseVolumeCanvas()
+    {
+        volumeCanvas.SetActive(false);
+        settingCanvas.SetActive(true);
     }
 
 
