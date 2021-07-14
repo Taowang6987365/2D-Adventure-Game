@@ -21,11 +21,14 @@ public class LanguageHandler : MonoBehaviour
 
     private void Awake()
     {
-        if(instance !=null)
+        if (instance != null)
         {
             Destroy(gameObject);
         }
-        instance = this;
+        else
+            instance = this;
+
+
         DontDestroyOnLoad(this.gameObject);
     }
     // Start is called before the first frame update
