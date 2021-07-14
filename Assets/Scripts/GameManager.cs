@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public Canvas settingCanvas;
     bool isPaused;
 
-    public static string startingLevel = "Level1";
+    public static string startingLevel = "Level9";
+    
     //public string nextLevel;
     [NonSerialized] public static string currentLevel = "";
     bool isLevelLoaded;

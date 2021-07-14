@@ -167,8 +167,10 @@ public class PlayerController : MonoBehaviour
 
     public void HitPlayer()
     {
-        //called in Enemy.cs
-        StartCoroutine(PlayerHurt());
+        if (PlayerStatus.instance.lives > 0)
+        {
+            StartCoroutine(PlayerHurt());
+        }
     }
 
     public void Death()
