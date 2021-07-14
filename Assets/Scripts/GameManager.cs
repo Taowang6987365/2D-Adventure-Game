@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject FirstPauseBtn;
     public Canvas settingCanvas;
     bool isPaused;
+    private LanguageHandler lang;
+  
 
     public static string startingLevel = "Level1";
     //public string nextLevel;
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     EventSystem eventSystem;
 
     public static GameManager Instance { get; private set; }
+
 
     private void Awake()
     {
@@ -34,7 +37,9 @@ public class GameManager : MonoBehaviour
         
         currentLevel = startingLevel;
 
+
         LoadLevel(currentLevel);
+        lang = LanguageHandler.instance;
     }
 
     public void LoadLevel(string levelName)
@@ -82,7 +87,9 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1;
+        Destroy(lang.gameObject);
         SceneManager.LoadScene("Menu");
+        
     }
 
     public void OpenSettingCanvas()

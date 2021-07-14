@@ -23,6 +23,7 @@ TagManager:
   - Boss
   - InitialPos
   - FallingStone
+  - LangHandler
   layers:
   - Default
   - TransparentFX

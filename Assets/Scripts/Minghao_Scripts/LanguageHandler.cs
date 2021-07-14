@@ -17,6 +17,8 @@ public class LanguageHandler : MonoBehaviour
     public Dialogs logs;
     private string jsonstr;
     public int currentLang =1;
+    private LangManager manager;
+
     public static LanguageHandler instance { get; private set; }
 
     private void Awake()
@@ -37,7 +39,9 @@ public class LanguageHandler : MonoBehaviour
         path = "./Assets/Language/Language.json";
         jsonstr = System.IO.File.ReadAllText(path);
         logs = JsonUtility.FromJson<Dialogs>(jsonstr);
-        currentLang = 1;
+        manager = LangManager.instance;
+        currentLang = manager.curLang;
+
         //Debug.Log(logs.eng[10]);
     }
     private void Update()
@@ -47,6 +51,8 @@ public class LanguageHandler : MonoBehaviour
     public void ChangeLang(int lang)
     {
         currentLang = lang;
+        manager.curLang = lang;
+
     }
     public string GetText(int logNum)
     {

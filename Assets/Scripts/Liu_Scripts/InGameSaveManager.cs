@@ -15,6 +15,7 @@ public class InGameSaveManager : MonoBehaviour
     public LevelName levelName;
     [SerializeField] private GameObject playerObject;
     public static InGameSaveData currentSaveData = new InGameSaveData();
+
     private void Awake()
     {
         instance = this;

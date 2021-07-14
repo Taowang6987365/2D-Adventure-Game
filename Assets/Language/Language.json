@@ -14,7 +14,10 @@
         "Select Level",
         "Back",
         "Unlock all",
-        "Reset All"
+        "Reset All",
+        "Resume",
+        "Main Menu",
+        "Volume"
     ],
 
     "chn":[
@@ -32,7 +35,11 @@
         "选择关卡",
         "返回",
         "解锁",
-        "重置"
+        "重置",
+        "继续",
+        "主菜单",
+        "音量"
+        
 
     ]
 
