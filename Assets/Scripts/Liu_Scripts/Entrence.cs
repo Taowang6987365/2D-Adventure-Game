@@ -17,6 +17,7 @@ public class Entrence : MonoBehaviour
             PlayerStatus.instance.transform.position = transform.position;//entrance position
         }
     }
+    
 
     void Update()
     {

@@ -16,6 +16,7 @@ public class UnlockAllLevels : MonoBehaviour
     {
         for (int i = 0; i <= 2; i++)
         {
+            InGameSaveManager.currentSaveData.currentLevel = "Level9";
             GameObject.FindObjectsOfType<LevelSelection>()[i].unlocked = true;
             //sl.UpdateLevelImage();
             //sl.UpdateLevelStatus();
