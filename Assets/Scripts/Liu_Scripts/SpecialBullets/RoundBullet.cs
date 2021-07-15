@@ -28,13 +28,13 @@ public class RoundBullet : MonoBehaviour
     IEnumerator FirRound(int number, Vector3 creatPoint)
     {
         Vector3 bulletDir = Vector3.down;//更改弹幕发射方式
-        Quaternion rotateQuate = Quaternion.AngleAxis(10, Vector3.forward);//使用四元数制造绕Z轴旋转10度的旋转
+        Quaternion rotateQuate = Quaternion.AngleAxis(30, Vector3.forward);//使用四元数制造绕Z轴旋转10度的旋转
         while (CountTime < StopTime)
         {
             yield return new WaitForSeconds(2f);
             for (int i = 0; i < number; i++)    //发射波数
             {
-                for (int j = 0; j < 36; j++)
+                for (int j = 0; j < 12; j++)
                 {
                     CreatBullet(bulletDir, firPoint.transform.position);
                     bulletDir = rotateQuate * bulletDir; //让发射方向旋转10度，到达下一个发射方向

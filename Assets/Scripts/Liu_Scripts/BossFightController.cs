@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,10 +21,15 @@ public class BossFightController : MonoBehaviour
     public bool canshoot;
     public int bossHP;
     public Slider booHPSlider;
+    public GameObject boss;
+    private Animator anim;
+    private Rigidbody2D rigid;
+    [SerializeField] private GameObject fillArea;
 
     public Transform[] originalIndex;
     public List<Transform> rawIndex;
     public List<Transform> newIndex;
+    
 
 
     public Transform firePosition;
@@ -37,6 +43,9 @@ public class BossFightController : MonoBehaviour
         nextCreateTime = 0;
         max_count = 3;
         canshoot = false;
+        booHPSlider.value = 1;
+        anim = boss.GetComponent<Animator>();
+        rigid = boss.GetComponent<Rigidbody2D>();
     }
     public static BossFightController GetInstance()
     {
@@ -57,6 +66,14 @@ public class BossFightController : MonoBehaviour
                 CreateBox();
                 nextCreateTime = 2f;
             }
+        }
+
+        if (bossHP <= 0)
+        {
+            anim.SetBool("IsDeath",true);
+            rigid.gravityScale = 10;
+            fillArea.SetActive(false);
+            Destroy(boss,2f);
         }
     }
     

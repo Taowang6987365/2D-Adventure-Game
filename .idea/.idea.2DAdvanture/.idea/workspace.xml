@@ -30,6 +30,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/VolumeController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -84,7 +87,8 @@
       <workItem from="1625960023467" duration="668000" />
       <workItem from="1626127749356" duration="1206000" />
       <workItem from="1626132542358" duration="1159000" />
-      <workItem from="1626287136875" duration="2777000" />
+      <workItem from="1626287136875" duration="3372000" />
+      <workItem from="1626372546761" duration="2320000" />
     </task>
     <servers />
   </component>
