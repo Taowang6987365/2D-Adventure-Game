@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerBulletBehavior : MonoBehaviour
 {
     private BossFightController bc;
+    public GameObject explosionPrefab;
     public float speed;
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerBulletBehavior : MonoBehaviour
     {
         if (other.tag == "Boss")
         {
+            Instantiate(explosionPrefab,transform.position,transform.rotation);
             BossFightController.GetInstance().bossHP -= 2;
             BossFightController.GetInstance().booHPSlider.value -= 0.2f;
             Destroy(this.gameObject,0.5f);
