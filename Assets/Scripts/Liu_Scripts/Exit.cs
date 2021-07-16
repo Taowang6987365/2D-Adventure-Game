@@ -14,6 +14,7 @@ public class Exit : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            Entrence.Next = newScecnePassword;
             PlayerStatus.instance.scenenPassword = newScecnePassword;
             FindObjectOfType<SceneFader>().FadeTo(sceneName);
             //SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
