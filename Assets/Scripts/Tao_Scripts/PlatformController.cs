@@ -8,10 +8,11 @@ public class PlatformController : RaycastController
     [SerializeField] private PlayerStatus playerStat;
 
     public LayerMask passengerMask;
-    private float platformMoveDistance = 0f;
+    public float platformMoveDistance = 0f;
     public float setMoveDistance = 100f;
     public bool isHorizontal;
     public bool resetOnPlayerDeath = true;
+    public bool revertMovement = false;
 
     private bool originDirection;
     private float originMoveDistance;
@@ -28,6 +29,12 @@ public class PlatformController : RaycastController
         originPos = gameObject.transform.position;
         originDirection = isHorizontal;
         originMoveDistance = platformMoveDistance;
+        if (revertMovement)
+        {
+            move.x *= -1;
+            move.y *= -1;
+        }
+
     }
 
     private void Update()
@@ -193,20 +200,22 @@ public class PlatformController : RaycastController
     public void MoveingPlateformX()
     {
         platformMoveDistance += velocity.x;
-        if (Mathf.Abs(platformMoveDistance) >= setMoveDistance)
-        {
-            move.x *= -1;
-            platformMoveDistance = 0;
-        }
+
+        //if (Mathf.Abs(platformMoveDistance) >= setMoveDistance )
+        //{
+        //    move.x *= -1;
+        //    platformMoveDistance = 0;
+        //}
+
     }
     public void MoveingPlateformY()
     {
         platformMoveDistance += velocity.y;
-        if (Mathf.Abs(platformMoveDistance) >= setMoveDistance)
-        {
-            move.y *= -1;
-            platformMoveDistance = 0;
-        }
+        //if (Mathf.Abs(platformMoveDistance) >= setMoveDistance)
+        //{
+        //    move.y *= -1;
+        //    platformMoveDistance = 0;
+        //}
     }
 
 
