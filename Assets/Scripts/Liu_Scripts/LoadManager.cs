@@ -36,6 +36,11 @@ public class LoadManager : MonoBehaviour
     public GameObject volumeFirstBtn;
     public GameObject volumeBackFirstBtn;
     
+    //volume Controller
+    [Header("Volume Controller") ]
+    public Slider volumeSlider;
+    public AudioSource menuBGM;
+    
     EventSystem eventSystem;
 
 
