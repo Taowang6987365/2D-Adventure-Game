@@ -119,7 +119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2165940872486924807
 Transform:
   m_ObjectHideFlags: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog: {fileID: 2165940872585963964}
+  player: {fileID: 0}
 --- !u!50 &2404483298796779623
 Rigidbody2D:
   serializedVersion: 4
@@ -254,8 +255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.49, y: 0.83}
-  m_SizeDelta: {x: 5.7366, y: 1.1626}
+  m_AnchoredPosition: {x: 1.273, y: 1.3692}
+  m_SizeDelta: {x: 7.3027, y: 2.241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2165940872585963971
 CanvasRenderer:
@@ -333,8 +334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4527, y: 0.8148}
-  m_SizeDelta: {x: 5.8749, y: 1.3342}
+  m_AnchoredPosition: {x: 1.2198, y: 1.3187}
+  m_SizeDelta: {x: 7.4091, y: 2.342}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6832869030014304257
 CanvasRenderer:

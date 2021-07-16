@@ -16,6 +16,7 @@ public class Door : MonoBehaviour
     private bool originStat;
     private bool originIsGuarded;
     private float originGuards;
+    public bool moveHorizontal=false;
    
     // Start is called before the first frame update
     void Start()
@@ -45,12 +46,17 @@ public class Door : MonoBehaviour
         {
             countDown -= Time.deltaTime;
         }
-        if (countDown > 0)
+        if (countDown > 0 && !moveHorizontal)
         {
             transform.position += new Vector3(0, Time.deltaTime * moveSpeed, 0);
         }
+        else if(countDown > 0 && moveHorizontal)
+        {
+            transform.position += new Vector3(Time.deltaTime * moveSpeed, 0, 0);
+        }
 
-        if(isGuarded && !isOpen)
+
+        if (isGuarded && !isOpen)
         {
             CheckGuard();
         }

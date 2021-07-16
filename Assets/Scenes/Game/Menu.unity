@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 12
+  logID: 17
 --- !u!114 &71892757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,6 +1737,7 @@ GameObject:
   - component: {fileID: 392020380}
   - component: {fileID: 392020382}
   - component: {fileID: 392020381}
+  - component: {fileID: 392020383}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1808,6 +1809,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392020379}
   m_CullTransparentMesh: 1
+--- !u!114 &392020383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392020379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: 21
 --- !u!1 &413872202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,7 +2658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 12
+  logID: 18
 --- !u!114 &541282431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,6 +3750,7 @@ GameObject:
   - component: {fileID: 613368726}
   - component: {fileID: 613368728}
   - component: {fileID: 613368727}
+  - component: {fileID: 613368729}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3805,6 +3821,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613368725}
   m_CullTransparentMesh: 1
+--- !u!114 &613368729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613368725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: 20
 --- !u!1 &620221206
 GameObject:
   m_ObjectHideFlags: 0
@@ -10952,6 +10982,7 @@ GameObject:
   - component: {fileID: 1979060984}
   - component: {fileID: 1979060986}
   - component: {fileID: 1979060985}
+  - component: {fileID: 1979060987}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -11024,6 +11055,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979060983}
   m_CullTransparentMesh: 1
+--- !u!114 &1979060987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979060983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: 22
 --- !u!1 &1979645089
 GameObject:
   m_ObjectHideFlags: 0
@@ -12939,6 +12984,7 @@ GameObject:
   - component: {fileID: 2167188752480394450}
   - component: {fileID: 2167188752480394448}
   - component: {fileID: 2167188752480394451}
+  - component: {fileID: 2167188752480394454}
   m_Layer: 5
   m_Name: SFXText
   m_TagString: Untagged
@@ -12946,6 +12992,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2167188752480394454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2167188752480394453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: 19
 --- !u!1 &2167188752680400969
 GameObject:
   m_ObjectHideFlags: 0
@@ -13259,6 +13319,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5292097360512878367, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
       propertyPath: m_RootOrder
       value: 13
