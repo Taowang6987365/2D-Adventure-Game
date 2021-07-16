@@ -425,7 +425,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0012566745, y: 0.004202366}
+  m_Offset: {x: 0.034610882, y: -0.07461983}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -436,7 +436,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5701056, y: 1.0033708}
+  m_Size: {x: 0.2637563, y: 0.8123779}
   m_EdgeRadius: 0
 --- !u!212 &309065292
 SpriteRenderer:
@@ -545,6 +545,8 @@ MonoBehaviour:
   timeToJumpApex: 0.4
   moveSpeed: 6
   setTime: 0.1
+  animationTime: 0.6
+  fallModifier: 0.8
   facingRight: 1
   bAttack: 0
   isFinished: 0
@@ -552,12 +554,12 @@ MonoBehaviour:
   canHit: 0
   isHitByEnemy: 0
   doOnce: 0
+  boxCollider: {fileID: 0}
   animator: {fileID: 309065289}
   velocity: {x: 0, y: 0, z: 0}
   timer: 0
-  animationTime: 0.6
-  fallModifier: 0.8
   guide: {fileID: 1489415939}
+  playerID: 0
 --- !u!114 &932352941
 MonoBehaviour:
   m_ObjectHideFlags: 0

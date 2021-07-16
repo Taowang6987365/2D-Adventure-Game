@@ -7,11 +7,12 @@ public class GuideNPC : MonoBehaviour
 {
     [SerializeField] private Text dialog;
     private LanguageHandler lang;
+    [SerializeField] private GameObject player;
 
 
     private IEnumerator ShowDialog()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
         gameObject.SetActive(false);
     }
     public void ShowUp(int logID)
@@ -34,13 +35,16 @@ public class GuideNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis("Horizontal")>0)
-        {
-            transform.rotation = Quaternion.Euler(0,0,0);
-        }
-        else if (Input.GetAxis("Horizontal") < 0)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
+        //if(Input.GetAxis("Horizontal")>0)
+        //{
+        //    transform.rotation = Quaternion.Euler(0,0,0);
+        //}
+        //else if (Input.GetAxis("Horizontal") < 0)
+        //{
+        //    transform.rotation = Quaternion.Euler(0, 180, 0);
+        //}
+
+        transform.position = player.transform.position + new Vector3(-0.5f, 0.6f,0f);
+
     }
 }

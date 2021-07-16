@@ -11,7 +11,7 @@ public class GameEnter : MonoBehaviour
     void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
+        if (player != null && !Entrence.HasNext())
         {
             player.transform.position = spawnPosition;
         }
