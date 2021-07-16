@@ -7,13 +7,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using Rewired.Integration.UnityUI;
+using Rewired.UI.ControlMapper;
 
 public class LoadManager : MonoBehaviour
 {
     public GameObject loadingScreen;
+    
     public GameObject settingCanvas;
     public GameObject menuCanvas;
-    public GameObject dataCanvas;
     [SerializeField] private GameObject volumeCanvas;
     [SerializeField] private Canvas levelCanvas;
     private AsyncOperation async;
@@ -22,6 +23,7 @@ public class LoadManager : MonoBehaviour
 
     //Menu scene
     public LevelSelection levelSelection;
+    public GameObject menuFirstBtn;
     
     //setting
     public GameObject settingFirstBtn;
@@ -41,6 +43,9 @@ public class LoadManager : MonoBehaviour
     public Slider volumeSlider;
     public AudioSource menuBGM;
     
+    //Input Setting
+    public ControlMapper controlMapper;
+    
     EventSystem eventSystem;
 
 
@@ -50,11 +55,34 @@ public class LoadManager : MonoBehaviour
         // Cursor.lockState = CursorLockMode.Locked;
         volumeCanvas.SetActive(false);
         menuCanvas.SetActive(true);
-        dataCanvas.SetActive(false);
+
         progressbar.value = 0;
         eventSystem = rewiredEventSystem;
     }
-    
+
+    void Update()
+    {
+        if (eventSystem.currentSelectedGameObject == null)
+        {
+            if (menuCanvas.activeSelf)
+            {
+                eventSystem.SetSelectedGameObject(menuFirstBtn);
+            }
+            else if (settingCanvas.activeSelf)
+            {
+                eventSystem.SetSelectedGameObject(settingFirstBtn);
+            }
+            else if (volumeCanvas.activeSelf)
+            {
+                eventSystem.SetSelectedGameObject(volumeFirstBtn);
+            }
+            else if (levelCanvas.enabled)
+            {
+                eventSystem.SetSelectedGameObject(menuFirstBtn);
+            }
+        }
+    }
+
     IEnumerator LoadLevel(string sceneName)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync("Game");//load target scene
@@ -67,8 +95,6 @@ public class LoadManager : MonoBehaviour
             yield return null;
         }
     }
-    
-    
 
     public void NextScene()
     {
@@ -96,7 +122,6 @@ public class LoadManager : MonoBehaviour
     public void LoadData()
     {
         menuCanvas.SetActive(false);
-        dataCanvas.SetActive(true);
     }
 
     public void LevelSettingBackToMenu()
@@ -129,7 +154,6 @@ public class LoadManager : MonoBehaviour
         }
     }
 
-
     public void OpenVolumeCanvas()
     {
         volumeCanvas.SetActive(true);
@@ -143,5 +167,9 @@ public class LoadManager : MonoBehaviour
         eventSystem.SetSelectedGameObject(volumeBackFirstBtn);
     }
 
+    public void OpenInputSetting()
+    {
+        controlMapper.Open();
+    }
 
 }
