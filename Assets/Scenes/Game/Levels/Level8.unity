@@ -47310,8 +47310,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1439427395}
     m_Modifications:
     - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: revertMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: setMoveDistance
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: platformMoveDistance
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: m_RootOrder
@@ -48508,8 +48516,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: revertMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: setMoveDistance
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: platformMoveDistance
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: m_RootOrder
@@ -53481,8 +53497,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1439427395}
     m_Modifications:
     - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: revertMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
+      propertyPath: setMoveDistance
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 728058816279537603, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: platformMoveDistance
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 728058816279537607, guid: d28a9ec773ee2494ea9bbfe289337550, type: 3}
       propertyPath: m_RootOrder
