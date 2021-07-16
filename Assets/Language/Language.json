@@ -17,7 +17,13 @@
         "Reset All",
         "Resume",
         "Main Menu",
-        "Volume"
+        "Volume",
+        "Input",
+        "SFX",
+        "Chapter one",
+        "Chapter two",
+        "Chapter three"
+
     ],
 
     "chn":[
@@ -38,7 +44,12 @@
         "重置",
         "继续",
         "主菜单",
-        "音量"
+        "音量",
+        "键位设置",
+        "音效",
+        "第一章",
+        "第二章",
+        "第三章"
         
 
     ]

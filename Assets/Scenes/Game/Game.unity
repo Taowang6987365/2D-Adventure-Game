@@ -343,7 +343,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: d4045cdcb3315604cb4afc9feaec4f89, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4045cdcb3315604cb4afc9feaec4f89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 235930c1af8c23b4484f3599ff87bca1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -781,6 +781,25 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4275016391920196304, guid: a814225f90793e342996935250e756a9, type: 3}
   m_PrefabInstance: {fileID: 601297979}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &601297981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4275016391807114950, guid: a814225f90793e342996935250e756a9, type: 3}
+  m_PrefabInstance: {fileID: 601297979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &601297982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601297981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: 19
 --- !u!1 &675496070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,7 +1438,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1431,7 +1450,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: d4045cdcb3315604cb4afc9feaec4f89, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1488,7 +1507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4045cdcb3315604cb4afc9feaec4f89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 235930c1af8c23b4484f3599ff87bca1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1796,7 +1815,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 1161640620}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1808,7 +1827,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: d4045cdcb3315604cb4afc9feaec4f89, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1865,7 +1884,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4045cdcb3315604cb4afc9feaec4f89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 235930c1af8c23b4484f3599ff87bca1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2877,6 +2896,25 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2167188752523934982, guid: 573443250622ad64bad390a4d755318f, type: 3}
   m_PrefabInstance: {fileID: 2010170408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2010170410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2167188752343742736, guid: 573443250622ad64bad390a4d755318f, type: 3}
+  m_PrefabInstance: {fileID: 2010170408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2010170411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010170410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: 17
 --- !u!1001 &6930873625130249558
 PrefabInstance:
   m_ObjectHideFlags: 0
