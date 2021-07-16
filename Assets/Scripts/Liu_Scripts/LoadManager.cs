@@ -62,25 +62,7 @@ public class LoadManager : MonoBehaviour
 
     void Update()
     {
-        if (eventSystem.currentSelectedGameObject == null)
-        {
-            if (menuCanvas.activeSelf)
-            {
-                eventSystem.SetSelectedGameObject(menuFirstBtn);
-            }
-            else if (settingCanvas.activeSelf)
-            {
-                eventSystem.SetSelectedGameObject(settingFirstBtn);
-            }
-            else if (volumeCanvas.activeSelf)
-            {
-                eventSystem.SetSelectedGameObject(volumeFirstBtn);
-            }
-            else if (levelCanvas.enabled)
-            {
-                eventSystem.SetSelectedGameObject(menuFirstBtn);
-            }
-        }
+        DefaultBtnSelect();
     }
 
     IEnumerator LoadLevel(string sceneName)
@@ -170,6 +152,29 @@ public class LoadManager : MonoBehaviour
     public void OpenInputSetting()
     {
         controlMapper.Open();
+    }
+
+    void DefaultBtnSelect()
+    {
+        if (eventSystem.currentSelectedGameObject == null)
+        {
+            if (menuCanvas.activeSelf)
+            {
+                eventSystem.SetSelectedGameObject(menuFirstBtn);
+            }
+            else if (settingCanvas.activeSelf)
+            {
+                eventSystem.SetSelectedGameObject(settingFirstBtn);
+            }
+            else if (volumeCanvas.activeSelf)
+            {
+                eventSystem.SetSelectedGameObject(volumeFirstBtn);
+            }
+            else if (levelCanvas.enabled)
+            {
+                eventSystem.SetSelectedGameObject(menuFirstBtn);
+            }
+        }
     }
 
 }
