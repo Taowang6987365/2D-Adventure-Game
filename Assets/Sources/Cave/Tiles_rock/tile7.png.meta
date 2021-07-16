@@ -93,9 +93,9 @@ TextureImporter:
     outline: []
     physicsShape:
     - - {x: -32, y: 32}
-      - {x: -32, y: -22}
-      - {x: -30, y: -22}
-      - {x: -4, y: -22}
+      - {x: -32, y: -26}
+      - {x: -30, y: -26}
+      - {x: -4, y: -26}
       - {x: 22, y: 12}
       - {x: 22, y: 32}
     bones: []
