@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/VolumeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BgmManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -36,6 +37,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/AudioManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BgmManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -93,7 +95,8 @@
       <workItem from="1626287136875" duration="3372000" />
       <workItem from="1626372546761" duration="3167000" />
       <workItem from="1626379732709" duration="5755000" />
-      <workItem from="1626456788867" duration="2339000" />
+      <workItem from="1626456788867" duration="2935000" />
+      <workItem from="1626470264713" duration="2112000" />
     </task>
     <servers />
   </component>
