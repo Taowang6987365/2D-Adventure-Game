@@ -205,6 +205,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &83659080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -44.94326
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 39.826885
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765460, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: sceneName
+      value: Level7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765460, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: currentScene
+      value: Level6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765460, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: newScecnePassword
+      value: 6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765461, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_Name
+      value: ExitPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765463, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_Radius
+      value: 1.0415001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494787765983765463, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.12673569
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
 --- !u!1 &89387326
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +820,7 @@ Transform:
   - {fileID: 166500669}
   - {fileID: 1683424427}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &343135682
 GameObject:
@@ -96948,7 +97025,7 @@ Transform:
   - {fileID: 193865299}
   - {fileID: 1596321169}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1508178462
 GameObject:
@@ -99128,6 +99205,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!4 &1125380853838890627
 Transform:
   m_ObjectHideFlags: 0
@@ -99233,6 +99311,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!1 &1125380854324357949
 GameObject:
   m_ObjectHideFlags: 0
@@ -99360,6 +99439,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!1 &1125380855216483873
 GameObject:
   m_ObjectHideFlags: 0
@@ -99443,6 +99523,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!114 &1125380855305522481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99460,6 +99541,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!4 &1125380855305522482
 Transform:
   m_ObjectHideFlags: 0
