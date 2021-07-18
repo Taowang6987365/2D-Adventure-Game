@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D boxCollider;
     public Animator animator;
     public Vector3 velocity;
+    public AudioClip[] audioClips;//slash,jump,hurt,death
+    public AudioSource audioSource;
     public static bool isMoveable;
     public static float gravity;
     public static float VelocityX;
@@ -43,6 +45,11 @@ public class PlayerController : MonoBehaviour
 
     public delegate void boxHit();
     public boxHit hit;
+
+    public float attackVol;
+    public float jumpVol;
+    public float hurtVol;
+    public float deathVol;
 
     public Rewired.Player Player { get => player; set => player = value; }
 
@@ -80,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
         if (player.GetButtonDown("Jump") && controller.collisions.below)
         {
-
+            PlaySound(1,jumpVol);
             Controller2D.isGounded = false;
             jumped = true;
         }
@@ -169,12 +176,14 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerStatus.instance.lives > 0)
         {
+            PlaySound(2,hurtVol);
             StartCoroutine(PlayerHurt());
         }
     }
 
     public void Death()
     {
+        PlaySound(3,deathVol);
         velocity.x = 0;
         if (controller.collisions.below)
         {
@@ -248,6 +257,7 @@ public class PlayerController : MonoBehaviour
     {
         if (player.GetButtonDown("Attack") && Mathf.Abs(velocity.x) <= 0.5f && Controller2D.isGounded)
         {
+            PlaySound(0,attackVol);
             isMoveable = false;
             if (Controller2D.isPlayerHit && !doOnce)
             {
@@ -265,6 +275,7 @@ public class PlayerController : MonoBehaviour
         {
             if (player.GetButtonDown("Attack") && !doOnce)
             {
+                PlaySound(0,attackVol);
                 if (Controller2D.isPlayerHit)
                 {
                     doOnce = true;
@@ -319,6 +330,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log("trig");
         guide.SetActive(true);
         guide.GetComponent<GuideNPC>().ShowUp(logID);
+    }
+
+    public void PlaySound(int id, float vol)
+    {
+        audioSource.clip = audioClips[id];
+        audioSource.volume = vol;
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }
 

@@ -743,38 +743,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1781279518}
     m_Modifications:
-    - target: {fileID: 163812913, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 856893970, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 163812915, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
-      propertyPath: m_BlockingMask.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 856893970, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8941864606760516510, guid: 20e2c04fcbf803047a08745b13811fcc, type: 2}
     - target: {fileID: 932352941, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
       propertyPath: liveText
       value: 
       objectReference: {fileID: 1560795239}
-    - target: {fileID: 932352941, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
-      propertyPath: fadeInCanvas
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1462760639, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489415939, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489415942, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091642552812832595, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8800119681587886304, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -827,6 +807,26 @@ PrefabInstance:
       propertyPath: guide
       value: 
       objectReference: {fileID: 1999375454}
+    - target: {fileID: 8800119681587886309, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: hurtVol
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800119681587886309, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: jumpVol
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800119681587886309, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: deathVol
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800119681587886309, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: attackVol
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800119681587886309, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 695756386}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
 --- !u!114 &695756384 stripped
@@ -843,6 +843,11 @@ MonoBehaviour:
 --- !u!4 &695756385 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8800119681587886308, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
+  m_PrefabInstance: {fileID: 695756383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &695756386 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 856893970, guid: 05193df451b75b14e82e71a35e51485d, type: 3}
   m_PrefabInstance: {fileID: 695756383}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &761406819

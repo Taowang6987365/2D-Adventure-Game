@@ -12,7 +12,7 @@ public class PlayerStatus : MonoBehaviour
     public float playerYPos;
     public bool isDead;
     public string scenenPassword;//store the name when player move to another scene
-
+    public bool isFinished;
     public GameObject checkPoint;
     public GameObject checkPointAfter;
     public Controller2D controller2D;
@@ -56,8 +56,11 @@ public class PlayerStatus : MonoBehaviour
         if (lives <= 0)
         {
             lives = 0;
-            
-            playerController.Death();
+            if (!isFinished)
+            {
+                playerController.Death();
+                isFinished = true;
+            }
             deathTimer -= Time.deltaTime;
             if(deathTimer <= 0)
             {
@@ -80,7 +83,6 @@ public class PlayerStatus : MonoBehaviour
 
         if (isDead)
         {
-
             PlayerController.isMoveable = false;
             resteTime -= Time.deltaTime;
         }
@@ -90,6 +92,7 @@ public class PlayerStatus : MonoBehaviour
             PlayerController.isMoveable = true;
             isDead = false;
             lives = 3;
+            isFinished = false;
             resteTime = 0.2f;
         }
     }
