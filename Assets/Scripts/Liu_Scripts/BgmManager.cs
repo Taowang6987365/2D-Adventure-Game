@@ -15,21 +15,21 @@ public class BgmManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.startingLevel == "Level1" || GameManager.startingLevel == "Level2")
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level1" ||InGameSaveManager.currentSaveData.currentLevel == "Level2")
         {
            playSound(0);
         }      
-        if (GameManager.startingLevel == "Level4" || GameManager.startingLevel == "Level5")
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level4" || InGameSaveManager.currentSaveData.currentLevel == "Level5")
         {
            playSound(1);
         }      
-        if (GameManager.startingLevel == "Level7" || GameManager.startingLevel == "Level8")
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level7" || InGameSaveManager.currentSaveData.currentLevel == "Level8")
         {
            playSound(2);
         }
 
-        if (GameManager.startingLevel == "Level3" || GameManager.startingLevel == "Level6" ||
-            GameManager.startingLevel == "Level9")
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level3" || InGameSaveManager.currentSaveData.currentLevel == "Level6" ||
+            InGameSaveManager.currentSaveData.currentLevel == "Level9")
         {
             playSound(3);
         }
