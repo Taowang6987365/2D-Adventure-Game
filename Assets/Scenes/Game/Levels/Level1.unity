@@ -8964,7 +8964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 193.71
+      value: 194.423
       objectReference: {fileID: 0}
     - target: {fileID: 1494787765983765419, guid: ef97e19c199b08b4a99fc9f58fd14544, type: 3}
       propertyPath: m_LocalPosition.y
@@ -107034,6 +107034,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
       propertyPath: m_audioClip
       value: 

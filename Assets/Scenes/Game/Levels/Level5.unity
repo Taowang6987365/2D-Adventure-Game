@@ -42660,6 +42660,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: db292f10f9c391e4a8310943cc6ad095, type: 3}
@@ -44350,6 +44354,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!1 &1125380853858260201
 GameObject:
   m_ObjectHideFlags: 0
@@ -44431,6 +44436,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!1 &1125380853996520361
 GameObject:
   m_ObjectHideFlags: 0
@@ -44512,6 +44518,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!1 &1125380854139255308
 GameObject:
   m_ObjectHideFlags: 0

@@ -341,6 +341,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 8605d50e3d361b34c8f473d736bbec03, type: 3}
@@ -1902,6 +1906,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 0
+  moveHorizontal: 0
 --- !u!61 &262533430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -106456,6 +106461,7 @@ MonoBehaviour:
   isGuarded: 0
   guards: 0
   resetOnPlayerDeath: 1
+  moveHorizontal: 0
 --- !u!1 &1125380853888028796
 GameObject:
   m_ObjectHideFlags: 0

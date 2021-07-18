@@ -63881,6 +63881,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292097360512878366, guid: df8ccb63bc7058547a7a0f11ef05da4c, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ed82a946e40be4d4383971d58d622d21, type: 3}
@@ -97025,7 +97029,7 @@ Transform:
   - {fileID: 193865299}
   - {fileID: 1596321169}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1508178462
 GameObject:
