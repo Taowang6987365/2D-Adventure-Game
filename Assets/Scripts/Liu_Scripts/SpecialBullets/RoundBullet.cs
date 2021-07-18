@@ -7,6 +7,7 @@ public class RoundBullet : MonoBehaviour
     public BulletCharacter bulletTemplate;
     public Transform firPoint;
     public List<BulletCharacter> tempBullets;
+    public float startTime;
 
     public float CountTime;
     public float StopTime;
@@ -14,6 +15,7 @@ public class RoundBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startTime = 6f;
         tempBullets = new List<BulletCharacter>();
         CountTime *= Time.deltaTime;
         StopTime += Time.deltaTime;
@@ -31,7 +33,7 @@ public class RoundBullet : MonoBehaviour
         Quaternion rotateQuate = Quaternion.AngleAxis(30, Vector3.forward);//使用四元数制造绕Z轴旋转10度的旋转
         while (CountTime < StopTime)
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(startTime);
             for (int i = 0; i < number; i++)    //发射波数
             {
                 for (int j = 0; j < 12; j++)

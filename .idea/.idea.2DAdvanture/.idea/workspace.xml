@@ -28,7 +28,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelTeleporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/VolumeController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/GameEnter.cs" />
@@ -38,6 +37,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BgmManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundGroupBullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/ShotGunBullet.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -97,6 +99,7 @@
       <workItem from="1626379732709" duration="5755000" />
       <workItem from="1626456788867" duration="2935000" />
       <workItem from="1626470264713" duration="2112000" />
+      <workItem from="1626632732169" duration="1211000" />
     </task>
     <servers />
   </component>

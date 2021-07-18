@@ -17,7 +17,7 @@ public class RoundGroupBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startTime = 10f;
+        startTime = 15f;
         tempBullets = new List<BulletCharacter>();
         CountTime *= Time.deltaTime;
         StopTime += Time.deltaTime;

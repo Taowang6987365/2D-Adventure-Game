@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
 
 
@@ -8,12 +9,14 @@ public class ShotGunBullet : MonoBehaviour
     public BulletCharacter bulletTemplate;
     public Transform firPoint;
     private List<BulletCharacter> tempBullets;
+    public float startTime;
 
     public float CountTime;
     public float StopTime;
 
     void Start()
     {
+        startTime = 4f;
         tempBullets = new List<BulletCharacter>();
         CountTime *= Time.deltaTime;
         StopTime += Time.deltaTime;
@@ -40,7 +43,7 @@ public class ShotGunBullet : MonoBehaviour
         Quaternion RightRota = Quaternion.AngleAxis(30, Vector3.forward); 
         while(CountTime<StopTime)
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(startTime);
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 3; j++)
