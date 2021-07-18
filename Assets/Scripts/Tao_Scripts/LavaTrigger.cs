@@ -11,8 +11,8 @@ public class LavaTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            lava.isLavaMove = true;
             lava.isReset = false;
+            lava.isLavaMove = true;
         }
     }
 }
