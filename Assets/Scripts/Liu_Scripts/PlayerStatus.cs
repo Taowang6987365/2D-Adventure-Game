@@ -56,6 +56,7 @@ public class PlayerStatus : MonoBehaviour
         if (lives <= 0)
         {
             lives = 0;
+            PlayerController.isMoveable = false;
             if (!isFinished)
             {
                 playerController.Death();
@@ -83,7 +84,6 @@ public class PlayerStatus : MonoBehaviour
 
         if (isDead)
         {
-            PlayerController.isMoveable = false;
             resteTime -= Time.deltaTime;
         }
 

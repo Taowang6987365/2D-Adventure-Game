@@ -17,10 +17,13 @@ public class Door : MonoBehaviour
     private bool originIsGuarded;
     private float originGuards;
     public bool moveHorizontal=false;
-   
+    public AudioSource audioSource;
+    private bool isFinished;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         moveSpeed = doorSpeed;
         playerStat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
         originPos = gameObject.transform.position;
@@ -73,6 +76,12 @@ public class Door : MonoBehaviour
     }
     public void OpenDoor()
     {
+        if (!isFinished)
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+            audioSource.volume = 0.5f;
+            isFinished = true;
+        }
         if (isOpen == false)
         {
             moveSpeed = doorSpeed;

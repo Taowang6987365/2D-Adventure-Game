@@ -184,10 +184,8 @@ public class PlayerController : MonoBehaviour
     public void Death()
     {
         PlaySound(3,deathVol);
-        velocity.x = 0;
         if (controller.collisions.below)
         {
-            isMoveable = false;
             StartCoroutine(PlayerDeath());
         }
     }
