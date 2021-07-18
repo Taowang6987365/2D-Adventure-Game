@@ -18,6 +18,7 @@ public class PlatformController : RaycastController
     private float originMoveDistance;
     private Vector3 velocity;
     private Vector3 originPos;
+    private Vector3 originSpeed;
     private List<PassengerMovement> passengerMovement;
     private readonly Dictionary<Transform, Controller2D> passengerDictionary = new Dictionary<Transform, Controller2D>();
 
@@ -34,6 +35,7 @@ public class PlatformController : RaycastController
             move.x *= -1;
             move.y *= -1;
         }
+        originSpeed = move;
 
     }
 
@@ -244,17 +246,18 @@ public class PlatformController : RaycastController
         isHorizontal = originDirection;
         platformMoveDistance = originMoveDistance;
         gameObject.transform.position = originPos;
-        if (!isHorizontal)
-        {
-            move.y = 2;
-            move.x = 0;
+        //if (!isHorizontal)
+        //{
+        //    move.y = 2;
+        //    move.x = 0;
 
-        }
-        else
-        {
-            move.y = 0;
-            move.x = 2;
-        }
+        //}
+        //else
+        //{
+        //    move.y = 0;
+        //    move.x = 2;
+        //}
+        move = originSpeed;
         gameObject.GetComponent<PlatformController>().enabled = false;
 
     }
