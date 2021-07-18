@@ -5,27 +5,41 @@ using UnityEngine;
 
 public class BgmManager : MonoBehaviour
 {
-
-    public AudioSource[] audioSource;
+    private bool isDone;
+    private bool isFinished;
+    [SerializeField] private string previousLevel;
+    [SerializeField] private string currentLevel;
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
 
     private void Start()
     {
-        audioSource = transform.GetComponentsInChildren<AudioSource>();
+        previousLevel = "";
+        currentLevel = "Level1";
     }
 
     private void Update()
     {
+        if (currentLevel != previousLevel)
+        {
+            ResetAudio();
+            previousLevel = currentLevel;
+            isDone = false;
+        }
+        
+        currentLevel = InGameSaveManager.currentSaveData.currentLevel;
+        
         if (InGameSaveManager.currentSaveData.currentLevel == "Level1" ||InGameSaveManager.currentSaveData.currentLevel == "Level2")
         {
-           playSound(0);
+            playSound(0);
         }      
         if (InGameSaveManager.currentSaveData.currentLevel == "Level4" || InGameSaveManager.currentSaveData.currentLevel == "Level5")
         {
-           playSound(1);
+            playSound(1);
         }      
         if (InGameSaveManager.currentSaveData.currentLevel == "Level7" || InGameSaveManager.currentSaveData.currentLevel == "Level8")
         {
-           playSound(2);
+            playSound(2);
         }
 
         if (InGameSaveManager.currentSaveData.currentLevel == "Level3" || InGameSaveManager.currentSaveData.currentLevel == "Level6" ||
@@ -37,21 +51,19 @@ public class BgmManager : MonoBehaviour
 
     private void ResetAudio()
     {
-        foreach (var sound in audioSource)
-        {
-            sound.playOnAwake = false;
-            sound.loop = false;
-        }
+        audioSource.Stop();
+        audioSource.clip = null;
+        audioSource.loop = false;
     }
-
+    
     private void playSound(int soundNum)
     {
-        ResetAudio();
-        if (!audioSource[soundNum].isPlaying)
+        if (!isDone)
         {
-            audioSource[soundNum].Play();
-            audioSource[soundNum].playOnAwake = true;
-            audioSource[soundNum].loop = true;
+            isDone = true;
+            audioSource.clip = audioClips[soundNum];
+            audioSource.Play();
+            audioSource.loop = true;
         }
     }
 }

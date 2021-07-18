@@ -16,7 +16,6 @@ public class Lava : MonoBehaviour
 
     void Start()
     {
-        lavaSpeed = 1f;
         initialPos = lavaGo.transform.position;
         lava = this;
         isLavaMove = false;
@@ -28,16 +27,16 @@ public class Lava : MonoBehaviour
         if (isLavaMove)
         {
             lavaController.Move(Vector3.up * Time.deltaTime * lavaSpeed, false);
-            if(PlayerStatus.instance.lives <= 0 && !isReset)
+        }
+        if(PlayerStatus.instance.lives <= 0 && !isReset)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0.1f)
             {
-                timer -= Time.deltaTime;
-                if (timer <= 0)
-                {
-                    lavaGo.transform.position = initialPos;
-                    isLavaMove = false;
-                    isReset = true;
-                    timer = 2f;
-                }
+                isLavaMove = false;
+                isReset = true;
+                lavaGo.transform.position = initialPos;
+                timer = 2f;
             }
         }
     }
