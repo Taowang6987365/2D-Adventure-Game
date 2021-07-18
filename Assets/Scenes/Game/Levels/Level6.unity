@@ -98408,7 +98408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef05338c068be204aaf94faf73ced6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lavaSpeed: 0
+  lavaSpeed: 1.7
   lavaController: {fileID: 498874817}
   isReset: 0
   initialPos: {x: 0, y: 0, z: 0}
