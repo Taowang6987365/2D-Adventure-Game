@@ -8,12 +8,15 @@ public class pushablebox : MonoBehaviour
     public static pushablebox instance;
     private Vector3 initPos ;
     public int life = 3;
+    private bool isFinished;
+    private AudioSource audioSource;
     
 
     [SerializeField] private bool canReset = false;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = gameObject.GetComponent<AudioSource>();
         instance = this;
         initPos = transform.position;
     }
@@ -39,8 +42,14 @@ public class pushablebox : MonoBehaviour
             }
             else
             {
+                if (!isFinished)
+                {
+                    audioSource.PlayOneShot(audioSource.clip);
+                    audioSource.volume = 2;
+                    isFinished = true;
+                }
                 Controller2D.isPlayerHit = false;
-                Destroy(gameObject,0.1f);
+                Destroy(gameObject,0.7f);
             }
         }
     }

@@ -48593,6 +48593,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995714221}
     m_Modifications:
+    - target: {fileID: 335701992641903924, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060477920475539799, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305939378395380543, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 2584326268593471965, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_Name
       value: Swingtrap (2)
@@ -48652,6 +48664,14 @@ PrefabInstance:
     - target: {fileID: 3181416309699685513, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631412940291604569, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191076999302989028, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
@@ -50101,6 +50121,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995714221}
     m_Modifications:
+    - target: {fileID: 335701992641903924, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060477920475539799, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305939378395380543, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 2584326268593471965, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_Name
       value: Swingtrap
@@ -50160,6 +50192,14 @@ PrefabInstance:
     - target: {fileID: 3181416309699685513, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631412940291604569, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191076999302989028, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
@@ -50455,6 +50495,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995714221}
     m_Modifications:
+    - target: {fileID: 335701992641903924, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060477920475539799, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305939378395380543, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 2584326268593471965, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_Name
       value: Swingtrap (4)
@@ -50514,6 +50566,14 @@ PrefabInstance:
     - target: {fileID: 3181416309699685513, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631412940291604569, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191076999302989028, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
@@ -50945,6 +51005,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995714221}
     m_Modifications:
+    - target: {fileID: 335701992641903924, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060477920475539799, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305939378395380543, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 2584326268593471965, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_Name
       value: Swingtrap (1)
@@ -51004,6 +51076,14 @@ PrefabInstance:
     - target: {fileID: 3181416309699685513, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631412940291604569, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191076999302989028, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
@@ -53007,6 +53087,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995714221}
     m_Modifications:
+    - target: {fileID: 335701992641903924, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060477920475539799, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305939378395380543, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 2584326268593471965, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_Name
       value: Swingtrap (3)
@@ -53066,6 +53158,14 @@ PrefabInstance:
     - target: {fileID: 3181416309699685513, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631412940291604569, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191076999302989028, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7125d12294b738747af009cd7e5edd3a, type: 3}
@@ -54735,6 +54835,7 @@ MonoBehaviour:
   guards: 0
   resetOnPlayerDeath: 1
   moveHorizontal: 0
+  audioSource: {fileID: 0}
 --- !u!4 &1125380854613673031
 Transform:
   m_ObjectHideFlags: 0
@@ -54792,6 +54893,7 @@ GameObject:
   - component: {fileID: 1125380854613673031}
   - component: {fileID: 1125380854613673032}
   - component: {fileID: 1125380854613673028}
+  - component: {fileID: 1125380854613673036}
   m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
@@ -54799,6 +54901,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &1125380854613673036
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125380854613673035}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8941864606760516510, guid: 20e2c04fcbf803047a08745b13811fcc, type: 2}
+  m_audioClip: {fileID: 8300000, guid: c76825d65a675ce46a03b56fbab7b15f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!212 &1471379774729043257
 SpriteRenderer:
   m_ObjectHideFlags: 0
