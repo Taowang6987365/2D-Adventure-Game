@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     private LanguageHandler lang;
   
 
-    public static string startingLevel = "Level6";
+    public static string startingLevel = "Level1";
     
     //public string nextLevel;
     [NonSerialized] public static string currentLevel = "";

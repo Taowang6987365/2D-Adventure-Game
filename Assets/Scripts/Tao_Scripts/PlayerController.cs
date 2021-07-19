@@ -145,7 +145,6 @@ public class PlayerController : MonoBehaviour
         if (isMoveable)
         {
             Vector2 input = new Vector2(player.GetAxisRaw("Move Horizontal"), player.GetAxisRaw("Move Vertical"));
-
             //if player stands on something and try to jump
             if (jumped)
             {
@@ -207,6 +206,7 @@ public class PlayerController : MonoBehaviour
     {
         velocity.y = 0f;
         velocity.y += jumpVelocity * 1.1f;
+        PlaySound(4,1f);
     }
 
     void PushItems()
