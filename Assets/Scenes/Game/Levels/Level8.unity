@@ -63100,7 +63100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be8b3f22a08494429eaf66ac682069c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controledDoor: {fileID: 0}
+  controledDoor: {fileID: 1125380854613673035}
   close: 0
   canTriggerByPlayer: 1
   requireKey: 1

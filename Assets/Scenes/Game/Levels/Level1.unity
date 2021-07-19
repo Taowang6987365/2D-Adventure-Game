@@ -112228,6 +112228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  particleSystem: {fileID: 2398875806821795970, guid: 7d14282a198adf44784769dc0bc55aed, type: 3}
   canReset: 0
 --- !u!212 &1670973073527689598
 SpriteRenderer:
@@ -112598,6 +112599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  particleSystem: {fileID: 2398875806821795970, guid: 7d14282a198adf44784769dc0bc55aed, type: 3}
   canReset: 0
 --- !u!212 &3344162396722171280
 SpriteRenderer:
@@ -113065,6 +113067,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3211486880617676338, guid: f27bddfc364e3db40b24521f3ef8203e, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 2398875806821795970, guid: 7d14282a198adf44784769dc0bc55aed, type: 3}
     - target: {fileID: 3211486880617676339, guid: f27bddfc364e3db40b24521f3ef8203e, type: 3}
       propertyPath: m_Name
       value: Crystal
