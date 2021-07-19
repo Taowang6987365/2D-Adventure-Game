@@ -24,6 +24,7 @@ public class BossFightController : MonoBehaviour
     public GameObject boss;
     private Animator anim;
     private Rigidbody2D rigid;
+    private bool isWin;
     [SerializeField] private GameObject fillArea;
 
     public Transform[] originalIndex;
@@ -38,6 +39,8 @@ public class BossFightController : MonoBehaviour
     private  BossFightController(){}
     private void Start()
     {
+        isWin = false;
+        booHPSlider.gameObject.SetActive(false);
         instance = this;
         bossHP = 10;
         nextCreateTime = 0;
@@ -61,7 +64,7 @@ public class BossFightController : MonoBehaviour
         if (count == 0)
         {
             nextCreateTime -= Time.deltaTime;
-            if (nextCreateTime <= 0)
+            if (nextCreateTime <= 0 && !isWin)
             {
                 CreateBox();
                 nextCreateTime = 2f;
@@ -70,11 +73,19 @@ public class BossFightController : MonoBehaviour
 
         if (bossHP <= 0)
         {
+            isWin = true;
             anim.SetBool("IsDeath",true);
             rigid.gravityScale = 10;
             fillArea.SetActive(false);
-            Destroy(boss,2f);
+            boss.SetActive(false);
         }
+
+        if (PlayerStatus.instance.lives<=0)
+        {
+            bossHP = 10;
+            booHPSlider.value = 1;
+        }
+        
     }
     
     public void CreateBox()
@@ -106,5 +117,13 @@ public class BossFightController : MonoBehaviour
         canshoot = true;
         Debug.Log("Shoot");
         GameObject.Instantiate(bulletPrefab, firePosition);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            booHPSlider.gameObject.SetActive(true);
+        }
     }
 }
