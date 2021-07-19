@@ -18,8 +18,8 @@ public class UnlockAllLevels : MonoBehaviour
         {
             InGameSaveManager.currentSaveData.currentLevel = "Level9";
             GameObject.FindObjectsOfType<LevelSelection>()[i].unlocked = true;
-            //sl.UpdateLevelImage();
-            //sl.UpdateLevelStatus();
+            sl.UpdateLevelImage();
+            sl.UpdateLevelStatus();
         }
     }
 
@@ -27,10 +27,10 @@ public class UnlockAllLevels : MonoBehaviour
     {
         for (int i = 0; i <= 2; i++)
         {
-            InGameSaveManager.currentSaveData.currentLevel = "Level1";
             GameObject.FindObjectsOfType<LevelSelection>()[i].unlocked = false;
-            //sl.UpdateLevelImage();
+            InGameSaveManager.currentSaveData.currentLevel = "Level1 ";
             //sl.UpdateLevelStatus();
+            sl.UpdateLevelImage();
         }
     }
 
