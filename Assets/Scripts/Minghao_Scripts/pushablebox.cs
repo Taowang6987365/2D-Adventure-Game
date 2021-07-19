@@ -10,7 +10,7 @@ public class pushablebox : MonoBehaviour
     public int life = 3;
     private bool isFinished;
     private AudioSource audioSource;
-    
+    public GameObject particleSystem;
 
     [SerializeField] private bool canReset = false;
     // Start is called before the first frame update
@@ -44,6 +44,7 @@ public class pushablebox : MonoBehaviour
             {
                 if (!isFinished)
                 {
+                    GameObject go = Instantiate(particleSystem,gameObject.transform.position,gameObject.transform.rotation);
                     audioSource.PlayOneShot(audioSource.clip);
                     audioSource.volume = 2;
                     isFinished = true;

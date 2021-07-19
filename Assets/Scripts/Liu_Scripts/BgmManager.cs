@@ -42,10 +42,14 @@ public class BgmManager : MonoBehaviour
             playSound(2);
         }
 
-        if (InGameSaveManager.currentSaveData.currentLevel == "Level3" || InGameSaveManager.currentSaveData.currentLevel == "Level6" ||
-            InGameSaveManager.currentSaveData.currentLevel == "Level9")
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level3" || InGameSaveManager.currentSaveData.currentLevel == "Level6")
         {
             playSound(3);
+        }
+
+        if (InGameSaveManager.currentSaveData.currentLevel == "Level9")
+        {
+            playSound(4);
         }
     }
 
