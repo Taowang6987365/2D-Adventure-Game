@@ -22,7 +22,11 @@
         "SFX",
         "Chapter one",
         "Chapter two",
-        "Chapter three"
+        "Chapter three",
+        "That crystal there holds magic power, breaking it should open us the path",
+        "There's the key, we should go back to see which door it is used",
+        "Oh my god! We better run from that thing if you dont want to be crush by it!",
+        "Look there's a switch over there, it is use to control doors"
 
     ],
 
@@ -49,7 +53,11 @@
         "音效",
         "第一章",
         "第二章",
-        "第三章"
+        "第三章",
+        "那块水晶中流淌着魔法，击碎它应该能为我们开启新的道路",
+        "是钥匙，我们最好回头看看它可以开启哪扇门",
+        "老天！那玩意肯定会敲碎我们！快跑！",
+        "看，那是一个开关，他应该是用来控制某扇门的"
         
 
     ]

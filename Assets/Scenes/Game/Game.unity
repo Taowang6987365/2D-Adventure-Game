@@ -3161,6 +3161,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2165940872585963964, guid: 91299bf4b7fe9f646a63ef40b264a19a, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165940872585963964, guid: 91299bf4b7fe9f646a63ef40b264a19a, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2794088320149985872, guid: 91299bf4b7fe9f646a63ef40b264a19a, type: 3}
       propertyPath: m_Type
       value: 0
