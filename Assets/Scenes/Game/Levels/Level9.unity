@@ -35634,6 +35634,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1518831929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518831930}
+  m_Layer: 0
+  m_Name: FirePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1518831930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518831929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.067, y: -0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3555638039563881240}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1573325232
 GameObject:
   m_ObjectHideFlags: 0
@@ -38230,10 +38260,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3555638039255164579, guid: 3491a4f35ba0a214ca5ba18d7e7a2ff1, type: 3}
+      propertyPath: firPoint
+      value: 
+      objectReference: {fileID: 1518831930}
     - target: {fileID: 3555638039255164581, guid: 3491a4f35ba0a214ca5ba18d7e7a2ff1, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3555638039347964036, guid: 3491a4f35ba0a214ca5ba18d7e7a2ff1, type: 3}
+      propertyPath: firPoint
+      value: 
+      objectReference: {fileID: 1518831930}
     - target: {fileID: 3555638039347964038, guid: 3491a4f35ba0a214ca5ba18d7e7a2ff1, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -38254,6 +38292,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3555638039380522141, guid: 3491a4f35ba0a214ca5ba18d7e7a2ff1, type: 3}
+      propertyPath: firPoint
+      value: 
+      objectReference: {fileID: 1518831930}
     - target: {fileID: 3555638039380522143, guid: 3491a4f35ba0a214ca5ba18d7e7a2ff1, type: 3}
       propertyPath: m_IsActive
       value: 1
