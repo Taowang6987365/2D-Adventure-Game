@@ -358,15 +358,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.021359887, g: 0.8164137, b: 0.9433962, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 05059b65b499ed140ab9a20d80686351, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -568,6 +568,10 @@ MonoBehaviour:
   timer: 0
   guide: {fileID: 0}
   playerID: 0
+  attackVol: 0
+  jumpVol: 0
+  hurtVol: 0
+  deathVol: 0
 --- !u!114 &932352941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,6 +589,7 @@ MonoBehaviour:
   playerYPos: 0
   isDead: 0
   scenenPassword: 
+  isFinished: 0
   checkPoint: {fileID: 0}
   checkPointAfter: {fileID: 0}
   controller2D: {fileID: 0}
