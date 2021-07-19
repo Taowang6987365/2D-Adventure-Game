@@ -194,7 +194,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.5, y: 1.5, z: 0}
   m_MaxChunkCount: 16
@@ -107454,6 +107454,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 413804001}
     m_Modifications:
+    - target: {fileID: 298123239762627499, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3550664164142506752, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -108865,6 +108869,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 413804001}
     m_Modifications:
+    - target: {fileID: 298123239762627499, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3550664164142506752, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -110968,6 +110976,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 413804001}
     m_Modifications:
+    - target: {fileID: 298123239762627499, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3550664164142506752, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -111608,6 +111620,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 413804001}
     m_Modifications:
+    - target: {fileID: 298123239762627499, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
+      propertyPath: m_SortingOrder
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3550664164142506752, guid: d9ac2d88dc1144049873eb539a473413, type: 3}
       propertyPath: m_RootOrder
       value: 0
