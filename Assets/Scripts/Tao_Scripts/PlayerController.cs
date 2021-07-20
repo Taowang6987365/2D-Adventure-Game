@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float animationTime = 0.6f;
     public float fallModifier = 0.8f;
     public bool facingRight = true;
-    public bool bAttack;//for stand attack anim
+    public bool bAttack; //for stand attack anim
     public bool isFinished;
     public bool isRunning;
     public bool canHit;
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D boxCollider;
     public Animator animator;
     public Vector3 velocity;
-    public AudioClip[] audioClips;//slash,jump,hurt,death
+    public AudioClip[] audioClips; //slash,jump,hurt,death
     public AudioSource audioSource;
     public static bool isMoveable;
     public static float gravity;
@@ -42,8 +42,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject guide;
     [SerializeField] private int playerID = 0;
     [SerializeField] private Rewired.Player player;
+    [SerializeField] private Vector3 jumpPos;
+    [SerializeField] private bool isJumping;
 
     public delegate void boxHit();
+
     public boxHit hit;
 
     public float attackVol;
@@ -51,7 +54,11 @@ public class PlayerController : MonoBehaviour
     public float hurtVol;
     public float deathVol;
 
-    public Rewired.Player Player { get => player; set => player = value; }
+    public Rewired.Player Player
+    {
+        get => player;
+        set => player = value;
+    }
 
     private void Awake()
     {
@@ -85,10 +92,12 @@ public class PlayerController : MonoBehaviour
             velocity.x = 0f;
         }
 
-        if (player.GetButtonDown("Jump") && controller.collisions.below)
+        if (player.GetButtonDown("Jump") && controller.collisions.below && PlayerStatus.instance.lives > 0)
         {
-            PlaySound(1,jumpVol);
+            jumpPos = gameObject.transform.position;
+            PlaySound(1, jumpVol);
             Controller2D.isGounded = false;
+            isJumping = true;
             jumped = true;
         }
 
@@ -132,6 +141,14 @@ public class PlayerController : MonoBehaviour
         {
             moveSpeed = 6f;
         }
+        
+        if (isJumping && PlayerStatus.instance.lives <= 0)
+        {
+            Debug.Log("active");
+            velocity.y += gravity * 0.005f;
+            velocity.x = 0;
+            controller.Move(velocity * Time.deltaTime, false);
+        }
     }
 
     void FixedUpdate()
@@ -160,7 +177,7 @@ public class PlayerController : MonoBehaviour
                 targetVelocityX,
                 ref velocityXSmoothing,
                 (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne
-                );
+            );
 
             velocity.y += gravity * Time.fixedDeltaTime * 0.9f;
             controller.Move(velocity * Time.fixedDeltaTime, input);
@@ -175,18 +192,15 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerStatus.instance.lives > 0)
         {
-            PlaySound(2,hurtVol);
+            PlaySound(2, hurtVol);
             StartCoroutine(PlayerHurt());
         }
     }
 
     public void Death()
     {
-        PlaySound(3,deathVol);
-        if (controller.collisions.below)
-        {
-            StartCoroutine(PlayerDeath());
-        }
+        PlaySound(3, deathVol);
+        StartCoroutine(PlayerDeath());
     }
 
     internal void ResetPosition()
@@ -206,7 +220,7 @@ public class PlayerController : MonoBehaviour
     {
         velocity.y = 0f;
         velocity.y += jumpVelocity * 1.1f;
-        PlaySound(4,1f);
+        PlaySound(4, 1f);
     }
 
     void PushItems()
@@ -235,6 +249,7 @@ public class PlayerController : MonoBehaviour
                 isFinished = false;
                 timer = setTime;
             }
+
             animator.SetBool("IsPushing", false);
         }
     }
@@ -248,6 +263,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("IsJumping", false);
+            isJumping = false;
         }
     }
 
@@ -255,7 +271,7 @@ public class PlayerController : MonoBehaviour
     {
         if (player.GetButtonDown("Attack") && Mathf.Abs(velocity.x) <= 0.5f && Controller2D.isGounded)
         {
-            PlaySound(0,attackVol);
+            PlaySound(0, attackVol);
             isMoveable = false;
             if (Controller2D.isPlayerHit && !doOnce)
             {
@@ -263,6 +279,7 @@ public class PlayerController : MonoBehaviour
                 pushablebox pb = Controller2D.hitItem.GetComponent<pushablebox>();
                 hit = new boxHit(pb.GetHit);
             }
+
             StartCoroutine(AttackAnim());
         }
     }
@@ -273,13 +290,14 @@ public class PlayerController : MonoBehaviour
         {
             if (player.GetButtonDown("Attack") && !doOnce)
             {
-                PlaySound(0,attackVol);
+                PlaySound(0, attackVol);
                 if (Controller2D.isPlayerHit)
                 {
                     doOnce = true;
                     pushablebox pb = Controller2D.hitItem.GetComponent<pushablebox>();
                     hit = new boxHit(pb.GetHit);
                 }
+
                 StartCoroutine(WalkAttackAnim());
             }
         }
@@ -310,9 +328,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PlayerHurt()
     {
-        animator.SetBool("isHurt", true);
-        yield return new WaitForSeconds(0.2f);
         PlayerStatus.instance.lives--;
+        animator.SetBool("isHurt", true);
+        yield return new WaitForSeconds(0f);
         animator.SetBool("isHurt", false);
     }
 
@@ -337,4 +355,3 @@ public class PlayerController : MonoBehaviour
         audioSource.PlayOneShot(audioSource.clip);
     }
 }
-
