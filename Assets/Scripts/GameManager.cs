@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
         
         PausePannel.SetActive(false);
         isPaused = false;

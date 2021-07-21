@@ -51,8 +51,8 @@ public class LoadManager : MonoBehaviour
 
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
         volumeCanvas.SetActive(false);
         menuCanvas.SetActive(true);
 
