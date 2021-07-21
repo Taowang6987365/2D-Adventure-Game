@@ -31,18 +31,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/VolumeController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/GameEnter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/Entrence.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BgmManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/RoundGroupBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/ShotGunBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/UnlockAllLevels.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Tao_Scripts/Win.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -58,6 +58,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../UnityBuild\2d Adventure Game.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\UnityBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -108,7 +116,7 @@
       <workItem from="1626724463912" duration="2900000" />
       <workItem from="1626888488587" duration="149000" />
       <workItem from="1626888658480" duration="607000" />
-      <workItem from="1626893802013" duration="326000" />
+      <workItem from="1626893802013" duration="879000" />
     </task>
     <servers />
   </component>

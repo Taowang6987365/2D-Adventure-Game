@@ -80,6 +80,7 @@ public class LoadManager : MonoBehaviour
 
     public void NextScene()
     {
+        GameManager.startingLevel = "Level1";
         StartCoroutine(LoadLevel("Game"));
 
     }
