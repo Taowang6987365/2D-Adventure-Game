@@ -28,6 +28,7 @@ public class Win : MonoBehaviour
                 timer = 1f;
                 isFinished = true;
             }
+            Time.timeScale = 0;
         }
         else
         {
