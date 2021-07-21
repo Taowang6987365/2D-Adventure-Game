@@ -34,10 +34,6 @@ public class InGameSaveManager : MonoBehaviour
         {
             Load();
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            DeletSaveData();
-        }
 
 
     }

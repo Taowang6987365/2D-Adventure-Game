@@ -15,6 +15,7 @@ public class Entrence : MonoBehaviour
         timer = 0.5f;
         if (Next == entrancePassword)
         {
+            Time.timeScale = 1;
             PlayerController.isMoveable = false;
             PlayerStatus.instance.transform.position = transform.position;//entrance position
         }

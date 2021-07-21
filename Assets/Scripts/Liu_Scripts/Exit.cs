@@ -20,6 +20,7 @@ public class Exit : MonoBehaviour
             //SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync(currentScene);
             InGameSaveManager.currentSaveData.currentLevel = sceneName;
+            Time.timeScale = 0;
         }
     }
 }
