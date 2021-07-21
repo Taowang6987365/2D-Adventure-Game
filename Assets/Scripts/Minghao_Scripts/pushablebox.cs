@@ -48,6 +48,7 @@ public class pushablebox : MonoBehaviour
                     audioSource.PlayOneShot(audioSource.clip);
                     audioSource.volume = 2;
                     isFinished = true;
+                    Destroy(go,0.6f);
                 }
                 Controller2D.isPlayerHit = false;
                 Destroy(gameObject,0.7f);
