@@ -20,7 +20,8 @@ public class Win : MonoBehaviour
             if (timer <= 0 && !isFinished)
             {
                 SceneManager.UnloadSceneAsync(currentScene);
-                InGameSaveManager.currentSaveData.currentLevel = sceneName;
+                SceneManager.LoadScene("Win");
+
             }
         }
         else

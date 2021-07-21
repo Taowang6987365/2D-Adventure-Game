@@ -93,6 +93,7 @@ public class BossFightController : MonoBehaviour
             bossHP = 10;
             booHPSlider.value = 1;
         }
+        
     }
 
     public void CreateBox()

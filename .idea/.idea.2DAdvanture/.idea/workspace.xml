@@ -42,6 +42,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Tao_Scripts/Win.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -105,6 +106,7 @@
       <workItem from="1626645422984" duration="1652000" />
       <workItem from="1626653848634" duration="1065000" />
       <workItem from="1626724463912" duration="2900000" />
+      <workItem from="1626888488587" duration="149000" />
     </task>
     <servers />
   </component>
