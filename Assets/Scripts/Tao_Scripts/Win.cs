@@ -2,37 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
-    public GameObject BossHpSlider;
-    public GameObject winPanel;
-
     private float timer = 1f;
     private bool isFinished;
+    public string sceneName;
+    public string currentScene;
 
-    private void Start()
-    {
-        winPanel.SetActive(false);
-    }
 
     private void Update()
     {
         if (BossFightController.GetInstance().isWin)
         {
-            BossHpSlider.SetActive(false);
             timer -= Time.deltaTime;
             if (timer <= 0 && !isFinished)
             {
-                winPanel.SetActive(true);
-                timer = 1f;
-                isFinished = true;
+                SceneManager.UnloadSceneAsync(currentScene);
+                InGameSaveManager.currentSaveData.currentLevel = sceneName;
             }
-            Time.timeScale = 0;
         }
         else
         {
-            winPanel.SetActive(false);
             isFinished = false;
         }
     }
