@@ -794,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 25
+      value: Log11
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669523, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: m_Size.y

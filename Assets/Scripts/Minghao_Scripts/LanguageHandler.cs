@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Newtonsoft.Json;
 
 public class LanguageHandler : MonoBehaviour
 {
 
     public class Dialogs
     {
-        public string[] eng;
-        public string[] chn;
+        // public string[] eng;
+        //public string[] chn;
+        public Dictionary<string, string> eng;
+        public Dictionary<string, string> chn;
     }
 
 
@@ -38,7 +40,8 @@ public class LanguageHandler : MonoBehaviour
     {
         path = "./Assets/Language/Language.json";
         jsonstr = System.IO.File.ReadAllText(path);
-        logs = JsonUtility.FromJson<Dialogs>(jsonstr);
+        // logs = JsonUtility.FromJson<Dialogs>(jsonstr);
+        logs = JsonConvert.DeserializeObject<Dialogs>(jsonstr);
         manager = LangManager.instance;
         currentLang = manager.curLang;
 
@@ -54,7 +57,7 @@ public class LanguageHandler : MonoBehaviour
         manager.curLang = lang;
 
     }
-    public string GetText(int logNum)
+    public string GetText(string logNum)
     {
         if(currentLang == 1)
         {

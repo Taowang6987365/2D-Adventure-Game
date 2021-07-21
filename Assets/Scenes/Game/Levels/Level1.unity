@@ -9074,7 +9074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 23
+      value: Log9
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -9495,7 +9495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 3
+      value: Log1
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -107092,7 +107092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 6
+      value: Log4
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -107783,7 +107783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 4
+      value: Log2
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -107857,7 +107857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 24
+      value: Log10
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -108803,7 +108803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 5
+      value: Log3
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -112037,7 +112037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 7
+      value: Log5
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase

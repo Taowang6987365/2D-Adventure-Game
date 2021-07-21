@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 17
+  logID: Volume
 --- !u!114 &71892757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 17
+  logID: Volume
 --- !u!1 &248170275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 21
+  logID: cp2
 --- !u!1 &404652915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 18
+  logID: Input
 --- !u!114 &541282431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4014,7 +4014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 20
+  logID: cp1
 --- !u!1 &613956502
 GameObject:
   m_ObjectHideFlags: 0
@@ -4244,6 +4244,7 @@ GameObject:
   - component: {fileID: 627040297}
   - component: {fileID: 627040299}
   - component: {fileID: 627040298}
+  - component: {fileID: 627040300}
   m_Layer: 5
   m_Name: SettingText
   m_TagString: Untagged
@@ -4314,6 +4315,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627040296}
   m_CullTransparentMesh: 1
+--- !u!114 &627040300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627040296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: Setting
 --- !u!1 &644442694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4484,7 +4499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 12
+  logID: Back
 --- !u!1 &663018094
 GameObject:
   m_ObjectHideFlags: 0
@@ -5270,7 +5285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 14
+  logID: Reset
 --- !u!1 &767766961
 GameObject:
   m_ObjectHideFlags: 0
@@ -9014,6 +9029,7 @@ GameObject:
   - component: {fileID: 1523609126}
   - component: {fileID: 1523609128}
   - component: {fileID: 1523609127}
+  - component: {fileID: 1523609129}
   m_Layer: 5
   m_Name: StartText
   m_TagString: Untagged
@@ -9084,6 +9100,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523609125}
   m_CullTransparentMesh: 1
+--- !u!114 &1523609129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523609125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: Start
 --- !u!1 &1531917517
 GameObject:
   m_ObjectHideFlags: 0
@@ -9207,7 +9237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 11
+  logID: SelectLevel
 --- !u!1 &1564153009
 GameObject:
   m_ObjectHideFlags: 0
@@ -10526,7 +10556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 12
+  logID: Back
 --- !u!114 &1783311957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11161,7 +11191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 12
+  logID: Back
 --- !u!1 &1918907976
 GameObject:
   m_ObjectHideFlags: 0
@@ -11733,7 +11763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 22
+  logID: cp3
 --- !u!1 &1979645089
 GameObject:
   m_ObjectHideFlags: 0
@@ -11995,6 +12025,7 @@ GameObject:
   - component: {fileID: 2013361797}
   - component: {fileID: 2013361799}
   - component: {fileID: 2013361798}
+  - component: {fileID: 2013361800}
   m_Layer: 5
   m_Name: QuitText
   m_TagString: Untagged
@@ -12065,6 +12096,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013361796}
   m_CullTransparentMesh: 1
+--- !u!114 &2013361800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013361796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf41c719b32fd241b01f09a93151eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 0}
+  logID: Quit
 --- !u!1 &2034046585
 GameObject:
   m_ObjectHideFlags: 0
@@ -12260,7 +12305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 13
+  logID: Unlock
 --- !u!1 &2084052821
 GameObject:
   m_ObjectHideFlags: 0
@@ -13757,7 +13802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 19
+  logID: SFX
 --- !u!1 &2167188752680400969
 GameObject:
   m_ObjectHideFlags: 0

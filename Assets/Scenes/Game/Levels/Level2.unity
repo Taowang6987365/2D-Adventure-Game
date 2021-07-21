@@ -8585,7 +8585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 8
+      value: Log6
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -103618,7 +103618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 9
+      value: Log7
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase
@@ -104353,7 +104353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 10
+      value: Log8
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: phrase

@@ -1514,7 +1514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669522, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: logID
-      value: 26
+      value: Log12
       objectReference: {fileID: 0}
     - target: {fileID: 6779353934695669523, guid: 219944e2e1496e3418ea548f9df3de74, type: 3}
       propertyPath: m_Size.y
@@ -2225,7 +2225,7 @@ Transform:
   - {fileID: 144443731}
   - {fileID: 1532144505}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283658649
 GameObject:

@@ -6,7 +6,7 @@ public class NPCtrigger : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     //[SerializeField] private string phrase = "";
-    [SerializeField]private int logID;
+    [SerializeField]private string logID;
     // Start is called before the first frame update
     void Start()
     {

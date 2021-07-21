@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonText : MonoBehaviour
 {
     [SerializeField] private Text txt;
-    [SerializeField] private int logID;
+    [SerializeField] private string logID;
     private LanguageHandler lang;
 
     // Start is called before the first frame update

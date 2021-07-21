@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 19
+  logID: SFX
 --- !u!1 &675496070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 15
+  logID: Resume
 --- !u!1 &967405795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,7 +2516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 16
+  logID: Main
 --- !u!1001 &1611914244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2887,7 +2887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 12
+  logID: Back
 --- !u!114 &1846265636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 1
+  logID: Setting
 --- !u!1 &1919953514
 GameObject:
   m_ObjectHideFlags: 0
@@ -3218,7 +3218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 0}
-  logID: 17
+  logID: Volume
 --- !u!224 &2167188752275739264
 RectTransform:
   m_ObjectHideFlags: 0

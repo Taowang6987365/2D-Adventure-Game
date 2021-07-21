@@ -341,7 +341,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isDead", false);
     }
 
-    public void ShowGuide(int logID)
+    public void ShowGuide(string logID)
     {
         Debug.Log("trig");
         guide.SetActive(true);
