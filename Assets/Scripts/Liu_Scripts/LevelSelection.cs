@@ -33,7 +33,8 @@ public class LevelSelection : MonoBehaviour
             bt.interactable = true;
             UpdateLevelImage();
         }
-        
+
+        UpdateLevelStatus();
     }
 
     public void UpdateLevelStatus()
