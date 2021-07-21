@@ -39,10 +39,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/SpecialBullets/ShotGunBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/UnlockAllLevels.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/PlayerBulletBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/BossFightController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Tao_Scripts/Win.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1v0Hd9vHSht8Te68pcg0PUr4Crj" />
@@ -107,6 +107,8 @@
       <workItem from="1626653848634" duration="1065000" />
       <workItem from="1626724463912" duration="2900000" />
       <workItem from="1626888488587" duration="149000" />
+      <workItem from="1626888658480" duration="607000" />
+      <workItem from="1626893802013" duration="326000" />
     </task>
     <servers />
   </component>
