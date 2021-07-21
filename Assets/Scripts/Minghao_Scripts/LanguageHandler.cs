@@ -38,7 +38,7 @@ public class LanguageHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        path = "./Assets/Language/Language.json";
+        path = Application.streamingAssetsPath +"/Language.json";
         jsonstr = System.IO.File.ReadAllText(path);
         // logs = JsonUtility.FromJson<Dialogs>(jsonstr);
         logs = JsonConvert.DeserializeObject<Dialogs>(jsonstr);
@@ -46,6 +46,7 @@ public class LanguageHandler : MonoBehaviour
         currentLang = manager.curLang;
 
         //Debug.Log(logs.eng[10]);
+        Debug.Log(Application.dataPath);
     }
     private void Update()
     {
