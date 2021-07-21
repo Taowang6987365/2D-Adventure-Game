@@ -18,17 +18,17 @@ public class MenuLang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(startText.text != lang.GetText(0))
-        {
-            startText.text = lang.GetText(0);
-        }
-        if (settingText.text != lang.GetText(1))
-        {
-            settingText.text = lang.GetText(1);
-        }
-        if (quitText.text != lang.GetText(2))
-        {
-            quitText.text = lang.GetText(2);
-        }
+        //if(startText.text != lang.GetText(0))
+        //{
+        //    startText.text = lang.GetText(0);
+        //}
+        //if (settingText.text != lang.GetText(1))
+        //{
+        //    settingText.text = lang.GetText(1);
+        //}
+        //if (quitText.text != lang.GetText(2))
+        //{
+        //    quitText.text = lang.GetText(2);
+        //}
     }
 }

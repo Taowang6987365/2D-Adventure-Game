@@ -15,7 +15,7 @@ public class GuideNPC : MonoBehaviour
         yield return new WaitForSeconds(8f);
         gameObject.SetActive(false);
     }
-    public void ShowUp(int logID)
+    public void ShowUp(string logID)
     {
         Debug.Log(logID);
         dialog.text = lang.GetText(logID);

@@ -22,10 +22,6 @@ public class RoundBullet : MonoBehaviour
         StartCoroutine(FirRound(5, firPoint.transform.position));
         //Destroy(gameObject, 4f);
     }
-    void Update()
-    {
-        
-    }
 
     IEnumerator FirRound(int number, Vector3 creatPoint)
     {

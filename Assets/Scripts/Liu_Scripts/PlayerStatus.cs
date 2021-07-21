@@ -108,7 +108,7 @@ public class PlayerStatus : MonoBehaviour
         {
             if(checkPoint != null)
             {
-                InGameSaveManager.currentSaveData.respawnPosition = new Vector2(checkPoint.transform.position.x, playerYPos);
+                InGameSaveManager.currentSaveData.respawnPosition = checkPoint.transform.position;
             }
 
             InGameSaveManager.Save();
