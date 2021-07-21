@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  particleSystem: {fileID: 2398875806821795970, guid: 7d14282a198adf44784769dc0bc55aed, type: 3}
   canReset: 0
 --- !u!95 &8598552700427510216
 Animator:
