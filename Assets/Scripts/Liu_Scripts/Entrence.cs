@@ -10,7 +10,7 @@ public class Entrence : MonoBehaviour
     public string entrancePassword;
     public float timer;
 
-    void Start()
+    private void Awake()
     {
         timer = 0.5f;
         if (Next == entrancePassword)
@@ -19,6 +19,11 @@ public class Entrence : MonoBehaviour
             PlayerController.isMoveable = false;
             PlayerStatus.instance.transform.position = transform.position;//entrance position
         }
+    }
+
+    void Start()
+    {
+
     }
 
     internal static bool HasNext() => !string.IsNullOrWhiteSpace(Next);

@@ -42,6 +42,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LevelSelection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/LoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/InGameSaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/Exit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Liu_Scripts/Entrence.cs" />
     </changedPaths>
   </component>
@@ -117,6 +118,8 @@
       <workItem from="1626888488587" duration="149000" />
       <workItem from="1626888658480" duration="607000" />
       <workItem from="1626893802013" duration="3418000" />
+      <workItem from="1626911088328" duration="648000" />
+      <workItem from="1626967539271" duration="416000" />
     </task>
     <servers />
   </component>
