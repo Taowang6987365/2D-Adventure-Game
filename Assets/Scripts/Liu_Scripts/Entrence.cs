@@ -16,14 +16,8 @@ public class Entrence : MonoBehaviour
         if (Next == entrancePassword)
         {
             Time.timeScale = 1;
-            PlayerController.isMoveable = false;
             PlayerStatus.instance.transform.position = transform.position;//entrance position
         }
-    }
-
-    void Start()
-    {
-
     }
 
     internal static bool HasNext() => !string.IsNullOrWhiteSpace(Next);
@@ -33,7 +27,6 @@ public class Entrence : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            PlayerController.isMoveable = true;
             timer = 0.5f;
 
             if (HasNext())
